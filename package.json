@@ -9,6 +9,7 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "changeset": "                           changeset",
     "start": "                               dotenv yarn run website:start",
     "website:start": "                       cd website && yarn start"
   },
@@ -20,6 +21,7 @@
     ]
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.8.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
@@ -29,6 +31,7 @@
     "@babel/preset-flow": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
+    "@changesets/cli": "^2.4.1",
     "@popperjs/core": "^2.0.0-rc.3",
     "@types/react-dom": "^16.9.4",
     "@types/react-router-dom": "^5.1.3",
@@ -41,9 +44,11 @@
     "@uidu/navigation": "^0.2.17",
     "@uidu/select": "^0.2.6",
     "@uidu/shell": "^0.2.1",
+    "@uidu/spinner": "^0.1.14",
     "@uidu/theme": "^0.1.19",
     "@uidu/webpack-config": "^0.1.47",
     "avataaars": "^1.2.1",
+    "axios": "^0.19.1",
     "babel-loader": "^8.0.6",
     "bolt": "^0.24.4",
     "bootstrap": "^4.4.1",
@@ -59,6 +64,7 @@
     "jquery": "^3.4.1",
     "less-loader": "^5.0.0",
     "lodash.debounce": "^4.0.8",
+    "numeral": "^2.0.6",
     "popper.js": "^1.16.0",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.19.1",
@@ -81,6 +87,7 @@
     "ts-loader": "^6.2.1",
     "tti-polyfill": "^0.2.2",
     "typescript-plugin-styled-components": "^1.4.3",
-    "url-loader": "^3.0.0"
+    "url-loader": "^3.0.0",
+    "uuid": "^3.4.0"
   }
 }

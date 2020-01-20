@@ -1,25 +1,29 @@
-import { code, Example, md } from '@uidu/docs';
+import { code, Example, md, Props } from '@uidu/docs';
 import * as React from 'react';
 
 export default md`
 
-  Buttons are used as triggers for actions. They are used in forms, toolbars,
-  dialog footers and as stand-alone action triggers.
-
-  Button also exports a chat-window-group component to make it easy to display
-  multiple chat-windows together.
+  # Salaries
+  Salary renders a salary chart. You can configure how the chart behaves using props. For instance you can add \`mySalary\` and show comparison with benchmarks.
+  You can also change chart colors, when needed.
 
   ## Usage
 
-  ${code`import Stepper, { Step } from '@uidu/stepper';`}
+  ${code`import Salaries from '@jobvalue/salaries';`}
 
   ${(
     <Example
-      packageName="@uidu/stepper"
+      packageName="@jobvalue/salaries"
       Component={require('../examples/Basic').default}
       title="Basic"
       source={require('!!raw-loader!../examples/Basic')}
     />
   )}
 
+  ${(
+    <Props
+      heading="Step Props"
+      props={require('!!extract-react-types-loader!../src/components/Salaries')}
+    />
+  )}
 `;

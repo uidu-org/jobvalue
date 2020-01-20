@@ -1,0 +1,57 @@
+$social-color: #fff;
+
+$social-twitter: #55acee;
+$social-twitter-state-color: darken($social-twitter, 5%);
+
+$social-facebook: #3b5998;
+$social-facebook-state-color: darken($social-facebook, 5%);
+
+$social-google: #dd4b39;
+$social-google-state-color: darken($social-google, 5%);
+
+$social-linkedin: #00669c;
+$social-linkedin-state-color: darken($social-linkedin, 5%);
+
+.btn-twitter {
+  background-color: $social-twitter;
+  color: $social-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $social-twitter-state-color;
+  }
+}
+
+.btn-facebook {
+  background-color: $social-facebook;
+  color: $social-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $social-facebook-state-color;
+  }
+}
+
+.btn-google {
+  background-color: $social-google;
+  color: $social-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $social-google-state-color;
+  }
+}
+
+.btn-linkedin {
+  background-color: $social-linkedin;
+  color: $social-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $social-linkedin-state-color;
+  }
+}

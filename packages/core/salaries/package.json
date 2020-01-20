@@ -4,5 +4,12 @@
   "module": "index.js",
   "types": "index.d.ts",
   "license": "MIT",
-  "jobvalue:src": "index.ts"
+  "jobvalue:src": "index.ts",
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.8.0",
+    "@uidu/spinner": "^0.1.14",
+    "axios": "^0.19.1",
+    "numeral": "^2.0.6",
+    "uuid": "^3.4.0"
+  }
 }

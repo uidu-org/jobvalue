@@ -1,0 +1,26 @@
+.form-loader {
+  background: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 999;
+}
+
+input:invalid {
+  box-shadow: none;
+}
+
+.is-searchable {
+  .Select-input {
+    height: auto !important;
+  }
+}
+
+.Select-input {
+  height: 3.2rem !important;
+}
+
+.Select-control {
+  @extend .border;
+}
