@@ -1,0 +1,25 @@
+{
+  "name": "@jobvalue/themes-stipendiogiusto",
+  "version": "0.1.0",
+  "description": "Stipendiogiusto main theme",
+  "repository": "https://github.com/uidu-org/jobvalue.git",
+  "license": "ISC",
+  "author": "",
+  "files": [
+    "index.scss"
+  ],
+  "main": "index.scss",
+  "devDependencies": {
+    "@uidu/docs": "^0.1.39"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bundlesize": [
+    {
+      "path": "./dist/umd/*.js",
+      "maxSize": "300 kB"
+    }
+  ],
+  "gitHead": "b7db529527c03f84030c3e712742ff4301bc72c5"
+}

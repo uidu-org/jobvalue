@@ -1,0 +1,10 @@
+{
+  "name": "guidu",
+  "short_name": "guidu",
+  "start_url": "/",
+  "theme_color": "#ec8447",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "portrait",
+  "prompt_message": "Add a Home screen icon for easy access to uidu"
+}
