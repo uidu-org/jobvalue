@@ -12,7 +12,6 @@ export const apiBaseUrl = {
   production: 'https://jpanalytics.it',
 };
 export const toEur = val => numeral(val).format('$ 0,0');
-
 export const toK = val => numeral(val).format('0a');
 export const toValue = val => numeral(val).format('0,0');
 

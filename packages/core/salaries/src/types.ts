@@ -39,7 +39,6 @@ export type SalariesProps = {
   salaryDataForChart: Array<SalaryData>;
   series: Array<SalaryKinds>;
   mySalary?: number;
-  loaded?: boolean;
   colors: {
     ral?: string;
     rga?: string;

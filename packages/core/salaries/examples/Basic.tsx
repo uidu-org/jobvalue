@@ -11,7 +11,6 @@ export default function Basic() {
         <Salaries
           salaryDataForChart={salaryForChart(salaryDataForChart)}
           series={['rga', 'ral']}
-          loaded
         />
         <SalariesTable salaryDataForChart={salaries} />
       </div>
@@ -24,7 +23,6 @@ export default function Basic() {
             rga: 25000,
           })}
           series={['rga']}
-          loaded
         />
         <SalariesTable salaryDataForChart={salaries} />
       </div>
@@ -33,7 +31,6 @@ export default function Basic() {
         <Salaries
           salaryDataForChart={salaries}
           series={['ral']}
-          loaded
           colors={{ rga: '#f28d0e', ral: '#f28d0e' }}
         />
         <SalariesTable salaryDataForChart={salaries} />
