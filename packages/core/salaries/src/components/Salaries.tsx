@@ -146,13 +146,13 @@ export default class Salaries extends PureComponent<SalariesProps> {
   };
 
   render() {
-    const { loaded } = this.props;
+    const { salaryDataForChart } = this.props;
 
     console.log(this.uuid);
 
     return (
       <>
-        {loaded ? (
+        {salaryDataForChart ? (
           <div style={{ overflowX: 'auto' }}>
             <div id={this.uuid} style={{ width: '100%', height: 400 }} />
           </div>

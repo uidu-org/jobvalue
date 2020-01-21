@@ -1,0 +1,13 @@
+{
+  "name": "@jobvalue/salaries-comparator",
+  "version": "0.1.0",
+  "description": "Serve a mostrare quanto guadagno rispetto agli altri",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "jobvalue:src": "index.ts",
+  "private": false,
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.8.0"
+  }
+}
