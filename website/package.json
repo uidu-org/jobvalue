@@ -15,7 +15,7 @@
     "build:report": "yarn build --report",
     "predeploy": "yarn build",
     "deploy": "netlify deploy --dir dist/ --prod",
-    "start": "node ../node_modules/@uidu/webpack-config/bin/dev.js"
+    "start": "node webpack.config.js"
   },
   "dependencies": {
     "@jobvalue/themes-stipendiogiusto": "^0.1.0",
