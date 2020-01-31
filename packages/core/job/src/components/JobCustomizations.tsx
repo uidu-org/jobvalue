@@ -12,6 +12,7 @@ export default function JobCustomizations(props: UserProfileProps) {
         Regione sede di lavoro: {province}
       </p>
       <h6>Le tue caratteristiche anagrafiche</h6>
+      TODO: icone
       <p>
         Fascia d'età anagrafica: {birthdate}
         <br />

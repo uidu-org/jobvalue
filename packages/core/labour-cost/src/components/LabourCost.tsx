@@ -196,6 +196,7 @@ export default class LabourCostChart extends PureComponent<any> {
       <>
         {labourCost ? (
           <div style={{ overflowX: 'auto' }}>
+            TODO: Waterfall https://amcharts.com/demos/waterfall-chart
             <div id={this.uuid} style={{ width: '100%', height: 300 }} />
           </div>
         ) : (

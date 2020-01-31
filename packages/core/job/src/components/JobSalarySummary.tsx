@@ -5,6 +5,7 @@ export default function JobSalarySummary({ mySalary }) {
   console.log(mySalary);
   return (
     <>
+      TODO: torta
       <table className="table">
         <tbody>
           <tr>
@@ -12,7 +13,7 @@ export default function JobSalarySummary({ mySalary }) {
               La tua retribuzione
             </th>
           </tr>
-          <tr>
+          {/* <tr>
             <td className="font-weight-light">
               Retribuzione fissa mensile lorda
             </td>
@@ -21,7 +22,7 @@ export default function JobSalarySummary({ mySalary }) {
           <tr>
             <td className="font-weight-light">Mensilità</td>
             <td className="font-weight-light">{mySalary.months}</td>
-          </tr>
+          </tr> */}
           <tr>
             <th scope="row">RAL - Retribuzione annua lorda</th>
             <th scope="row">{toEur(mySalary.ral)}</th>
