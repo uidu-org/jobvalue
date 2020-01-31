@@ -1,16 +1,19 @@
 {
-  "name": "@jobvalue/salaries",
+  "name": "@jobvalue/salaries-variations",
   "version": "0.1.0",
+  "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
   "license": "MIT",
   "jobvalue:src": "index.ts",
+  "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.0",
+    "@jobvalue/salaries": "^0.1.0",
     "@uidu/spinner": "^0.1.14",
-    "axios": "^0.19.1",
-    "numeral": "^2.0.6",
     "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@uidu/docs": "^0.1.39"
   }
 }

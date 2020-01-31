@@ -1,5 +1,5 @@
+import { toEur } from '@jobvalue/utils';
 import React from 'react';
-import { toEur } from '../utils';
 
 export default function SalariesTable({ salaryDataForChart }) {
   return (

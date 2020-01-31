@@ -1,19 +1,8 @@
+import { Salary } from '@jobvalue/salaries';
 import axios from 'axios';
 import groupBy from 'lodash/groupBy';
-import numeral from 'numeral';
-import 'numeral/locales/it';
-import { Salary } from '../types';
 
-numeral.locale('it');
-
-export const apiBaseUrl = {
-  development: 'http://jpanalytics.local:5000',
-  staging: 'https://jpanalytics.it',
-  production: 'https://jpanalytics.it',
-};
-export const toEur = val => numeral(val).format('$ 0,0');
-export const toK = val => numeral(val).format('0a');
-export const toValue = val => numeral(val).format('0,0');
+export const salaryDiff = (mine, other): number => (mine - other) / other;
 
 export const salaryBySenses = state => {
   const { salary } = state;

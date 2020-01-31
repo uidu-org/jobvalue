@@ -1,0 +1,14 @@
+{
+  "name": "@jobvalue/job",
+  "version": "0.1.0",
+  "description": "Components to show user current job position",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "jobvalue:src": "index.ts",
+  "author": "uidu",
+  "private": false,
+  "devDependencies": {
+    "@uidu/docs": "^0.1.39"
+  }
+}

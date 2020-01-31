@@ -1,5 +1,6 @@
+import { salaryForChart } from '@jobvalue/utils';
 import React from 'react';
-import Salaries, { SalariesTable, salaryForChart } from '..';
+import Salaries, { SalariesTable } from '..';
 import { salaryDataForChart } from '../examples-utils';
 
 export default function Basic() {
