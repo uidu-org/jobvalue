@@ -10,5 +10,8 @@
   "private": false,
   "devDependencies": {
     "@uidu/docs": "^0.1.39"
+  },
+  "dependencies": {
+    "@jobvalue/utils": "^0.1.0"
   }
 }

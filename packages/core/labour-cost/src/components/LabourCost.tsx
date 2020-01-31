@@ -82,7 +82,7 @@ const manipulate = ({ labourCost, mySalary, isAutonomous }) => {
       value: isAutonomous ? item.yearlyGross : mySalary,
     });
     res.push({
-      color: 'rgba(56, 109, 166, .5)',
+      color: 'rgba(56, 109, 166, .3)',
       name: 'Retribuzione Annua Netta',
       value: item.yearlyNet,
     });
@@ -110,11 +110,12 @@ export default class LabourCostChart extends PureComponent<any> {
       chart.language.locale = am4lang_it_IT;
       chart.paddingTop = 0;
       chart.paddingRight = 32;
+      chart.paddingBottom = 0;
       chart.data = manipulate(this.props);
       chart.responsive.enabled = true;
+      chart.maskBullets = false;
 
       const categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.renderer.minGridDistance = 30;
       categoryAxis.renderer.grid.template.disabled = true;
       categoryAxis.renderer.ticks.template.disabled = true;
       categoryAxis.dataFields.category = 'name';
@@ -123,7 +124,7 @@ export default class LabourCostChart extends PureComponent<any> {
       categoryAxis.renderer.inversed = true;
 
       const label = categoryAxis.renderer.labels.template;
-      label.inside = true;
+      label.disabled = true;
 
       const valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
       valueAxis.min = 0;
@@ -132,17 +133,32 @@ export default class LabourCostChart extends PureComponent<any> {
       valueAxis.renderer.opposite = true;
       valueAxis.numberFormatter = new am4core.NumberFormatter();
       valueAxis.numberFormatter.numberFormat = '#a';
+      valueAxis.renderer.baseGrid.strokeOpacity = 0;
+      valueAxis.renderer.labels.template.fillOpacity = 0.3;
+      valueAxis.renderer.grid.template.strokeOpacity = 0;
 
       const ral = chart.series.push(new am4charts.ColumnSeries());
       ral.dataFields.valueX = 'value';
       ral.dataFields.categoryY = 'name';
       ral.tooltipText = '{valueX}';
-      ral.columns.template.width = am4core.percent(100);
-      ral.fillOpacity = 0.8;
+      ral.tooltip.disabled = true;
+      ral.columns.template.width = am4core.percent(3);
+      ral.fillOpacity = 0.5;
+      ral.columns.template.strokeOpacity = 0.5;
+
+      var bullet = ral.bullets.push(new am4charts.LabelBullet());
+      bullet.label.text = "[bold]{name}[/]\n€ {valueX.formatNumber('#,###')}";
+      bullet.locationX = 1;
+      bullet.dx = 16;
+
+      bullet.label.horizontalCenter = 'left';
+      bullet.label.truncate = false;
+      bullet.label.hideOversized = false;
 
       ral.tooltipText = 'RAL: [bold]{valueX}[/]';
       ral.columns.template.propertyFields.fill = 'color';
       ral.columns.template.propertyFields.stroke = 'color';
+      ral.columns.template.column.cornerRadius(0, 3, 0, 3);
 
       chart.cursor = new am4charts.XYCursor();
       chart.cursor.lineY.disabled = true;
@@ -180,7 +196,7 @@ export default class LabourCostChart extends PureComponent<any> {
       <>
         {labourCost ? (
           <div style={{ overflowX: 'auto' }}>
-            <div id={this.uuid} style={{ width: '100%', height: 400 }} />
+            <div id={this.uuid} style={{ width: '100%', height: 300 }} />
           </div>
         ) : (
           <div
@@ -190,23 +206,6 @@ export default class LabourCostChart extends PureComponent<any> {
             <Spinner />
           </div>
         )}
-        <p className="small text-muted">
-          {isAutonomous ? (
-            <span>
-              Pensiamo ti possa essere utile confrontare la tua situazione con
-              quella di un lavoratore dipendente. Nel grafico trovi la
-              conversione del tuo compenso (ipotizzato come costo del lavoro
-              dell’azienda, qualora fossi un dipendente), in una retribuzione
-              annua lorda e netta.
-            </span>
-          ) : (
-            <span>
-              Il dato può presentare uno scarto del 3% in funzione delle
-              caratteristiche aziendali/contrattuali, delle aliquote regionali e
-              comunali e delle singole situazioni individuali
-            </span>
-          )}
-        </p>
       </>
     );
   }

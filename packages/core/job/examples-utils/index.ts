@@ -22,4 +22,12 @@ export const mockUser: UserProfileProps = {
   gender: 'Maschio',
   qualification: 'Laurea magistrale',
   inq: 'Quadro',
+  mySalary: {
+    months: 13,
+    ral: 18000,
+    addToRal: 10000,
+    rga: 28000,
+    ralMonthly: 1200,
+    partTimePerc: null,
+  },
 };

@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export default md`
 
-  # SalariesComparator
+  # Job
   --- come si usa
 
   ## Usage

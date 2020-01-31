@@ -1,7 +1,15 @@
 import React from 'react';
-import Job from '..';
+import Job, { JobCustomizations, JobSalarySummary } from '..';
 import { mockUser } from '../examples-utils';
 
 export default function Basic() {
-  return <Job {...mockUser} />;
+  return (
+    <div className="card">
+      <div className="card-body pb-0">
+        <Job {...mockUser} />
+        <JobCustomizations {...mockUser} />
+      </div>
+      <JobSalarySummary mySalary={mockUser.mySalary} />
+    </div>
+  );
 }

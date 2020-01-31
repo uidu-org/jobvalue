@@ -14,6 +14,15 @@ export type FunctionalArea = {
   name: string;
 };
 
+export type MySalary = {
+  months?: number;
+  ral: number;
+  addToRal?: number;
+  rga: number;
+  ralMonthly: number;
+  partTimePerc?: number;
+};
+
 export type UserProfileProps = {
   email: string;
   job: Job;
@@ -25,4 +34,5 @@ export type UserProfileProps = {
   gender: string;
   qualification: string;
   inq: string;
+  mySalary: MySalary;
 };

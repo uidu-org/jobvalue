@@ -58,7 +58,10 @@ export default class Salaries extends PureComponent<SalariesProps> {
       valueAxis.renderer.opposite = true;
       valueAxis.numberFormatter = new am4core.NumberFormatter();
       valueAxis.numberFormatter.numberFormat = '#a';
-      valueAxis.extraMax = 0.05;
+      valueAxis.extraMax = series.length === 2 ? 0.05 : 0.1;
+      valueAxis.renderer.baseGrid.strokeOpacity = 0;
+      valueAxis.renderer.labels.template.fillOpacity = 0.3;
+      valueAxis.renderer.grid.template.strokeOpacity = 0.05;
 
       if (series.includes('ral')) {
         const ral = chart.series.push(new am4charts.ColumnSeries());
@@ -72,6 +75,15 @@ export default class Salaries extends PureComponent<SalariesProps> {
         ral.tooltipText = 'RAL: [bold]{valueY}[/]';
         ral.columns.template.propertyFields.fill = 'color';
         ral.columns.template.propertyFields.stroke = 'color';
+        ral.columns.template.column.cornerRadius(3, 3, 0, 0);
+        ral.columns.template.strokeOpacity = 0.5;
+
+        if (!series.includes('rga')) {
+          ral.tooltip.disabled = true;
+          var bullet = ral.bullets.push(new am4charts.LabelBullet());
+          bullet.label.text = "€ {ral.formatNumber('#,###')}";
+          bullet.dy = -16;
+        }
       }
 
       if (series.includes('rga')) {
@@ -86,6 +98,15 @@ export default class Salaries extends PureComponent<SalariesProps> {
         rga.tooltipText = 'RGA: [bold]{valueY}[/]';
         rga.columns.template.propertyFields.fill = 'color';
         rga.columns.template.propertyFields.stroke = 'color';
+        rga.columns.template.column.cornerRadius(3, 3, 0, 0);
+        rga.columns.template.strokeOpacity = 0.5;
+
+        if (!series.includes('ral')) {
+          rga.tooltip.disabled = true;
+          var bullet = rga.bullets.push(new am4charts.LabelBullet());
+          bullet.label.text = "€ {ral.formatNumber('#,###')}";
+          bullet.dy = -16;
+        }
       }
 
       chart.cursor = new am4charts.XYCursor();
