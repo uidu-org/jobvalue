@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/job",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Components to show user current job position",
   "module": "index.js",
   "types": "index.d.ts",
@@ -12,6 +12,6 @@
     "@uidu/docs": "^0.1.39"
   },
   "dependencies": {
-    "@jobvalue/utils": "^0.1.0"
+    "@jobvalue/utils": "^0.1.1"
   }
 }

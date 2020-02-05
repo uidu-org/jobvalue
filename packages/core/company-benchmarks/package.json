@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/company-benchmarks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.0",
+    "@jobvalue/utils": "^0.1.1",
     "react-feather": "^2.0.3"
   },
   "devDependencies": {
