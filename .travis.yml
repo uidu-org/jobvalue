@@ -1,0 +1,28 @@
+language: node_js
+
+git:
+  depth: 2
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.9.2
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+install:
+  - travis_wait 20 yarn install --pure-lockfile
+
+script:
+  - bash ./build-setup.sh
+  - bolt install --pure-lockfile
+  - yarn build
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: bash ./release-setup.sh
+  on:
+    branch: master
+
+cache:
+  timeout: 1200
+  yarn: false
+  npm: true
