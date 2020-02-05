@@ -17,7 +17,7 @@ script:
 
 deploy:
   provider: script
-  cleanup: false
+  skip_cleanup: true
   script: bash ./release-setup.sh
   on:
     branch: master
