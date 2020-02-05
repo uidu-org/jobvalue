@@ -1,6 +1,7 @@
 import { Salary } from '@jobvalue/salaries';
 import axios from 'axios';
 import groupBy from 'lodash/groupBy';
+import { apiBaseUrl } from '..'
 
 export const salaryDiff = (mine, other): number => (mine - other) / other;
 

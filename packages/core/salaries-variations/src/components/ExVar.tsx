@@ -1,7 +1,7 @@
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 
-export default class ExVar extends PureComponent {
+export default class ExVar extends PureComponent<any> {
   render() {
     const { salaryDataForChart, loaded } = this.props;
     return (

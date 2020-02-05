@@ -12,6 +12,7 @@ am4core.options.commercialLicense = true;
 
 export default class ExPerc extends PureComponent<{
   salaryDataForChart: Array<SalaryData>;
+  loaded?: boolean;
 }> {
   private chart: am4charts.PieChart;
   private uuid = uuid();
@@ -41,11 +42,11 @@ export default class ExPerc extends PureComponent<{
       chart.data = [
         {
           country: 'Percettori',
-          count: salaryDataForChart[1].ex_perc,
+          count: (salaryDataForChart[1] as any).ex_perc,
         },
         {
           country: 'Non percettori',
-          count: 100 - salaryDataForChart[1].ex_perc,
+          count: 100 - (salaryDataForChart[1] as any).ex_perc,
         },
       ];
 
@@ -56,6 +57,7 @@ export default class ExPerc extends PureComponent<{
 
       const colorSet = new am4core.ColorSet();
       colorSet.list = ['#DA291C', '#F8F9FA'].map(color => {
+        // @ts-ignore
         return new am4core.color(color);
       });
       pieSeries.colors = colorSet;
@@ -72,7 +74,7 @@ export default class ExPerc extends PureComponent<{
       pieSeries.ticks.template.disabled = true;
 
       const label = pieSeries.createChild(am4core.Label);
-      label.text = `${salaryDataForChart[1].ex_perc}%`;
+      label.text = `${(salaryDataForChart[1] as any).ex_perc}%`;
       label.horizontalCenter = 'middle';
       label.verticalCenter = 'middle';
       label.fontSize = 18;

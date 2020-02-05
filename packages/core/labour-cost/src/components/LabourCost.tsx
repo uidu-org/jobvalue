@@ -93,7 +93,12 @@ const manipulate = ({ labourCost, mySalary, isAutonomous }) => {
 export default class LabourCostChart extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
   private uuid = uuid();
-
+  
+  static defaultProps = {
+    aspect: 2,
+  className: 'mt-3 mb-4',
+  margin: { top: 0, right: 0, left: 0, bottom: 0 },
+  }
   componentDidMount() {
     this.drawChart();
   }
@@ -111,7 +116,7 @@ export default class LabourCostChart extends PureComponent<any> {
       chart.paddingTop = 0;
       chart.paddingRight = 32;
       chart.paddingBottom = 0;
-      chart.data = manipulate(this.props);
+      chart.data = manipulate(this.props as any);
       chart.responsive.enabled = true;
       chart.maskBullets = false;
 
@@ -212,17 +217,4 @@ export default class LabourCostChart extends PureComponent<any> {
   }
 }
 
-// LabourCostChart.propTypes = {
-//   labourCost: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   aspect: PropTypes.number,
-//   className: PropTypes.string,
-//   margin: PropTypes.shape(PropTypes.obj),
-//   substituteKey: PropTypes.string.isRequired,
-//   substituteWith: PropTypes.number.isRequired,
-// };
 
-LabourCostChart.defaultProps = {
-  aspect: 2,
-  className: 'mt-3 mb-4',
-  margin: { top: 0, right: 0, left: 0, bottom: 0 },
-};

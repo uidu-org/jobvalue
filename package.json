@@ -6,18 +6,23 @@
     "@types/react": "^16.9.17",
     "@uidu/docs": "^0.1.39",
     "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
     "typescript": "^3.7.5"
   },
   "scripts": {
+    "build": "                               run-p build:pkg build:typescript --print-label --continue-on-error",
+    "build:babel:esm": "                     NODE_ENV=production BABEL_ENV=production:esm bolt workspaces exec --parallel --only-fs \"$(node ./build/ci-scripts/get.glob.packages.for.tools.js babel)\" -- babel --root-mode upward src -d ./",
+    "build:pkg": "                           bolt workspaces exec --only-fs 'packages/**' -- copy-pkg package.json tmp/package.json --only name,version,sideEffects && bolt workspaces exec --only-fs 'packages/**' -- mv ./tmp/package.json ./version.json",
+    "build:typescript": "                    NODE_ENV=production bolt workspaces exec -- tsc --project ./build/es2015",
+    "build:website": "                       bolt install --pure-lockfile && cd website && yarn build",
     "changeset": "                           changeset",
     "start": "                               dotenv yarn run website:start",
+    "typecheck:typescript": "                tsc --noEmit --project ./tsconfig.typecheck.json",
     "website:start": "                       cd website && yarn start"
   },
   "bolt": {
     "workspaces": [
-      "packages/*/*",
-      "themes/*",
-      "website"
+      "packages/*/*"
     ]
   },
   "dependencies": {
