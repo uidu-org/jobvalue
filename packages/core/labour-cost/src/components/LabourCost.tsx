@@ -93,12 +93,13 @@ const manipulate = ({ labourCost, mySalary, isAutonomous }) => {
 export default class LabourCostChart extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
   private uuid = uuid();
-  
+
   static defaultProps = {
     aspect: 2,
-  className: 'mt-3 mb-4',
-  margin: { top: 0, right: 0, left: 0, bottom: 0 },
-  }
+    className: 'mt-3 mb-4',
+    margin: { top: 0, right: 0, left: 0, bottom: 0 },
+  };
+
   componentDidMount() {
     this.drawChart();
   }
@@ -216,5 +217,3 @@ export default class LabourCostChart extends PureComponent<any> {
     );
   }
 }
-
-
