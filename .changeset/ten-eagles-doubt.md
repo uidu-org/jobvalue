@@ -7,7 +7,6 @@
 '@jobvalue/salaries-comparator': patch
 '@jobvalue/salaries-variations': patch
 '@jobvalue/utils': patch
-'@jobvalue/website': patch
 ---
 
 Initial commit
