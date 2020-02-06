@@ -98,7 +98,11 @@ export default class ExPerc extends PureComponent<{
           className="card-body flex-shrink-0 pl-0 text-center"
           style={{ width: '35%' }}
         >
-          {loaded ? <div id={this.uuid} style={{ height: 100}}></div> : <Spinner />}
+          {loaded ? (
+            <div id={this.uuid} style={{ height: 100 }}></div>
+          ) : (
+            <Spinner />
+          )}
         </div>
       </div>
     );
