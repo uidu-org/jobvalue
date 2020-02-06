@@ -9,7 +9,7 @@ am4core.useTheme(am4themesAnimated);
 am4core.options.commercialLicense = true;
 
 export default class JobSalarySummary extends PureComponent<any> {
-  private chart: am4charts.PieChart = undefined;
+  private chart: am4charts.TreeMap = undefined;
   private uuid = uuid();
 
   componentDidMount() {
@@ -23,10 +23,13 @@ export default class JobSalarySummary extends PureComponent<any> {
   drawChart = () => {
     const { mySalary } = this.props;
     if (!this.chart) {
-      const chart = am4core.create(this.uuid, am4charts.PieChart);
+      const chart = am4core.create(this.uuid, am4charts.TreeMap);
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-      chart.paddingTop = 16;
-      chart.paddingBottom = 0;
+      chart.paddingTop = 5;
+      chart.paddingLeft = 5;
+      chart.paddingRight = 5;
+      chart.paddingBottom = 5;
+      chart.tooltip.disabled = true;
 
       chart.data = [
         {
@@ -37,28 +40,40 @@ export default class JobSalarySummary extends PureComponent<any> {
           country: 'Czech Republic',
           value: 300,
         },
-        {
-          country: 'Ireland',
-          value: 200,
-        },
       ];
-      chart.radius = am4core.percent(70);
-      chart.innerRadius = am4core.percent(40);
-      chart.startAngle = 180;
-      chart.endAngle = 360;
+      //  chart.radius = am4core.percent(70);
+      //  chart.innerRadius = am4core.percent(40);
+      //  chart.startAngle = 180;
+      //  chart.endAngle = 360;
 
-      let series = chart.series.push(new am4charts.PieSeries());
-      series.dataFields.value = 'value';
-      series.dataFields.category = 'country';
+      chart.dataFields.value = 'value';
+      chart.dataFields.name = 'country';
 
-      series.slices.template.cornerRadius = 10;
-      series.slices.template.innerCornerRadius = 7;
-      series.slices.template.draggable = true;
-      series.slices.template.inert = true;
-      series.alignLabels = false;
+      var level1 = chart.seriesTemplates.create('0');
+      level1.tooltip.disabled = true;
 
-      series.hiddenState.properties.startAngle = 90;
-      series.hiddenState.properties.endAngle = 90;
+      var level1_column = level1.columns.template;
+      level1_column.column.cornerRadius(10, 10, 10, 10);
+      level1_column.fillOpacity = 0.8;
+      level1_column.stroke = am4core.color('#f8f9fa');
+      level1_column.strokeWidth = 10;
+      level1_column.strokeOpacity = 1;
+
+      let level1_bullet = level1.bullets.push(new am4charts.LabelBullet());
+      level1_bullet.locationY = 0.5;
+      level1_bullet.locationX = 0.5;
+      level1_bullet.label.text = '{name}\n{value}';
+      level1_bullet.label.fill = am4core.color('#fff');
+
+      // let series = chart.series.push(new am4charts.PieSeries());
+      //  series.slices.template.cornerRadius = 10;
+      //  series.slices.template.innerCornerRadius = 7;
+      //  series.slices.template.draggable = true;
+      //  series.slices.template.inert = true;
+      //  series.alignLabels = false;
+
+      //  series.hiddenState.properties.startAngle = 90;
+      //  series.hiddenState.properties.endAngle = 90;
 
       // chart.legend = new am4charts.Legend();
       this.chart = chart;
@@ -78,7 +93,7 @@ export default class JobSalarySummary extends PureComponent<any> {
         <div
           id={this.uuid}
           className="bg-light"
-          style={{ width: '100%', height: 200 }}
+          style={{ width: '100%', height: 150 }}
         />
         <table className="table">
           <tbody>
