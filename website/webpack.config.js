@@ -1,9 +1,8 @@
-const fs = require('fs');
 const runDevServer = require('@uidu/webpack-config/bin/dev.js');
 
 runDevServer({
   serverOptions: {
-    https: false
+    https: false,
   },
   webpackOptions: {
     resolve: {

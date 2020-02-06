@@ -5,7 +5,7 @@ import { mockUser } from '../examples-utils';
 export default function Basic() {
   return (
     <div className="card">
-      <div className="card-body pb-0">
+      <div className="card-body">
         <Job {...mockUser} />
         <JobCustomizations {...mockUser} />
       </div>

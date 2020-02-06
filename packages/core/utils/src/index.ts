@@ -1,4 +1,5 @@
 export { default as ArrowUpDown } from './components/ArrowUpDown';
+export * from './converters';
 export * from './formatters';
 export * from './salaries';
 export * from './ui';
