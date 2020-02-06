@@ -1,5 +1,13 @@
 # @jobvalue/utils
 
+## 0.1.3
+
+### Patch Changes
+
+- 7fd1b88: Republish utils
+- Updated dependencies [d883e9f]
+  - @jobvalue/salaries@0.1.4
+
 ## 0.1.2
 
 ### Patch Changes

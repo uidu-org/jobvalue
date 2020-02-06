@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 0.1.6
+
+### Patch Changes
+
+- d883e9f: Better full width charts
+- Updated dependencies [d883e9f]
+  - @jobvalue/salaries@0.1.4
+
 ## 0.1.5
 
 ### Patch Changes
