@@ -95,7 +95,7 @@ export default class JobSalarySummary extends PureComponent<any> {
           className="bg-light"
           style={{ width: '100%', height: 150 }}
         />
-        <table className="table">
+        <table className="table mb-0">
           <tbody>
             {/* <tr>
               <td className="font-weight-light">
