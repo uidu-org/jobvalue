@@ -6,7 +6,7 @@ export default function Job(props: UserProfileProps) {
   return (
     <>
       <h5>{job.name}</h5>
-      <p>{job.description}</p>
+      <p className="text-muted">{job.description}</p>
     </>
   );
 }

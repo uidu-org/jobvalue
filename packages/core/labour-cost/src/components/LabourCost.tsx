@@ -153,7 +153,8 @@ export default class LabourCostChart extends PureComponent<any> {
       ral.columns.template.strokeOpacity = 0.5;
 
       var bullet = ral.bullets.push(new am4charts.LabelBullet());
-      bullet.label.text = "[bold]{name}[/]\n€ {valueX.formatNumber('#,###')}";
+      bullet.label.text =
+        "[font-weight: 500]{name}[/]\n€ {valueX.formatNumber('#,###')}";
       bullet.locationX = 1;
       bullet.dx = 16;
 

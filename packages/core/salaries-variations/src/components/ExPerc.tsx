@@ -86,13 +86,9 @@ export default class ExPerc extends PureComponent<{
   render() {
     const { loaded } = this.props;
     return (
-      <div className="card shadow-sm flex-row align-items-center">
+      <div className="d-flex flex-row align-items-center">
         <div className="card-body">
-          <p className="mb-1">
-            Variabile
-            <br />
-            Percettori
-          </p>
+          <p className="mb-1">Percettori</p>
           <p className="text-muted mb-0">
             La percentuale di profili analizzati che ha percepito una quota
             variabile di retribuzione.

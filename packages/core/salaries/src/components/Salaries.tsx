@@ -36,6 +36,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
       chart.language.locale = am4lang_it_IT;
       chart.paddingTop = 32;
       chart.paddingRight = 0;
+      chart.paddingBottom = 0;
       chart.data = salaryDataForChart;
       chart.responsive.enabled = true;
 

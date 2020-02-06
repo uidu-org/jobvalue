@@ -5,13 +5,9 @@ export default class ExCount extends PureComponent<any> {
   render() {
     const { salaryDataForChart, loaded } = this.props;
     return (
-      <div className="card shadow-sm flex-row align-items-center">
+      <div className="d-flex flex-row align-items-center">
         <div className="card-body">
-          <p className="mb-1">
-            Variabile
-            <br />
-            Incidenza sulla RAL
-          </p>
+          <p className="mb-1">Incidenza sulla RAL</p>
           <p className="text-muted mb-0">
             Rapporto fra la retribuzione variabile media annua percepita e la
             RAL media annua

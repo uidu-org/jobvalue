@@ -10,7 +10,9 @@ export default function CompanyBenchmarks({ companyBenchmarks, mySalary }) {
 
           return (
             <tr key={size.codesense_name}>
-              <td className="w-50">{size.codesense_name}</td>
+              <th scope="row" className="w-50">
+                {size.codesense_name}
+              </th>
               <td className="w-25">{toEur(size.ex_rga_average)}</td>
               <td className="w-25">
                 <div className="d-flex align-items-center">

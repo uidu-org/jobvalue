@@ -4,10 +4,11 @@ import { salaryDataForChart } from '../../salaries/examples-utils';
 
 export default function Basic() {
   return (
-    <>
+    <div className="card">
+      <div className="card-header">Retribuzione variabile</div>
       <ExCount salaryDataForChart={salaryDataForChart} loaded />
       <ExVar salaryDataForChart={salaryDataForChart} loaded />
       <ExPerc salaryDataForChart={salaryDataForChart} loaded />
-    </>
+    </div>
   );
 }
