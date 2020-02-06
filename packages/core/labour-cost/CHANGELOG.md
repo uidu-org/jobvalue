@@ -1,5 +1,11 @@
 # @jobvalue/labour-cost
 
+## 0.1.3
+
+### Patch Changes
+
+- 8c4300f: FIX labour cost, now waterfall chart
+
 ## 0.1.2
 
 ### Patch Changes

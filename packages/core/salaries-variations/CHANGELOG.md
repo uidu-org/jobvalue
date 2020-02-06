@@ -1,5 +1,11 @@
 # @jobvalue/salaries-variations
 
+## 0.1.5
+
+### Patch Changes
+
+- 8c4300f: FIX labour cost, now waterfall chart
+
 ## 0.1.4
 
 ### Patch Changes
