@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.6
+
+### Patch Changes
+
+- 3e219ec: Small fixes to salaries variations
+
 ## 0.1.5
 
 ### Patch Changes
