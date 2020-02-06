@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 0.1.3
+
+### Patch Changes
+
+- 227fb02: Small style fixes
+- Updated dependencies [227fb02]
+  - @jobvalue/salaries@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes
