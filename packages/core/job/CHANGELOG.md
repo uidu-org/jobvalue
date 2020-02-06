@@ -1,5 +1,12 @@
 # @jobvalue/job
 
+## 0.1.5
+
+### Patch Changes
+
+- 227fb02: Treemap instead of radisl
+- 227fb02: Small style fixes
+
 ## 0.1.4
 
 ### Patch Changes

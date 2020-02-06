@@ -1,6 +1,13 @@
 # @jobvalue/salaries
 
+## 0.1.2
+
+### Patch Changes
+
+- 227fb02: Small style fixes
+
 ## 0.1.1
+
 ### Patch Changes
 
 - b10b7b8: Initial commit

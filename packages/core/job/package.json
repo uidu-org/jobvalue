@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/job",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Components to show user current job position",
   "module": "index.js",
   "types": "index.d.ts",
