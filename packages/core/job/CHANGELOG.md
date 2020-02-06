@@ -10,7 +10,7 @@
 
 ### Patch Changes
 
-- 227fb02: Treemap instead of radisl
+- 227fb02: Treemap instead of radial
 - 227fb02: Small style fixes
 
 ## 0.1.4

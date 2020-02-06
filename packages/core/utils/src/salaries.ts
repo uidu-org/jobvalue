@@ -25,7 +25,7 @@ export const salaryForChart = (
     const res: { name: string; rga?: number; ral?: number; color?: string } = {
       name: legend.name,
     };
-    const foo = salaries.filter(s => !s.codesense_id && !s.id)[0];
+    const foo = salaries.filter(s => !s.codesense_id && !s.sense_id)[0];
     res.rga = foo[`ex_rga_${legend.key}`];
     res.ral = foo[`ex_ral_${legend.key}`];
     return res;
