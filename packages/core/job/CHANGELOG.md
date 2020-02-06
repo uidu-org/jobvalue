@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.4
+
+### Patch Changes
+
+- d5ec85a: Color and text-truncate
+
 ## 0.1.3
 
 ### Patch Changes
