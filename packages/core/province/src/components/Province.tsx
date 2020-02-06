@@ -39,13 +39,13 @@ export default class LabourCostChart extends PureComponent<any> {
       polygonSeries.useGeodata = true;
       const polygonTemplate = polygonSeries.mapPolygons.template;
       const hs = polygonTemplate.states.create('hover');
-      hs.properties.fill = am4core.color('#DA291C');
+      hs.properties.fill = am4core.color('#386da7');
       polygonTemplate.tooltipText = '{SIGLA}';
       polygonSeries.data = [
         {
           id: province.code,
           name: province.name,
-          fill: am4core.color('#F05C5C'),
+          fill: am4core.color('#386da7'),
         },
       ];
 

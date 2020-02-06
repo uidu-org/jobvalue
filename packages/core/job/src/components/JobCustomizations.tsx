@@ -8,39 +8,39 @@ export default function JobCustomizations(props: UserProfileProps) {
   return (
     <>
       <dl className="mb-0">
-        <dd className="d-flex align-items-center">
-          <span className="d-flex align-items-center">
+        <dd className="d-flex align-items-center justify-content-between">
+          <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
             <Briefcase size={16} className="mr-2" />
-            {industry.name}
+            <span className="text-truncate">{industry.name}</span>
           </span>
-          <small className="text-muted ml-auto font-weight-light">
-            Settore
-          </small>
+          <small className="text-muted ml-3 font-weight-light">Settore</small>
         </dd>
-        <dd className="d-flex align-items-center">
-          <span className="d-flex align-items-center">
+        <dd className="d-flex align-items-center justify-content-between">
+          <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
             <Tag size={16} className="mr-2" />
-            {ageRangeFromBirthdate(birthdate)}
+            <span className="text-truncate">
+              {ageRangeFromBirthdate(birthdate)}
+            </span>
           </span>
-          <small className="text-muted ml-auto font-weight-light">
+          <small className="text-muted ml-3 font-weight-light">
             Fascia d'età
           </small>
         </dd>
-        <dd className="d-flex align-items-center">
-          <span className="d-flex align-items-center">
+        <dd className="d-flex align-items-center justify-content-between">
+          <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
             <Award size={16} className="mr-2" />
-            {qualification}
+            <span className="text-truncate">{qualification}</span>
           </span>
-          <small className="text-muted ml-auto font-weight-light">
+          <small className="text-muted ml-3 font-weight-light">
             Titolo di studio
           </small>
         </dd>
-        <dd className="d-flex align-items-center">
-          <span className="d-flex align-items-center">
+        <dd className="d-flex align-items-center justify-content-between">
+          <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
             <User size={16} className="mr-2" />
-            {gender}
+            <span className="text-truncate">{gender}</span>
           </span>
-          <small className="text-muted ml-auto font-weight-light">Genere</small>
+          <small className="text-muted ml-3 font-weight-light">Genere</small>
         </dd>
       </dl>
     </>

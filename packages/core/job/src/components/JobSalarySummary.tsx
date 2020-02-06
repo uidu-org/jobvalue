@@ -93,7 +93,9 @@ export default class JobSalarySummary extends PureComponent<any> {
               <td className="font-weight-light">{mySalary.months}</td>
             </tr> */}
             <tr>
-              <th scope="row">RAL - Retribuzione annua lorda</th>
+              <th scope="row">
+                RAL <small>Retribuzione annua lorda</small>
+              </th>
               <th scope="row" className="text-right text-nowrap">
                 {toEur(mySalary.ral)}
               </th>
@@ -111,7 +113,9 @@ export default class JobSalarySummary extends PureComponent<any> {
               </td>
             </tr>
             <tr>
-              <th scope="row">RGA - Retribuzione globale annua</th>
+              <th scope="row">
+                RGA <small>Retribuzione globale annua</small>
+              </th>
               <th scope="row" className="text-right text-nowrap">
                 {toEur(mySalary.rga)}
               </th>
