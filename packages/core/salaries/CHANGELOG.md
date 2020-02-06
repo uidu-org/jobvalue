@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.3
+
+### Patch Changes
+
+- 0df1f16: Fix how salaries are handled
+
 ## 0.1.2
 
 ### Patch Changes
