@@ -68,7 +68,7 @@ export default class ExVar extends PureComponent<ExVarProps> {
           },
           {
             name: 'La tua VAR (%)',
-            value: mySalary.exVar / mySalary.ral,
+            value: (mySalary.exVar / mySalary.ral) * 100,
             color: 'rgba(56, 109, 166, .7)',
           },
         ];

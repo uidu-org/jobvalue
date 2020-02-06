@@ -30,12 +30,15 @@ export default class Salaries extends PureComponent<SalariesProps> {
   }
 
   drawChart = () => {
-    const { salaryDataForChart, series, colors } = this.props;
+    const { salaryDataForChart, series, colors, fullWidth } = this.props;
     if (salaryDataForChart && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;
-      chart.paddingTop = 32;
-      chart.paddingRight = 0;
+      chart.paddingTop = 48;
+      if (fullWidth) {
+        chart.paddingRight = 0;
+        chart.paddingLeft = 0;
+      }
       chart.paddingBottom = 0;
       chart.data = salaryDataForChart;
       chart.responsive.enabled = true;
@@ -56,6 +59,9 @@ export default class Salaries extends PureComponent<SalariesProps> {
       const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.min = 0;
       valueAxis.cursorTooltipEnabled = false;
+      if (fullWidth) {
+        valueAxis.renderer.disabled = true;
+      }
       valueAxis.renderer.opposite = true;
       valueAxis.numberFormatter = new am4core.NumberFormatter();
       valueAxis.numberFormatter.numberFormat = '#a';

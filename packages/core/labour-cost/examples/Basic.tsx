@@ -10,7 +10,12 @@ export default function Basic() {
           Valore e costo del tuo lavoro annuo
         </div>
         <div className="card-body">
-          <LabourCost labourCost={labourCost} mySalary={34000} isAutonomous />
+          <LabourCost
+            labourCost={labourCost}
+            mySalary={34000}
+            isAutonomous
+            fullWidth
+          />
         </div>
         <div className="card-footer small text-muted">
           <LabourCostDescription isAutonomous />

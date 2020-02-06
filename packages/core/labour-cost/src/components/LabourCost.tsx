@@ -77,11 +77,15 @@ export default class LabourCostChart extends PureComponent<any> {
   }
 
   drawChart = () => {
-    const { labourCost, series, colors } = this.props;
+    const { labourCost, fullWidth } = this.props;
     console.log(labourCost);
     if (labourCost && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;
+      if (fullWidth) {
+        chart.paddingRight = 0;
+        chart.paddingLeft = 0;
+      }
       chart.paddingBottom = 0;
       chart.data = manipulate(this.props as any);
       chart.responsive.enabled = true;
@@ -105,6 +109,9 @@ export default class LabourCostChart extends PureComponent<any> {
       const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.min = 0;
       valueAxis.extraMax = 0.02;
+      if (fullWidth) {
+        valueAxis.renderer.disabled = true;
+      }
       valueAxis.renderer.baseGrid.disabled = true;
       valueAxis.cursorTooltipEnabled = false;
       valueAxis.renderer.opposite = true;
