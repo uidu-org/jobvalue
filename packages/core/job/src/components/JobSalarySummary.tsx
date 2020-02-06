@@ -25,7 +25,7 @@ export default class JobSalarySummary extends PureComponent<any> {
     if (!this.chart) {
       const chart = am4core.create(this.uuid, am4charts.PieChart);
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-      chart.paddingTop = 0;
+      chart.paddingTop = 16;
       chart.paddingBottom = 0;
 
       chart.data = [
@@ -82,11 +82,6 @@ export default class JobSalarySummary extends PureComponent<any> {
         />
         <table className="table">
           <tbody>
-            <tr>
-              <th scope="row" colSpan={2}>
-                La tua retribuzione
-              </th>
-            </tr>
             {/* <tr>
               <td className="font-weight-light">
                 Retribuzione fissa mensile lorda
@@ -99,19 +94,27 @@ export default class JobSalarySummary extends PureComponent<any> {
             </tr> */}
             <tr>
               <th scope="row">RAL - Retribuzione annua lorda</th>
-              <th scope="row">{toEur(mySalary.ral)}</th>
+              <th scope="row" className="text-right text-nowrap">
+                {toEur(mySalary.ral)}
+              </th>
             </tr>
             <tr>
-              <td>Retribuzione variabile percepita nell'ultimo anno</td>
-              <td>{toEur(mySalary.addToRal)}</td>
+              <td>Retribuzione variabile (€)</td>
+              <td className="text-right text-nowrap">
+                {toEur(mySalary.addToRal)}
+              </td>
             </tr>
             <tr>
-              <td>Retribuzione variabile in %</td>
-              <td>{toPerc(mySalary.addToRal / mySalary.ral)}</td>
+              <td>Retribuzione variabile (%)</td>
+              <td className="text-right text-nowrap">
+                {toPerc(mySalary.addToRal / mySalary.ral)}
+              </td>
             </tr>
             <tr>
               <th scope="row">RGA - Retribuzione globale annua</th>
-              <th scope="row">{toEur(mySalary.rga)}</th>
+              <th scope="row" className="text-right text-nowrap">
+                {toEur(mySalary.rga)}
+              </th>
             </tr>
           </tbody>
         </table>

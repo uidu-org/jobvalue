@@ -86,7 +86,7 @@ export default class ExPerc extends PureComponent<{
   render() {
     const { loaded } = this.props;
     return (
-      <div className="card shadow-sm h-100 flex-row align-items-center">
+      <div className="card shadow-sm flex-row align-items-center">
         <div className="card-body">
           <p className="mb-1">
             Variabile
