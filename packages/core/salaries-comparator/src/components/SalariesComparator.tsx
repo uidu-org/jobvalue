@@ -47,12 +47,11 @@ export default class SalariesComparator extends PureComponent<any> {
 
   transformData(data: any): any {
     for (let i = 0; i < data.length; i++) {
-    }
-
-    for (let i = 0; i < data.length; i++) {
+      //Valori duplicati
       if (data[i].id === 9624 || data[i].id === 9652) {
         data[i].percentage++;
       }
+
       if (data[i].percentage > 50 && data[i].percentage <= 100) {
         data[i].percentage = 100 - data[i].percentage + 1;
       }
