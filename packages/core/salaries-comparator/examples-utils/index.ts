@@ -258,7 +258,7 @@ export const salaries = [
     exCodesense: 1,
     exCodesenseName: 'dato nazionale',
     value: 25303,
-    percentage: 28,
+    percentage: 29,
   },
   {
     id: 9625,
@@ -1158,7 +1158,7 @@ export const salaries = [
     exCodesense: 1,
     exCodesenseName: 'Uomini',
     value: 26129,
-    percentage: 28,
+    percentage: 29,
   },
   {
     id: 9725,
