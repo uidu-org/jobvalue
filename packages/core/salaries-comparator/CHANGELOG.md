@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.3
+
+### Patch Changes
+
+- 0c07aca: Height
+
 ## 0.1.2
 
 ### Patch Changes
