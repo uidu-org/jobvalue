@@ -32,6 +32,10 @@ export default class SalariesComparator extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
   private uuid = uuid();
 
+  static defaultProps = {
+    height: 150,
+  };
+
   componentDidMount() {
     this.drawChart();
   }
@@ -68,8 +72,8 @@ export default class SalariesComparator extends PureComponent<any> {
       valueAxis.renderer.labels.template.disabled = true;
       //valueAxis.title.text = "Litres sold (M)";
 
-      createGrid(valueAxis, 0, 'Minimo');
-      createGrid(valueAxis, data[99].value, 'Massimo');
+      // createGrid(valueAxis, 0, 'Minimo');
+      // createGrid(valueAxis, data[99].value, 'Massimo');
 
       const series = chart.series.push(new am4charts.LineSeries());
       series.fillOpacity = 0.3;
@@ -128,18 +132,18 @@ export default class SalariesComparator extends PureComponent<any> {
   }
 
   render() {
-    const { salaryDataForChart } = this.props;
+    const { salaryDataForChart, height } = this.props;
 
     return (
       <>
         {salaryDataForChart ? (
           <div style={{ overflowX: 'auto' }}>
-            <div id={this.uuid} style={{ width: '100%', height: 300 }} />
+            <div id={this.uuid} style={{ width: '100%', height: height }} />
           </div>
         ) : (
           <div
             className="d-flex align-items-center justify-content-center"
-            style={{ height: '400px' }}
+            style={{ height: height }}
           >
             <Spinner />
           </div>
