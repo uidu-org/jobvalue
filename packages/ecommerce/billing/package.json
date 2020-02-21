@@ -1,0 +1,20 @@
+{
+  "name": "@jobvalue/billing",
+  "version": "0.1.0",
+  "description": "Billing form for invoicing",
+  "main": "index.js",
+  "author": "uidu",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@uidu/docs": "^0.1.39"
+  },
+  "dependencies": {
+    "@uidu/field-geosuggest": "^0.1.11",
+    "@uidu/field-number": "^0.1.25",
+    "@uidu/field-text": "^0.1.24",
+    "@uidu/field-textarea": "^0.1.13",
+    "@uidu/form": "^0.1.45",
+    "@uidu/select": "^0.2.6"
+  }
+}

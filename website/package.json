@@ -25,7 +25,7 @@
     "@uidu/navigation": "^0.2.17",
     "@uidu/select": "^0.2.6",
     "@uidu/shell": "^0.2.1",
-    "@uidu/theme": "^0.1.19",
+    "@uidu/theme": "^0.2.2",
     "avataaars": "^1.2.1",
     "codesandboxer": "^1.0.3",
     "hoverintent": "^2.2.1",

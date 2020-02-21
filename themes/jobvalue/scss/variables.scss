@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oswald:500,700|Roboto+Condensed:300,400,700&display=swap');
 
 // Variables
 $white: #fff;
@@ -36,7 +36,14 @@ $sizes: (
   50: 50%,
   75: 75%,
   90: 90%,
-  100: 100%
+  100: 100%,
+);
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  facebook: #3b5998,
+  linkedin: #00669c,
 );
 
 // Body
@@ -68,15 +75,19 @@ $line-height-sm: $line-height-base;
 // $font-family-sans-serif: 'Avenir', 'Ubuntu', 'Muli', -apple-system,
 //   BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
 //   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$font-family-sans-serif: "Ubuntu", "Muli", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: 'Roboto Condensed', 'Muli', -apple-system,
+  BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-serif: 'Oswald', 'Muli', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
 $font-weight-base: 300;
 
 $headings-font-weight: 400;
+$headings-font-family: $font-family-serif;
 
 // Tables
-$table-cell-padding: $spacer $spacer * $line-height-base;
+$table-cell-padding: $spacer $spacer;
 $table-border-color: #fafafa;
 
 // Buttons
@@ -100,9 +111,10 @@ $input-btn-border-width: $border-width;
 
 $form-group-margin-bottom: $grid-gutter-width;
 $input-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-$input-border-color: $border-color;
+$input-bg-color: $white;
+$input-border-color: $gray-200;
 $custom-file-text: (
-  en: "Browse"
+  en: 'Browse',
 ) !default;
 
 $input-group-addon-color: $gray-700;
@@ -145,7 +157,7 @@ $navbar-toggler-padding-x: 0;
 // Cards
 $card-spacer-y: 1.25rem;
 // $card-border-width: 0;
-$card-border-color: rgba($black, 0.075);
+$card-border-color: $border-color;
 $card-cap-bg: rgba($white, 0.03) !default;
 
 $list-group-border-color: $border-color;
