@@ -1,5 +1,13 @@
 # @jobvalue/website
 
+## 0.1.3
+
+### Patch Changes
+
+- 3730194: Public pages
+- Updated dependencies [3730194]
+  - @jobvalue/themes-stipendiogiusto@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes
