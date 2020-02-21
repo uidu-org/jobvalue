@@ -3,9 +3,6 @@ import SalariesComparator from '..';
 import { salaries } from '../examples-utils/index';
 
 export default function Basic() {
-  const salaryDataForChart = salaries.filter(
-    item => item.exSense === 1 && item.exCodesense === 1,
-  );
   return (
     <>
       <div className="mb-4">

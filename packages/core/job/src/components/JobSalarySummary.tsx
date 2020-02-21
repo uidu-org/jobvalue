@@ -34,11 +34,11 @@ export default class JobSalarySummary extends PureComponent<any> {
 
       chart.data = [
         {
-          country: 'Lithuania',
+          country: 'RAL',
           value: 401,
         },
         {
-          country: 'Czech Republic',
+          country: 'Variabile',
           value: 300,
         },
       ];
