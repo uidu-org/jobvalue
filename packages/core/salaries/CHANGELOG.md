@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.5
+
+### Patch Changes
+
+- 48c0004: Fixes
+
 ## 0.1.4
 
 ### Patch Changes
