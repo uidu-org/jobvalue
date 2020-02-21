@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.8
+
+### Patch Changes
+
+- 48c0004: Fixes
+
 ## 0.1.7
 
 ### Patch Changes

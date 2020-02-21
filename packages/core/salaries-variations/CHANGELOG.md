@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 0.1.7
+
+### Patch Changes
+
+- 48c0004: Fixes
+- Updated dependencies [48c0004]
+  - @jobvalue/salaries@0.1.5
+
 ## 0.1.6
 
 ### Patch Changes
