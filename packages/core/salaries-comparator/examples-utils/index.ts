@@ -896,7 +896,7 @@ export const salaries = [
     exSenseName: 'dato nazionale',
     exCodesense: 1,
     exCodesenseName: 'dato nazionale',
-    value: 209000,
+    value: 98284,
     percentage: 100,
   },
   {

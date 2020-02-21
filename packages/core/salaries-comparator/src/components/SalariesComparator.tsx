@@ -53,7 +53,7 @@ export default class SalariesComparator extends PureComponent<any> {
     if (salaryDataForChart && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.paddingTop = 0;
-      chart.paddingBottom = 0;
+      chart.paddingBottom = 32;
       chart.paddingRight = 32;
       chart.paddingLeft = 32;
       chart.data = data;
@@ -72,8 +72,8 @@ export default class SalariesComparator extends PureComponent<any> {
       valueAxis.renderer.labels.template.disabled = true;
       //valueAxis.title.text = "Litres sold (M)";
 
-      // createGrid(valueAxis, 0, 'Minimo');
-      // createGrid(valueAxis, data[99].value, 'Massimo');
+      createGrid(valueAxis, 0, 'Minimo');
+      createGrid(valueAxis, data[99].value, 'Massimo');
 
       const series = chart.series.push(new am4charts.LineSeries());
       series.fillOpacity = 0.3;
@@ -122,11 +122,11 @@ export default class SalariesComparator extends PureComponent<any> {
   };
 
   transformData(data: any): any {
-    for (let i = 0; i < data.length; i++) {
-      if (data[i].percentage > 50 && data[i].percentage <= 100) {
-        data[i].percentage = 100 - data[i].percentage + 1;
-      }
-    }
+    // for (let i = 0; i < data.length; i++) {
+    //   if (data[i].percentage > 50 && data[i].percentage <= 100) {
+    //     data[i].percentage = 100 - data[i].percentage + 1;
+    //   }
+    // }
     console.log(data);
     return data;
   }
