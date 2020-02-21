@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.6
+
+### Patch Changes
+
+- bf4a3b8: No padding for comparator
+
 ## 0.1.5
 
 ### Patch Changes
