@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.4
+
+### Patch Changes
+
+- c7b355b: Use PieChart
+
 ## 0.1.3
 
 ### Patch Changes

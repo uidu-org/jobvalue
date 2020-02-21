@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.7
+
+### Patch Changes
+
+- c7b355b: Use PieChart
+
 ## 0.1.6
 
 ### Patch Changes
