@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/website",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "devDependencies": {
     "@types/node": "^13.1.8",
@@ -18,7 +18,7 @@
     "start": "node webpack.config.js"
   },
   "dependencies": {
-    "@jobvalue/themes-stipendiogiusto": "^0.1.0",
+    "@jobvalue/themes-stipendiogiusto": "^0.1.1",
     "@uidu/drawer": "^0.2.10",
     "@uidu/field-text": "^0.1.24",
     "@uidu/modal-dialog": "^0.1.24",
