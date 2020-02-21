@@ -1,7 +1,7 @@
 import Navigation from '@uidu/navigation';
-import { ShellHeader } from '@uidu/shell';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import logo from '../../assets/atlaskit-logo-monochrome.png';
 import { externalPackages as packages } from '../../site';
 import * as fs from '../../utils/fs';
 import defaultNavigations from './navigations/Default';
@@ -35,12 +35,9 @@ export default class Nav extends React.Component<{}, State> {
           render={({ location }) => {
             const schema = [
               {
-                type: 'InlineComponent',
-                component: () => (
-                  <ShellHeader className="px-3 px-xl-4 py-3">
-                    JOBVALUIKIT
-                  </ShellHeader>
-                ),
+                type: 'NavigationHeader',
+                text: 'JobValUIKIT',
+                before: <img src={logo} width={32} className="mr-2" />,
               },
               {
                 type: 'NavigationSection',

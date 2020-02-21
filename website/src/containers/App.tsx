@@ -102,7 +102,7 @@ export default class App extends React.Component<{}, State> {
                 <Shell>
                   <ShellContent>
                     <ShellNavigation
-                      className="d-lg-flex d-none shadow-sm"
+                      className="d-lg-flex d-none shadow-sm bg-white"
                       style={{
                         flex: '1 0 22%',
                         maxWidth: '18rem',
