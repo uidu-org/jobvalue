@@ -9,7 +9,5 @@ export type LabourCostProps = {
   mySalary: number;
 
   fullWidth?: boolean;
-  substituteKey?: string;
-  substituteWith?: string;
   isAutonomous?: boolean;
 };

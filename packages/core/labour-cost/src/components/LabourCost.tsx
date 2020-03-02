@@ -178,16 +178,9 @@ export default class LabourCostChart extends PureComponent<LabourCostProps> {
   }
 
   render() {
-    const {
-      labourCost,
-      substituteKey,
-      substituteWith,
-      isAutonomous,
-    } = this.props;
+    const { labourCost } = this.props;
 
     if (labourCost) {
-      const labourCostWithCorrectedValues = labourCost;
-      labourCostWithCorrectedValues[substituteKey] = substituteWith;
       return (
         <div style={{ overflowX: 'auto' }}>
           <div id={this.uuid} style={{ width: '100%', height: 350 }} />
