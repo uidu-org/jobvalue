@@ -5,60 +5,68 @@ import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
+import { LabourCostProps, LabourCostRecord } from '../types';
 
 am4core.useTheme(am4themesAnimated);
 am4core.options.commercialLicense = true;
 
-const manipulate = ({ labourCost, mySalary, isAutonomous }) => {
-  return labourCost.reduce((res, item) => {
-    res.push({
-      color: 'rgb(243, 141, 13)',
-      name: 'Costo Azienda',
-      open: 0,
-      value: isAutonomous ? mySalary : item.yearlyCompany,
-      stepValue: isAutonomous ? mySalary : item.yearlyCompany,
-      displayValue: isAutonomous ? mySalary : item.yearlyCompany,
-    });
-    res.push({
-      color: 'rgba(56, 109, 166, .7)',
-      name: 'Costo del lavoro',
-      open: isAutonomous ? item.yearlyGross : mySalary,
-      value: isAutonomous ? mySalary : item.yearlyCompany,
-      stepValue: isAutonomous ? item.yearlyGross : mySalary,
-      displayValue: isAutonomous
-        ? mySalary - item.yearlyGross
-        : item.yearlyCompany - mySalary,
-    });
-    res.push({
-      color: 'rgba(56, 109, 166, .7)',
-      name: 'Retribuzione Annua Lorda',
-      open: 0,
-      value: isAutonomous ? item.yearlyGross : mySalary,
-      displayValue: isAutonomous ? item.yearlyGross : mySalary,
-      stepValue: isAutonomous ? item.yearlyGross : mySalary,
-    });
-    res.push({
-      color: 'rgba(56, 109, 166, .3)',
-      name: 'Imposte sul lavoro',
-      open: item.yearlyNet,
-      value: isAutonomous ? item.yearlyGross : mySalary,
-      displayValue:
-        (isAutonomous ? item.yearlyGross : mySalary) - item.yearlyNet,
-      stepValue: item.yearlyNet,
-    });
-    res.push({
-      color: 'rgba(56, 109, 166, .3)',
-      name: 'Retribuzione Annua Netta',
-      open: 0,
-      value: item.yearlyNet,
-      displayValue: item.yearlyNet,
-      stepValue: item.yearlyNet,
-    });
-    return res;
-  }, []);
+const manipulate = ({
+  labourCost,
+  mySalary,
+  isAutonomous,
+}: {
+  labourCost: LabourCostRecord;
+  mySalary: number;
+  isAutonomous: boolean;
+}) => {
+  const res = [];
+  res.push({
+    color: 'rgb(243, 141, 13)',
+    name: 'Costo Azienda',
+    open: 0,
+    value: isAutonomous ? mySalary : labourCost.yearlyCompany,
+    stepValue: isAutonomous ? mySalary : labourCost.yearlyCompany,
+    displayValue: isAutonomous ? mySalary : labourCost.yearlyCompany,
+  });
+  res.push({
+    color: 'rgba(56, 109, 166, .7)',
+    name: 'Costo del lavoro',
+    open: isAutonomous ? labourCost.yearlyGross : mySalary,
+    value: isAutonomous ? mySalary : labourCost.yearlyCompany,
+    stepValue: isAutonomous ? labourCost.yearlyGross : mySalary,
+    displayValue: isAutonomous
+      ? mySalary - labourCost.yearlyGross
+      : labourCost.yearlyCompany - mySalary,
+  });
+  res.push({
+    color: 'rgba(56, 109, 166, .7)',
+    name: 'Retribuzione Annua Lorda',
+    open: 0,
+    value: isAutonomous ? labourCost.yearlyGross : mySalary,
+    displayValue: isAutonomous ? labourCost.yearlyGross : mySalary,
+    stepValue: isAutonomous ? labourCost.yearlyGross : mySalary,
+  });
+  res.push({
+    color: 'rgba(56, 109, 166, .3)',
+    name: 'Imposte sul lavoro',
+    open: labourCost.yearlyNet,
+    value: isAutonomous ? labourCost.yearlyGross : mySalary,
+    displayValue:
+      (isAutonomous ? labourCost.yearlyGross : mySalary) - labourCost.yearlyNet,
+    stepValue: labourCost.yearlyNet,
+  });
+  res.push({
+    color: 'rgba(56, 109, 166, .3)',
+    name: 'Retribuzione Annua Netta',
+    open: 0,
+    value: labourCost.yearlyNet,
+    displayValue: labourCost.yearlyNet,
+    stepValue: labourCost.yearlyNet,
+  });
+  return res;
 };
 
-export default class LabourCostChart extends PureComponent<any> {
+export default class LabourCostChart extends PureComponent<LabourCostProps> {
   private chart: am4charts.XYChart = undefined;
   private uuid = uuid();
 
@@ -177,28 +185,23 @@ export default class LabourCostChart extends PureComponent<any> {
       isAutonomous,
     } = this.props;
 
-    if (!labourCost.length) {
-      return null;
+    if (labourCost) {
+      const labourCostWithCorrectedValues = labourCost;
+      labourCostWithCorrectedValues[substituteKey] = substituteWith;
+      return (
+        <div style={{ overflowX: 'auto' }}>
+          <div id={this.uuid} style={{ width: '100%', height: 350 }} />
+        </div>
+      );
     }
 
-    const labourCostWithCorrectedValues = labourCost;
-    labourCostWithCorrectedValues[0][substituteKey] = substituteWith;
-
     return (
-      <>
-        {labourCost ? (
-          <div style={{ overflowX: 'auto' }}>
-            <div id={this.uuid} style={{ width: '100%', height: 350 }} />
-          </div>
-        ) : (
-          <div
-            className="d-flex align-items-center justify-content-center"
-            style={{ height: '400px' }}
-          >
-            <Spinner />
-          </div>
-        )}
-      </>
+      <div
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: '400px' }}
+      >
+        <Spinner />
+      </div>
     );
   }
 }
