@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.9
+
+### Patch Changes
+
+- d92731f: Fix piechrt values
+
 ## 0.1.8
 
 ### Patch Changes
