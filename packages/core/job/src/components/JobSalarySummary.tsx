@@ -35,11 +35,11 @@ export default class JobSalarySummary extends PureComponent<any> {
       chart.data = [
         {
           country: 'RAL',
-          value: 401,
+          value: mySalary.ral,
         },
         {
           country: 'Variabile',
-          value: 300,
+          value: mySalary.addToRal,
         },
       ];
       chart.radius = am4core.percent(70);
