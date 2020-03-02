@@ -1,5 +1,11 @@
 # @jobvalue/salaries-variations
 
+## 0.1.8
+
+### Patch Changes
+
+- 6d7d875: Bump dependencies, fix labour cost
+
 ## 0.1.7
 
 ### Patch Changes
