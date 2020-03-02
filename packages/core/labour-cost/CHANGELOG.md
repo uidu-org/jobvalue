@@ -1,5 +1,11 @@
 # @jobvalue/labour-cost
 
+## 0.1.6
+
+### Patch Changes
+
+- d326f6b: Fixed labour cost substitue
+
 ## 0.1.5
 
 ### Patch Changes
