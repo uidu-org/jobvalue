@@ -1,5 +1,11 @@
 # @jobvalue/website
 
+## 0.1.4
+
+### Patch Changes
+
+- 6d7d875: Bump dependencies, fix labour cost
+
 ## 0.1.3
 
 ### Patch Changes
