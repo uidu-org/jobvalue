@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.10
+
+### Patch Changes
+
+- d0af557: Do not shrink icons
+
 ## 0.1.9
 
 ### Patch Changes
