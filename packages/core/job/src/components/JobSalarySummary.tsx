@@ -4,13 +4,20 @@ import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { toEur, toPerc } from '@jobvalue/utils';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
+import { JobSalarySummaryProps } from '../types';
 
 am4core.useTheme(am4themesAnimated);
 am4core.options.commercialLicense = true;
 
-export default class JobSalarySummary extends PureComponent<any> {
+export default class JobSalarySummary extends PureComponent<
+  JobSalarySummaryProps
+> {
   private chart: am4charts.PieChart = undefined;
   private uuid = uuid();
+
+  static defaultProps = {
+    isAutonomous: false,
+  };
 
   componentDidMount() {
     this.drawChart();
@@ -21,8 +28,8 @@ export default class JobSalarySummary extends PureComponent<any> {
   }
 
   drawChart = () => {
-    const { mySalary } = this.props;
-    if (!this.chart) {
+    const { mySalary, isAutonomous } = this.props;
+    if (!this.chart && !isAutonomous) {
       const chart = am4core.create(this.uuid, am4charts.PieChart);
       // const chart = am4core.create(this.uuid, am4charts.TreeMap);
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
@@ -91,14 +98,16 @@ export default class JobSalarySummary extends PureComponent<any> {
   }
 
   render() {
-    const { mySalary } = this.props;
+    const { mySalary, isAutonomous } = this.props;
     return (
       <>
-        <div
-          id={this.uuid}
-          className="bg-light"
-          style={{ width: '100%', height: 150 }}
-        />
+        {!isAutonomous && (
+          <div
+            id={this.uuid}
+            className="bg-light"
+            style={{ width: '100%', height: 150 }}
+          />
+        )}
         <table className="table mb-0">
           <tbody>
             {/* <tr>
@@ -111,26 +120,32 @@ export default class JobSalarySummary extends PureComponent<any> {
               <td className="font-weight-light">Mensilità</td>
               <td className="font-weight-light">{mySalary.months}</td>
             </tr> */}
-            <tr>
-              <th scope="row">
-                RAL <small>Retribuzione annua lorda</small>
-              </th>
-              <th scope="row" className="text-right text-nowrap">
-                {toEur(mySalary.ral)}
-              </th>
-            </tr>
-            <tr>
-              <td>Retribuzione variabile (€)</td>
-              <td className="text-right text-nowrap">
-                {toEur(mySalary.addToRal)}
-              </td>
-            </tr>
-            <tr>
-              <td>Retribuzione variabile (%)</td>
-              <td className="text-right text-nowrap">
-                {toPerc(mySalary.addToRal / mySalary.ral)}
-              </td>
-            </tr>
+            {!isAutonomous && (
+              <tr>
+                <th scope="row">
+                  RAL <small>Retribuzione annua lorda</small>
+                </th>
+                <th scope="row" className="text-right text-nowrap">
+                  {toEur(mySalary.ral)}
+                </th>
+              </tr>
+            )}
+            {mySalary.addToRal && (
+              <>
+                <tr>
+                  <td>Retribuzione variabile (€)</td>
+                  <td className="text-right text-nowrap">
+                    {toEur(mySalary.addToRal)}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Retribuzione variabile (%)</td>
+                  <td className="text-right text-nowrap">
+                    {toPerc(mySalary.addToRal / mySalary.ral)}
+                  </td>
+                </tr>
+              </>
+            )}
             <tr>
               <th scope="row">
                 RGA <small>Retribuzione globale annua</small>

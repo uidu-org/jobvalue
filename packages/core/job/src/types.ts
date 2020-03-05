@@ -36,3 +36,8 @@ export type UserProfileProps = {
   inq: string;
   mySalary: MySalary;
 };
+
+export type JobSalarySummaryProps = {
+  mySalary: MySalary;
+  isAutonomous: boolean;
+};
