@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.11
+
+### Patch Changes
+
+- b76abe4: Account for isAutonomous
+
 ## 0.1.10
 
 ### Patch Changes
