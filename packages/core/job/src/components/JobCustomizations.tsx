@@ -10,7 +10,7 @@ export default function JobCustomizations(props: UserProfileProps) {
       <dl className="mb-0">
         <dd className="d-flex align-items-center justify-content-between">
           <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
-            <Briefcase size={16} className="mr-2" />
+            <Briefcase size={16} className="mr-2 flex-shrink-0" />
             <span className="text-truncate">{industry.name}</span>
           </span>
           <small className="text-muted ml-3 font-weight-light flex-shrink-0">
@@ -19,7 +19,7 @@ export default function JobCustomizations(props: UserProfileProps) {
         </dd>
         <dd className="d-flex align-items-center justify-content-between">
           <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
-            <Tag size={16} className="mr-2" />
+            <Tag size={16} className="mr-2 flex-shrink-0" />
             <span className="text-truncate">
               {ageRangeFromBirthdate(birthdate)}
             </span>
@@ -30,7 +30,7 @@ export default function JobCustomizations(props: UserProfileProps) {
         </dd>
         <dd className="d-flex align-items-center justify-content-between">
           <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
-            <Award size={16} className="mr-2" />
+            <Award size={16} className="mr-2 flex-shrink-0" />
             <span className="text-truncate">{qualification}</span>
           </span>
           <small className="text-muted ml-3 font-weight-light flex-shrink-0">
@@ -39,7 +39,7 @@ export default function JobCustomizations(props: UserProfileProps) {
         </dd>
         <dd className="d-flex align-items-center justify-content-between">
           <span className="d-flex align-items-center" style={{ minWidth: 0 }}>
-            <User size={16} className="mr-2" />
+            <User size={16} className="mr-2 flex-shrink-0" />
             <span className="text-truncate">{gender}</span>
           </span>
           <small className="text-muted ml-3 font-weight-light flex-shrink-0">
