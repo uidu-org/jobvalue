@@ -1,5 +1,13 @@
 # @jobvalue/salaries
 
+## 0.1.6
+
+### Patch Changes
+
+- 14fde3c: Added Salaries compact mode
+- Updated dependencies [14fde3c]
+  - @jobvalue/utils@0.1.4
+
 ## 0.1.5
 
 ### Patch Changes
