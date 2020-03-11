@@ -3,44 +3,37 @@ import FieldText from '@uidu/field-text';
 import FieldTextarea from '@uidu/field-textarea';
 import Select from '@uidu/select';
 import React, { useState } from 'react';
+import { BillingProps } from '../types';
 
-export default function Billing(props: any) {
-  const [billingKind, setBillingKind] = useState('individual');
+export default function Billing({
+  defaultBillingKind = 'personal',
+  billingKinds = [{ id: 'personal', name: 'Persona Fisica' }],
+}: BillingProps) {
+  const [billingKind, setBillingKind] = useState(defaultBillingKind);
   return (
     <>
-      <Select
-        styles={{
-          control: (base, state) => ({
-            ...base,
-            backgroundColor: '#fff',
-          }),
-          valueContainer: (base, state) => ({
-            ...base,
-            padding:
-              state.isMulti && state.hasValue
-                ? 'calc(.5rem - 3px) .5rem'
-                : '.75rem 1rem',
-          }),
-        }}
-        label="Tipologia"
-        name="billing_kind"
-        options={[
-          {
-            id: 'company',
-            name: 'Azienda',
-          },
-          {
-            id: 'individual',
-            name: 'Ditta individuale / Libero professionista',
-          },
-          {
-            id: 'personal',
-            name: 'Persona fisica',
-          },
-        ]}
-        onChange={(_name, value) => setBillingKind(value)}
-        value={billingKind}
-      />
+      {billingKinds.length > 1 && (
+        <Select
+          styles={{
+            control: (base, state) => ({
+              ...base,
+              backgroundColor: '#fff',
+            }),
+            valueContainer: (base, state) => ({
+              ...base,
+              padding:
+                state.isMulti && state.hasValue
+                  ? 'calc(.5rem - 3px) .5rem'
+                  : '.75rem 1rem',
+            }),
+          }}
+          label="Tipologia"
+          name="billing_kind"
+          options={billingKinds}
+          onChange={(_name, value) => setBillingKind(value)}
+          value={billingKind}
+        />
+      )}
       {billingKind === 'company' ? (
         <FieldText
           name="billing_company_name"
