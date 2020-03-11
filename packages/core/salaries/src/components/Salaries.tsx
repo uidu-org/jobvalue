@@ -30,11 +30,17 @@ export default class Salaries extends PureComponent<SalariesProps> {
   }
 
   drawChart = () => {
-    const { salaryDataForChart, series, colors, fullWidth } = this.props;
+    const {
+      salaryDataForChart,
+      series,
+      colors,
+      fullWidth,
+      compactMode,
+    } = this.props;
     if (salaryDataForChart && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;
-      chart.paddingTop = 48;
+      chart.paddingTop = compactMode ? 16 : 48;
       if (fullWidth) {
         chart.paddingRight = 0;
         chart.paddingLeft = 0;
@@ -123,28 +129,30 @@ export default class Salaries extends PureComponent<SalariesProps> {
       chart.cursor.lineX.strokeWidth = 0;
       chart.cursor.behavior = 'none';
 
-      this.createRange(
-        categoryAxis,
-        '1° Decile',
-        '1° Decile',
-        am4core.color('rgba(242, 141, 14, .3)'),
-        'Sotto mercato',
-      );
-      this.createRange(
-        categoryAxis,
-        '1° Decile',
-        '9° Decile',
+      if (!compactMode) {
+        this.createRange(
+          categoryAxis,
+          '1° Decile',
+          '1° Decile',
+          am4core.color('rgba(242, 141, 14, .3)'),
+          'Sotto mercato',
+        );
+        this.createRange(
+          categoryAxis,
+          '1° Decile',
+          '9° Decile',
 
-        am4core.color('rgba(255, 255, 255, .5)'),
-        'In linea con il mercato',
-      );
-      this.createRange(
-        categoryAxis,
-        '9° Decile',
-        '9° Decile',
-        am4core.color('rgba(242, 141, 14, .3)'),
-        'Sopra mercato',
-      );
+          am4core.color('rgba(255, 255, 255, .5)'),
+          'In linea con il mercato',
+        );
+        this.createRange(
+          categoryAxis,
+          '9° Decile',
+          '9° Decile',
+          am4core.color('rgba(242, 141, 14, .3)'),
+          'Sopra mercato',
+        );
+      }
 
       this.chart = chart;
     }

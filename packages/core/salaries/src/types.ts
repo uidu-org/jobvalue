@@ -40,6 +40,7 @@ export type SalariesProps = {
   series: Array<SalaryKinds>;
   mySalary?: number;
   fullWidth?: boolean;
+  compactMode?: boolean;
   colors: {
     ral?: string;
     rga?: string;

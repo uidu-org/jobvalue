@@ -1,4 +1,4 @@
-import { salaryForChart } from '@jobvalue/utils';
+import { salaryForChart, salaryForChartCompactMode } from '@jobvalue/utils';
 import React from 'react';
 import Salaries, { SalariesTable } from '..';
 import { salaryDataForChart } from '../examples-utils';
@@ -35,6 +35,26 @@ export default function Basic() {
           colors={{ rga: '#f28d0e', ral: '#f28d0e' }}
         />
         <SalariesTable salaryDataForChart={salaries} />
+      </div>
+      <div className="card mb-5">
+        <div className="card-header">Dati retributivi (RGA) compact mode</div>
+        <Salaries
+          compactMode
+          salaryDataForChart={salaryForChartCompactMode(salaryDataForChart, {
+            color: '#386da7',
+            ral: 24000,
+            rga: 25000,
+          })}
+          series={['rga']}
+          colors={{ rga: '#f28d0e', ral: '#f28d0e' }}
+        />
+        <SalariesTable
+          salaryDataForChart={salaryForChartCompactMode(salaryDataForChart, {
+            color: '#386da7',
+            ral: 24000,
+            rga: 25000,
+          })}
+        />
       </div>
     </>
   );

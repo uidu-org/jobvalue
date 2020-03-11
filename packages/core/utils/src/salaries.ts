@@ -10,18 +10,29 @@ export const salaryBySenses = state => {
   return groupBy(salary.items, 'sense_id');
 };
 
+export const salaryForChartCompactMode = (
+  salaries: Array<Salary>,
+  mySalary?: { ral: number; rga: number; color?: string },
+  curves = [
+    { name: 'Minimo', key: 'perc_10' },
+    { name: 'Medio', key: 'average' },
+    { name: 'Massimo', key: 'perc_90' },
+  ],
+) => salaryForChart(salaries, mySalary, curves);
+
 export const salaryForChart = (
   salaries: Array<Salary>,
   mySalary?: { ral: number; rga: number; color?: string },
-) => {
-  const out = [
+  curves = [
     // { name: 'Media', key: 'average' },
     { name: '1° Decile', key: 'perc_10' },
     { name: '1° Quartile', key: 'perc_25' },
     { name: 'Mediana', key: 'perc_50' },
     { name: '3° Quartile', key: 'perc_75' },
     { name: '9° Decile', key: 'perc_90' },
-  ].map(legend => {
+  ],
+) => {
+  const out = curves.map(legend => {
     const res: { name: string; rga?: number; ral?: number; color?: string } = {
       name: legend.name,
     };
