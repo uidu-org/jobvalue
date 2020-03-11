@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.3
+
+### Patch Changes
+
+- b156136: Better compact mode, billing with types and customizable billing kinds
+
 ## 0.1.2
 
 ### Patch Changes
