@@ -125,8 +125,8 @@ export default class SalariesComparator extends PureComponent<any> {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.paddingTop = 0;
       chart.paddingBottom = 0;
-      chart.paddingRight = 8;
-      chart.paddingLeft = 8;
+      chart.paddingRight = 16;
+      chart.paddingLeft = 16;
       chart.data = data;
       chart.maskBullets = true;
       chart.responsive.enabled = true;
