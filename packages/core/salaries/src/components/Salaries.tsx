@@ -49,6 +49,26 @@ export default class Salaries extends PureComponent<SalariesProps> {
       chart.data = salaryDataForChart;
       chart.responsive.enabled = true;
 
+      chart.responsive.rules.push({
+        relevant: function(target) {
+          if (target.pixelWidth <= 400) {
+            return true;
+          }
+          return false;
+        },
+        state: function(target, stateId) {
+          if (target instanceof am4charts.Chart) {
+            let state = target.states.create(stateId);
+            state.properties.paddingTop = 0;
+            state.properties.paddingRight = 0;
+            state.properties.paddingBottom = 5;
+            state.properties.paddingLeft = 0;
+            return state;
+          }
+          return null;
+        },
+      });
+
       const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
       categoryAxis.renderer.minGridDistance = 30;
       categoryAxis.renderer.grid.template.disabled = true;
