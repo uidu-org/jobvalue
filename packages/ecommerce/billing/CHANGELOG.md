@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.6
+
+### Patch Changes
+
+- 9dd4be3: Added cf validation
+
 ## 0.1.5
 
 ### Patch Changes
