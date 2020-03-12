@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/salaries",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "module": "index.js",
   "types": "index.d.ts",
   "license": "MIT",

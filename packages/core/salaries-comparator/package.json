@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/salaries-comparator",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",

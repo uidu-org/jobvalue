@@ -1,5 +1,11 @@
 # @jobvalue/company-benchmarks
 
+## 0.1.3
+
+### Patch Changes
+
+- 99f054d: Wip responsive, fix salaries comparator
+
 ## 0.1.2
 
 ### Patch Changes
