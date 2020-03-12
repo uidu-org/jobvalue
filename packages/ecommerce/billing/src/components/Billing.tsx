@@ -94,7 +94,12 @@ export default function Billing({
         name="billing_address"
         required={billingKind === 'company'}
       />
-      <FieldGeosuggest name="billing_city" label="Comune" required />
+      <FieldGeosuggest
+        name="billing_city"
+        label="Comune"
+        required
+        onGeocode={console.log}
+      />
       <FieldText type="hidden" name="billing_zip" label="CAP" required />
       <FieldText
         type="hidden"

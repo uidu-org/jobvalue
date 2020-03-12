@@ -1,5 +1,6 @@
 import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
+import * as am4plugins_bullets from '@amcharts/amcharts4/plugins/bullets';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
@@ -21,7 +22,7 @@ export default class SalariesComparator extends PureComponent<any> {
   private uuid = uuid();
 
   static defaultProps = {
-    height: 64,
+    height: 128,
   };
 
   componentDidMount() {
@@ -32,7 +33,14 @@ export default class SalariesComparator extends PureComponent<any> {
     this.drawChart();
   }
 
-  createSeries = (chart: am4charts.XYChart, field, name, color) => {
+  createSeries = (
+    chart: am4charts.XYChart,
+    data,
+    valueAxis: am4charts.ValueAxis,
+    field,
+    name,
+    color,
+  ) => {
     console.log(chart.series);
     const series = chart.series.push(new am4charts.ColumnSeries());
     series.name = name;
@@ -46,37 +54,82 @@ export default class SalariesComparator extends PureComponent<any> {
     series.stacked = true;
 
     // Configure columns
-    series.columns.template.width = am4core.percent(60);
+    series.columns.template.height = am4core.percent(20);
     series.columns.template.fill = am4core.color(color);
-    series.columns.template.strokeWidth = 0;
+    series.columns.template.stroke = am4core.color(color);
+    series.columns.template.fillOpacity = 0.6;
+    // series.columns.template.strokeWidth = 0;
+    if (field === 'lessThan') {
+      series.columns.template.column.cornerRadius(3, 0, 3, 0);
+    } else {
+      series.columns.template.column.cornerRadius(0, 3, 0, 3);
+    }
     // series.columns.template.tooltipText =
     //   '[bold]{name}[/]\n[font-size:14px]{categoryX}: {valueY}';
 
-    let label = series.columns.template.createChild(am4core.Label);
-    label.text = '{valueX}%';
-    label.fontWeight = 'bold';
-    label.align = 'center';
-    label.valign = 'middle';
-    label.zIndex = 2;
-    label.fill = am4core.color('#000');
-    label.strokeWidth = 0;
+    let label_range = valueAxis.axisRanges.create();
+    label_range.bullet = new am4core.Triangle();
+    label_range.bullet.width = 15;
+    label_range.bullet.height = 11;
+    label_range.bullet.fill = am4core.color('#c00');
+    label_range.value = data[0].lessThan;
+    label_range.label.text = name;
+    label_range.label.disabled = false;
+    label_range.label.rotation = 0;
+    label_range.label.dy = -10;
+    label_range.label.dx = field === 'lessThan' ? -64 : 64;
+    // range1.label.fill = am4core.color('#0c0');
+    label_range.label.adapter.add('horizontalCenter', function() {
+      return 'middle';
+    });
 
-    let bullet = series.columns.template.createChild(am4core.Circle);
-    // bullet.locationY = 0.5;
-    bullet.align = 'center';
-    bullet.valign = 'middle';
-    bullet.fill = am4core.color('#fff');
-    bullet.strokeWidth = 0;
-    bullet.fillOpacity = 0.3;
-    bullet.radius = 20;
+    label_range.grid.above = true;
+    label_range.grid.stroke = am4core.color('#000');
+    label_range.grid.strokeWidth = 2;
+    label_range.grid.strokeOpacity = 1;
+
+    // percentage
+    let percentage_range = valueAxis.axisRanges.create();
+    percentage_range.value = data[0].lessThan;
+    percentage_range.label.valign = 'top';
+    percentage_range.label.fontWeight = 'bold';
+    percentage_range.label.text = `${data[0][field]}%`;
+    percentage_range.label.disabled = false;
+    percentage_range.label.rotation = 0;
+    percentage_range.label.dy = 10;
+    percentage_range.label.dx = field === 'lessThan' ? -70 : 70;
+    // percentage_range.label.fill = am4core.color('#0c0');
+    percentage_range.label.adapter.add('horizontalCenter', function() {
+      return field === 'lessThan' ? 'left' : 'right';
+    });
+
+    percentage_range.grid.above = true;
+    percentage_range.grid.stroke = am4core.color('#000');
+    percentage_range.grid.strokeWidth = 2;
+    percentage_range.grid.strokeOpacity = 1;
+
+    var pin = new am4plugins_bullets.PinBullet();
+    percentage_range.bullet = pin;
+
+    // Configure
+    pin.dy = -64;
+    pin.layout = 'none';
+    pin.valign = 'top';
+    pin.horizontalCenter = 'left';
+    pin.background.pointerAngle = 90;
+    pin.background.radius = 20;
+    pin.background.fill = am4core.color('#868e96');
+    pin.label = new am4core.Label();
+    pin.label.text = 'Tu';
+    // pin.image = new am4core.Image();
+    // pin.image.href =
+    //   'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/cat.png';
   };
 
   drawChart = () => {
     const { salaryDataForChart, mySalary } = this.props;
 
     const data = manipulateSalariesData(salaryDataForChart, mySalary);
-
-    console.log(data);
 
     if (salaryDataForChart && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
@@ -107,12 +160,21 @@ export default class SalariesComparator extends PureComponent<any> {
       // createGrid(valueAxis, 0, 'Minimo');
       // createGrid(valueAxis, data[99].value, 'Massimo');
 
-      this.createSeries(chart, 'lessThan', 'Minimo', 'rgba(243, 141, 13, .7)');
       this.createSeries(
         chart,
+        data,
+        valueAxis,
+        'lessThan',
+        'Meno di me',
+        '#386da7',
+      );
+      this.createSeries(
+        chart,
+        data,
+        valueAxis,
         'greaterThan',
-        'MAssimo',
-        'rgba(56, 109, 166, .7)',
+        'Più di me',
+        '#f28d0e',
       );
 
       // const series = chart.series.push(new am4charts.ColumnSeries());
