@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.5
+
+### Patch Changes
+
+- f9d59b8: Salaries comparator padding and billing provinces
+
 ## 0.1.4
 
 ### Patch Changes
