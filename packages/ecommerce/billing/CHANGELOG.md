@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.4
+
+### Patch Changes
+
+- 4ad89b7: Fix salaries comparator
+
 ## 0.1.3
 
 ### Patch Changes
