@@ -3,6 +3,7 @@ import FieldNumber from '@uidu/field-number';
 import FieldText from '@uidu/field-text';
 import FieldTextarea from '@uidu/field-textarea';
 import Select from '@uidu/select';
+import CodiceFiscale from 'codice-fiscale-js';
 import React, { useState } from 'react';
 import { BillingProps } from '../types';
 
@@ -83,6 +84,19 @@ export default function Billing({
             name="billing_fiscal_code"
             label="Codice fiscale"
             required
+            validations={{
+              isValidCodiceFiscale: function(values, value: string) {
+                if (value && value !== '') {
+                  try {
+                    const cf = new CodiceFiscale(value);
+                    return cf.isValid();
+                  } catch (error) {
+                    return 'Inserisci un codice fiscale valido';
+                  }
+                }
+                return 'Inserisci un codice fiscale valido';
+              },
+            }}
           />
         </div>
         {billingKind !== 'personal' && (
@@ -108,12 +122,14 @@ export default function Billing({
         required
         options={{ format: '#####', mask: '_', allowEmptyFormatting: true }}
       />
+
       <Select
         options={provinces}
         name="billing_province"
         label="Provincia (Sigla)"
         getOptionValue={({ abbr }) => abbr}
-        required
+        required={provinces.length > 0}
+        isLoading={provinces.length === 0}
       />
     </>
   );

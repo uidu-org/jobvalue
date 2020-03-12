@@ -15,6 +15,7 @@
     "@uidu/field-text": "^0.1.24",
     "@uidu/field-textarea": "^0.1.13",
     "@uidu/form": "^0.1.45",
-    "@uidu/select": "^0.3.0"
+    "@uidu/select": "^0.3.0",
+    "codice-fiscale-js": "^2.2.4"
   }
 }
