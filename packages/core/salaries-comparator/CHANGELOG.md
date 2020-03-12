@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.8
+
+### Patch Changes
+
+- 99f054d: Wip responsive, fix salaries comparator
+
 ## 0.1.7
 
 ### Patch Changes
