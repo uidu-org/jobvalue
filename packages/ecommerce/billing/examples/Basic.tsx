@@ -7,6 +7,7 @@ export default function Basic() {
     <>
       <div className="mb-4">
         <Form
+          onChange={console.log}
           handleSubmit={async model => console.log(model)}
           footerRenderer={({ loading, canSubmit }) => (
             <FormSubmit loading={loading} canSubmit={canSubmit} label="Invia" />
@@ -14,7 +15,7 @@ export default function Basic() {
         >
           <fieldset>
             <legend>Default</legend>
-            <Billing />
+            <Billing provinces={[{ name: 'Bergamo', id: '1', abbr: 'BG' }]} />
           </fieldset>
         </Form>
       </div>
@@ -27,6 +28,7 @@ export default function Basic() {
         <fieldset>
           <legend>Multiple billing kinds</legend>
           <Billing
+            provinces={[{ name: 'Bergamo', id: '1', abbr: 'BG' }]}
             billingKinds={[
               {
                 id: 'company',

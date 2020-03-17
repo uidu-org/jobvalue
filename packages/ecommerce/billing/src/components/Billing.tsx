@@ -122,7 +122,6 @@ export default function Billing({
         required
         options={{ format: '#####', mask: '_', allowEmptyFormatting: true }}
       />
-
       <Select
         options={provinces}
         name="billing_province"

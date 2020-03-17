@@ -20,10 +20,10 @@
   "dependencies": {
     "@jobvalue/themes-stipendiogiusto": "^0.1.2",
     "@uidu/drawer": "^0.2.10",
-    "@uidu/field-text": "^0.1.24",
+    "@uidu/field-text": "^0.2.0",
     "@uidu/modal-dialog": "^0.1.24",
     "@uidu/navigation": "^0.2.17",
-    "@uidu/select": "^0.3.0",
+    "@uidu/select": "^0.4.0",
     "@uidu/shell": "^0.2.1",
     "@uidu/theme": "^0.2.2",
     "avataaars": "^1.2.1",
