@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.10
+
+### Patch Changes
+
+- dec184a: Bump uidu form component, fixed billing
+
 ## 0.1.9
 
 ### Patch Changes

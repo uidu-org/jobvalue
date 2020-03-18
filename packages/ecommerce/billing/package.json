@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/billing",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Billing form for invoicing",
   "main": "index.js",
   "author": "uidu",
