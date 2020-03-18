@@ -4,7 +4,6 @@
   "private": true,
   "devDependencies": {
     "@types/node": "^13.1.8",
-    "@types/react": "^16.9.17",
     "typescript": "^3.7.5"
   },
   "scripts": {

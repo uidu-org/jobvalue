@@ -45,10 +45,11 @@ export default class Benefits extends PureComponent<any> {
       categoryAxis.renderer.minHeight = 110;
       categoryAxis.renderer.grid.template.disabled = true;
       //categoryAxis.renderer.labels.template.disabled = true;
-      let labelTemplate = categoryAxis.renderer.labels.template;
-      labelTemplate.radius = am4core.percent(-60);
-      labelTemplate.location = 0.5;
-      labelTemplate.relativeRotation = 90;
+      // let labelTemplate = categoryAxis.renderer.labels.template;
+      // labelTemplate.radius = am4core.percent(-60);
+      // labelTemplate.location = 0.5;
+      // labelTemplate.truncate = true;
+      // labelTemplate.relativeRotation = 90;
       let valueAxis = chart.yAxes.push(new am4charts.ValueAxis() as any);
       valueAxis.renderer.grid.template.disabled = true;
       valueAxis.renderer.labels.template.disabled = true;
@@ -84,11 +85,28 @@ export default class Benefits extends PureComponent<any> {
   };
 
   render() {
+    const { data } = this.props;
     return (
       <>
+        https://www.amcharts.com/demos/bars-with-moving-bullets/
         <div style={{ overflowX: 'auto' }}>
           <div id="chartdiv" style={{ width: '100%', height: 400 }} />
         </div>
+        {data && (
+          <div className="table-responsive">
+            <table className="table">
+              <thead></thead>
+              <tbody>
+                {data.map(datum => (
+                  <tr>
+                    <td>{datum.name}</td>
+                    <td className="text-right">{datum.value}%</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </>
     );
   }

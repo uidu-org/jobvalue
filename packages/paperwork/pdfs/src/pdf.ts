@@ -13,7 +13,7 @@ export const preparePDF = ({
   console.log(chartIds);
   const promises = [charts[0].exporting.pdfmake];
   charts.forEach(chart => {
-    promises.push(chart.exporting.getImage('jpg', { options: 1 }));
+    promises.push(chart.exporting.getImage('jpg'));
   });
   webpackImages.forEach(element => {
     promises.push(toDataURL(element));
@@ -93,9 +93,13 @@ export const preparePDF = ({
         fontSize: 11,
         font: 'houschkahead',
       },
-      content: content({ chartIds, chartImages }),
+      content: content({
+        chartIds,
+        chartImages,
+      }),
     };
 
+    // @ts-ignore
     return pdfMake.createPdf(doc, null, fonts, vfs);
   });
 };

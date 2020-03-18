@@ -37,9 +37,9 @@
     uuid "^3.1.0"
 
 "@atlaskit/theme@^9.5.1":
-  version "9.5.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-9.5.1.tgz#c866806dd0cc140524ba1083cdba250021914251"
-  integrity sha512-GTTqNfrPuoGC9Yvpu604iIrsFy5ljHcVt19yjpw9QQ5c0cRl+6suAVSJN38OA9+AfACvvPd38UaDbn9xoTAuOQ==
+  version "9.5.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-9.5.2.tgz#a6ede937f5a6870c4acf6a6cbf094b429e0e759d"
+  integrity sha512-I5pUi6Ie0eOAwnuFtgoXsB3NoRoCl5itQtiIaZ106eLB+eYd22H9Qr0KXWvl4RY2Dn82MO3KbnVGMTX7DUSGeg==
   dependencies:
     exenv "^1.2.2"
     prop-types "^15.5.10"
@@ -653,30 +653,30 @@
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
 "@formatjs/intl-displaynames@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-1.2.1.tgz#7560fedc9bde5da15dfa13d4bd69f2e468fd08bb"
-  integrity sha512-gAkRtcCbRrvNX8AhJ+PACWZyh6Txn7FXdoqgYSmfhEMD/O4qwsd6dYTVbuXOlhBzcNSYU4mCn1ov15nrcp4pxg==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-1.2.2.tgz#d0f0edebad96660196d282f609a1169a88a27d4a"
+  integrity sha512-qwYxEWJEIplshOMWyLGl2g0d9g/25oQm8GWWCRcagHhv4YIfSJM5+GCTYNJiQImm10pKfEhoV5ezDs0Pr/8CRA==
   dependencies:
     "@formatjs/intl-utils" "^2.2.0"
 
 "@formatjs/intl-listformat@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-listformat/-/intl-listformat-1.4.1.tgz#a467cc6857808f2eec78e5bdd0ae03b224e89d0c"
-  integrity sha512-AX0o1y5xXyMY4ebZOO+UujMcDhniYDs50KpwGzjUPV+bBILwRYqH/6IprZZG/V8YSOtetZlalZiwzJ50dH6PuQ==
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-listformat/-/intl-listformat-1.4.2.tgz#ed8250107e84faa9fe9fafd8602022e8d9d6a179"
+  integrity sha512-e4ooLDRkNpwlswXLTuSB34catJSWqnYVITBQl+rOLLAdIqVxowqX5ngWCAhaXGIMs58ohaZMor5ikJpUbPhgTA==
   dependencies:
     "@formatjs/intl-utils" "^2.2.0"
 
 "@formatjs/intl-relativetimeformat@^4.5.9":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-relativetimeformat/-/intl-relativetimeformat-4.5.9.tgz#d9b74724a7cbcb4edc9d751b2979195fab4d39cc"
-  integrity sha512-6rgPXQl5MrPPbCuNiHxolzO6xNCHphCVEWW6RWGy7t/Mek70gD7nq1erW8fbQJ0XL/UeAC0Cz/+ggh7vaSsKNA==
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-relativetimeformat/-/intl-relativetimeformat-4.5.10.tgz#5c23775da4366e8e3763c900270711d42a0f4fb7"
+  integrity sha512-lQXqwywTcWL88VV+6RC1xShZjH0ry4/TEQHKGcTF3ObJp2P61EHIu8UftYgFfDqRDSV9/yQBiyStaBZWbHNlzg==
   dependencies:
     "@formatjs/intl-utils" "^2.2.0"
 
-"@formatjs/intl-unified-numberformat@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-unified-numberformat/-/intl-unified-numberformat-3.2.0.tgz#5197987e61ba0972889105e525f1cbe6d91cf46f"
-  integrity sha512-SZMTV/tR0h7nYhS2x69S7zhHXaBmE0ZTR2OIiakt8W7uYWVgcRhu/LgUeVtGzpwPI2ChcOjNMtX/k6y1M9aDNA==
+"@formatjs/intl-unified-numberformat@^3.2.0", "@formatjs/intl-unified-numberformat@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-unified-numberformat/-/intl-unified-numberformat-3.3.0.tgz#0692346a9cd432abb2cd9b6879ddd6592585641a"
+  integrity sha512-wLT3myYq6fUhJYUh53tt5fMok+sUqO3Jy1XeSqYTphP7MmQl38tHqAIL65Dxh7M6/QlDEQTOkMZNpQcnT0AzaQ==
   dependencies:
     "@formatjs/intl-utils" "^2.2.0"
 
@@ -844,7 +844,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.17":
+"@types/react@*", "@types/react@^16.9.23":
   version "16.9.23"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.23.tgz#1a66c6d468ba11a8943ad958a8cb3e737568271c"
   integrity sha512-SsGVT4E7L2wLN3tPYLiF20hmZTPGuzaayVunfgXzUn1x4uHVsKH6QDJQ/TdpHqwsTLd4CwrmQ2vOgxN7gE24gw==
@@ -862,237 +862,237 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-6.2.1.tgz#a236185670a7860f1597cf73bea2e16d001461ba"
   integrity sha512-+beqKQOh9PYxuHvijhVl+tIHvT6tuwOrE9m14zd+MT2A38KoKZhh7pYJ0SNleLtwDsiIxHDsIk9bv01oOxvSvA==
 
-"@uidu/analytics@^0.1.17", "@uidu/analytics@^0.1.19":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@uidu/analytics/-/analytics-0.1.19.tgz#7459a5737c82f3219966a7b08854fdbdd455c015"
-  integrity sha512-i7JKX0iGxBRubpCSriZ532KVpRck6BvNnFzpxEWtLNTuMt05DRzGM6323lrm23n1DElqz0Lt3lXvm0EODLZiKA==
+"@uidu/analytics@^0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@uidu/analytics/-/analytics-0.1.20.tgz#a6f037c35a20d90b38dd1be4f1a179d340e2c925"
+  integrity sha512-Uk2qISqAgTgnX2F9ihVzTod/11uf+Er8V68o8PN2P8F45TXLBRM3W0VTHYkgtzevCVEh7JHN82V6p3nnl56n5Q==
   dependencies:
     "@atlaskit/type-helpers" "^4.1.6"
     prop-types "^15.6.0"
 
-"@uidu/avatar@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@uidu/avatar/-/avatar-0.3.0.tgz#239f3e1b940d4921e6fa7e0a08ddef5e7bc5190f"
-  integrity sha512-k5P806VcbOLew5WagPdeX7jRoaM00UZ+im9toAy3eRpkncoEYNdp+aMWeLJASu1o19Qu9LIJj6p9Z1XUwVf9Lg==
+"@uidu/avatar@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@uidu/avatar/-/avatar-0.3.1.tgz#46500bed9562da97c40ca3649d078fc5c685857d"
+  integrity sha512-c4FaMBP5JAukZibnk3e+gfXlYzFJvSJ6ZvAk6TXpt5Y5mCqCRzdKp9mupC/WPrHwxfH5OR694W5/r/rnqDTdLQ==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/theme" "^0.2.0"
-    "@uidu/tooltip" "^0.1.23"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/theme" "^0.2.3"
+    "@uidu/tooltip" "^0.1.25"
 
-"@uidu/blanket@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@uidu/blanket/-/blanket-0.1.18.tgz#9193860b927144cd6500ce38c7c7e8e48d24d30b"
-  integrity sha512-yHlaZc4I36/ZgNHCi1pFq+sKmPb+XGlDmhlrcl0Q/RDPhl9uzZVwbG/8Um4U3Rrth84Qya2Q++ONUSGfeb5KjA==
+"@uidu/blanket@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@uidu/blanket/-/blanket-0.1.19.tgz#b6939ef28f57261016e8af04af9707a397f8430e"
+  integrity sha512-g1Hg3bk7/rTYGiC1/19b4pbMqGfQEeQ7MZyv83w4d82IHHqq6HTA5b/oDL9Zw6g9jBJq3ruloiQpie4Ub2g/oA==
   dependencies:
-    "@uidu/analytics" "^0.1.17"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/theme" "^0.2.3"
 
-"@uidu/button@^0.1.51", "@uidu/button@^0.1.56":
-  version "0.1.56"
-  resolved "https://registry.yarnpkg.com/@uidu/button/-/button-0.1.56.tgz#4fd50661ee5f0706ae073647943f73d59ec6706e"
-  integrity sha512-16n1c61vxFv5/5YQaGHlHAmmKVwvDBx0C9XwtDwhAAONmmhvS6ewstWY6MAYRS1L8XEfGRYQUyCwqo+pmGSbsA==
+"@uidu/button@^0.1.57":
+  version "0.1.57"
+  resolved "https://registry.yarnpkg.com/@uidu/button/-/button-0.1.57.tgz#ca473027fe6ce75f99dc0821bf2874cdf89c5ac3"
+  integrity sha512-jqdgFNfL3rcayNQgXKy2C2lzdc/FIqVBi2eHFTwu5VkFOCkEl8fuOYZhOF5i3fC2pFdc4Bv9BcRXZAaLOVqUzw==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/spinner" "^0.1.16"
-    "@uidu/theme" "^0.2.2"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/spinner" "^0.1.17"
+    "@uidu/theme" "^0.2.3"
     memoize-one "^5.0.0"
 
-"@uidu/changelog-loader@^0.1.16", "@uidu/changelog-loader@^0.1.17":
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/@uidu/changelog-loader/-/changelog-loader-0.1.17.tgz#918b19b8dbe1c1c4de644a402e4a692314d1ab96"
-  integrity sha512-OAK68N/lqo+JKPPYlS1L/iTxMFWq0drYoNMjUrzpcvh1NKmD/ugS4IdpgTclKFt10Hsq8ebCY6Ne4QhnBh7rMA==
+"@uidu/changelog-loader@^0.1.16", "@uidu/changelog-loader@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@uidu/changelog-loader/-/changelog-loader-0.1.18.tgz#4fff7c221de0b739124338c165b2007288b9468c"
+  integrity sha512-QLsa4OnMcTKEZbwB/AVFzoMkFL+80CxCEKvy9hDZKQS5Ty3q7RRCwuxPdr0TqECpjsq6tUnv5h40olURG108yg==
 
-"@uidu/checkbox@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@uidu/checkbox/-/checkbox-0.2.0.tgz#7d8f651301b410e8632a2ce585ba9800eac1518b"
-  integrity sha512-VQYYUbvYikgLfND8W2FVGx6JTmWGhyEAwc5AsaBjnO/7wQzh40Hy/riE7Ug20IekML78bglPSfvNSltUZ0pBPw==
+"@uidu/checkbox@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@uidu/checkbox/-/checkbox-0.2.1.tgz#8d8609bfc13d93555374af70075849b5191201f8"
+  integrity sha512-EfWTJuMy0NUZ+1eLrLNkUiyvv4fw/GBvawO2s6hHRwK+QCXVBHBIHWE+yA4XkvCLSB7rKctB5EkBkdL4dONmyg==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/field-base" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/field-base" "^0.2.1"
 
-"@uidu/code@^0.1.20":
-  version "0.1.21"
-  resolved "https://registry.yarnpkg.com/@uidu/code/-/code-0.1.21.tgz#c15be63668e01a8b662211826c4b27a37db09ef4"
-  integrity sha512-RfOIjjTLY+5KWXrc9KcOknzZhsv67vX+/Fnn5UcnTX1YqolMIpdAt/uSLAqwxy+fwmmqLo9dQbdwullInL0VBg==
+"@uidu/code@^0.1.22":
+  version "0.1.22"
+  resolved "https://registry.yarnpkg.com/@uidu/code/-/code-0.1.22.tgz#ab0f4e594b4516b70a67b31c86b12c2bfb16e87c"
+  integrity sha512-+lTVFjocwXffmnWtE1ltyoldbd+mjJM4DMkNjHUcZlEo1Hap2H5mnleFtTX14apefgy6TE40ju3F/Ds22urT5A==
   dependencies:
-    "@uidu/theme" "^0.2.0"
+    "@uidu/theme" "^0.2.3"
     memoize-one "^5.0.0"
     react-syntax-highlighter "^12.2.1"
 
-"@uidu/docs@^0.1.39", "@uidu/docs@^0.1.41":
-  version "0.1.43"
-  resolved "https://registry.yarnpkg.com/@uidu/docs/-/docs-0.1.43.tgz#7a5b64b11ca982abd399c1ef6592a727e615cc72"
-  integrity sha512-7ZsvXlOJPLhE4MLoXTcI1mz+MHxgJcthkQwe8mWXlUD9y5LWwPkPJIG/Z2sy7FRUqxERo/TioHEjJFObxBG1+g==
+"@uidu/docs@^0.1.39", "@uidu/docs@^0.1.44":
+  version "0.1.44"
+  resolved "https://registry.yarnpkg.com/@uidu/docs/-/docs-0.1.44.tgz#a5c8f91efe844569b0b475c42f2bbfbe869360ec"
+  integrity sha512-qELHQiS85ZKbJ6W+jqJz8mBVs2i8oGqCNmAEer46ZQvBbeVLZ2PRCIXcP/VMHaDx4FM+2hXlSdJrf1elt1THNg==
   dependencies:
-    "@uidu/button" "^0.1.51"
-    "@uidu/code" "^0.1.20"
-    "@uidu/section-message" "^0.1.19"
-    "@uidu/theme" "^0.2.0"
-    "@uidu/tooltip" "^0.1.23"
+    "@uidu/button" "^0.1.57"
+    "@uidu/code" "^0.1.22"
+    "@uidu/section-message" "^0.1.21"
+    "@uidu/theme" "^0.2.3"
+    "@uidu/tooltip" "^0.1.25"
     pretty-proptypes "^1.0.4"
     react-markings "^1.3.0"
     string-raw "^1.0.1"
 
 "@uidu/drawer@^0.2.10":
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/@uidu/drawer/-/drawer-0.2.13.tgz#7ae900876e1a07b4474d48d1028ab1575d377029"
-  integrity sha512-AnQT4J9M9QIO1JhmiX4Hd5TPnyqHQUUuLKZrq78ioAYnB9q0VnyDeWJ/7uMb4RLcubaFUi1ca8pgMGSiKZAIdg==
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@uidu/drawer/-/drawer-0.2.14.tgz#c531aacb8143cf75be3550906c476150e034d7ec"
+  integrity sha512-4/3hAZb0oDuggWWAO/bO+s/aL7Rkkf3AS8EPs01ruXWl6LbAkJxn+1lKYqDxgdTOgqquBR0fUw4NMXsjdCtzoQ==
   dependencies:
-    "@uidu/analytics" "^0.1.17"
-    "@uidu/blanket" "^0.1.18"
-    "@uidu/docs" "^0.1.41"
-    "@uidu/item" "^0.1.22"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/blanket" "^0.1.19"
+    "@uidu/docs" "^0.1.44"
+    "@uidu/item" "^0.1.25"
+    "@uidu/theme" "^0.2.3"
     chromatism "^3.0.0"
     exenv "^1.2.2"
     react-dom "^16.4.0"
     react-feather "^2.0.3"
     react-transition-group "^4.0.0"
 
-"@uidu/dropdown-menu@^0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@uidu/dropdown-menu/-/dropdown-menu-0.1.22.tgz#7471df6350b404742ddae48ed5ac42bdf70277bc"
-  integrity sha512-hncJsGVaZ1OPhdHWG9rI6n7ZZ6dO78amQDJGCabQzUAgkfptaCZ1bnEvau7th0GsNS2Dv06EVN6iFp1zeOWsbA==
+"@uidu/dropdown-menu@^0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@uidu/dropdown-menu/-/dropdown-menu-0.1.23.tgz#ba72c55cfbdda6259b3577b94b964b05f44b9a04"
+  integrity sha512-FqYVLbfKzgr8xwhIVgQEYD44UyuZWzEWeKS4gMna62C4KwlaQK1nMDKl7vD/mv9eoVLKQ2hiQIWmTVGNjTgZwQ==
   dependencies:
     "@atlaskit/icon" "^20.0.2"
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/button" "^0.1.56"
-    "@uidu/droplist" "^0.1.22"
-    "@uidu/item" "^0.1.24"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/button" "^0.1.57"
+    "@uidu/droplist" "^0.1.23"
+    "@uidu/item" "^0.1.25"
+    "@uidu/theme" "^0.2.3"
     array-find "^1.0.0"
     prop-types "^15.6.0"
     uuid "^7.0.0"
 
-"@uidu/droplist@^0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@uidu/droplist/-/droplist-0.1.22.tgz#5205021db13645a053daa1ff4bdc5ac0ce209c5e"
-  integrity sha512-/QepqhKyAPlgZP3CzYk/VPvfD7ggcJ/5qljNBIqdAJEdIaszPS4mDa4SM9zm158iwblPkEmhQI5tC7h+SWgjWA==
+"@uidu/droplist@^0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@uidu/droplist/-/droplist-0.1.23.tgz#0315b1a4fd7924621871caa03cb2bcbd1d7f1676"
+  integrity sha512-xdhgm9HZryNZ3HxTH/ttssr1H0q6oXVjTL9xjmQyphYRWrlzYWd3g7IG8zySuj3BGwFKLGRleAWqeLtBz2AnkQ==
   dependencies:
     "@atlaskit/icon" "^20.0.2"
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/item" "^0.1.24"
-    "@uidu/layer" "^0.1.11"
-    "@uidu/spinner" "^0.1.16"
-    "@uidu/theme" "^0.2.0"
-    "@uidu/tooltip" "^0.1.24"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/item" "^0.1.25"
+    "@uidu/layer" "^0.1.12"
+    "@uidu/spinner" "^0.1.17"
+    "@uidu/theme" "^0.2.3"
+    "@uidu/tooltip" "^0.1.25"
     classnames "^2.2.6"
     keycode "^2.2.0"
     prop-types "^15.6.0"
 
-"@uidu/field-base@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@uidu/field-base/-/field-base-0.2.0.tgz#24c657f3c0f9c67fbbd5b45746e36c2ee1469fd8"
-  integrity sha512-pSbQlGXoDcjQJMMnocMjQVRVYfHXP8aJaH3cHzyFBaZV73NcoJ4onO7RlcnEUYApQ1Oejl+Ddkv7f6VbapoGJw==
+"@uidu/field-base@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@uidu/field-base/-/field-base-0.2.1.tgz#bea6b34a0b0442cd897488a059b67e3a1ebcfbb5"
+  integrity sha512-LBT75XgMP1s+g3BH6X9ayfkS/H013Ms4786M75/ILQPu1yPunorhH7p/mTiAHXrgIMbVyhQqYKhwRpw2A8xIlQ==
   dependencies:
-    "@uidu/form" "^0.2.0"
+    "@uidu/form" "^0.2.2"
     classnames "^2.2.6"
     formsy-react "^2.0.0"
     react-feather "^2.0.3"
     shortid "^2.2.14"
 
 "@uidu/field-geosuggest@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@uidu/field-geosuggest/-/field-geosuggest-0.2.0.tgz#431c4889c793dcaae44cbafb4408f8200fe56a0a"
-  integrity sha512-keySN2n+Eu3yj4FpvvXCasisgx3avVAC282LxgsNQZaITEH3vUb21WVMyEanZxLH3hCbe68UQUTJdPIHuqPXJw==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@uidu/field-geosuggest/-/field-geosuggest-0.2.1.tgz#f42657dd96d182c739312833e5fcff19fcccc21d"
+  integrity sha512-56yoZvAqnq+i3Cm+ZyknZD3D7kOsVtk5NlSqI11hRAnrv87NG4GbGfbecWC57SoMzCtpzmbds1531/x1w0bg7g==
   dependencies:
-    "@uidu/field-base" "^0.2.0"
-    "@uidu/spinner" "^0.1.16"
+    "@uidu/field-base" "^0.2.1"
+    "@uidu/spinner" "^0.1.17"
     react-feather "^2.0.3"
     use-places-autocomplete "^1.0.2"
 
 "@uidu/field-number@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@uidu/field-number/-/field-number-0.2.0.tgz#d9272594e67f01b83a9202a045eb2f77d36c4366"
-  integrity sha512-5b2KnymVu+ZGb073R7xzuxFgi6mv4MO8LzQAG6hSAv5CY7IAH5NITOS0bLJ9v5XmEaCpZ0ek5lbI1qMmzfS7tQ==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@uidu/field-number/-/field-number-0.2.1.tgz#ef02b6380b5e465f85a1772370ca6ec5fafdcaf0"
+  integrity sha512-sKBZIHqhIEwhNOqkb/gksXFuYjfuGG1CgikmmWsJpdTes3Va+PL65AHCkL4OEkskmwjrdRQYu0v5PqzLvBiyTw==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/field-base" "^0.2.0"
-    "@uidu/field-text" "^0.2.0"
-    "@uidu/form" "^0.2.0"
-    "@uidu/theme" "^0.2.1"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/field-base" "^0.2.1"
+    "@uidu/field-text" "^0.2.5"
+    "@uidu/form" "^0.2.2"
+    "@uidu/theme" "^0.2.3"
     react-number-format "^4.0.6"
 
-"@uidu/field-text@^0.2.0":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@uidu/field-text/-/field-text-0.2.3.tgz#d6a0bdacfa704f5095756bec4b09047d2a3ce168"
-  integrity sha512-urr6zKy23lEGXN3oceooR3PfCOCE/gEiuDTxkM4qlrTInHNGuVtPW4PVxEVf8Xv0QNqlcY3H+sXJ4M4aNF7okQ==
+"@uidu/field-text@^0.2.0", "@uidu/field-text@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@uidu/field-text/-/field-text-0.2.5.tgz#0f2794ebc8804bfd84f3f45ccac2e5fe42b47a06"
+  integrity sha512-fqJdUXVDX4XuP3Cn4oP3zbc3GP3ACcPe+bZ4JtF1OBeVkIQqNPJ0O3m7Qpm1jWiD4HKq4DIuhwq6g9fH4/3BKA==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/field-base" "^0.2.0"
-    "@uidu/form" "^0.2.1"
-    "@uidu/theme" "^0.2.1"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/field-base" "^0.2.1"
+    "@uidu/form" "^0.2.2"
+    "@uidu/theme" "^0.2.3"
 
 "@uidu/field-textarea@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@uidu/field-textarea/-/field-textarea-0.2.0.tgz#722ddbc89bf1e6612dca82843a1292550bc64b78"
-  integrity sha512-QqEQAl3wVMJ0KZTGrzykZu3/UH5oM47se6TYOUQINgfs7z6g6h16RBHYzMT6lU3YbSN0xmHfXFnL0POgoe7PCw==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@uidu/field-textarea/-/field-textarea-0.2.1.tgz#b2e1d64869b5f41f1191030f9009da7053d08249"
+  integrity sha512-9KEWH1CQ6DxgzcDL4W1dA16ieMzrukYT1gGwOOTErWvgEIi9JimVoIwZDcq72n1MFiXMl3h4wib8OqbXKnriCQ==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/field-base" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/field-base" "^0.2.1"
     autosize "^4.0.2"
 
-"@uidu/form@^0.2.0", "@uidu/form@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@uidu/form/-/form-0.2.1.tgz#37c979f28598a2157a03759b526a3752946c925c"
-  integrity sha512-GdRXt97t0+IDG73ger8eyx1B/ZviV57ygRwsPtf/f3XIRoWVoMkW9J7IQjJHns12mUdGCr5WV4CyIVPWjZBtVw==
+"@uidu/form@^0.2.0", "@uidu/form@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@uidu/form/-/form-0.2.2.tgz#94cb88b6ec7522b6920e618b47261bd9905f187c"
+  integrity sha512-O+sCdzklXRHNqwsePwJwcwqKL+YEQ07aZJWnyyuSURuUiX1PV9mtS1d7yus4gTkQysYUa4xiqhlG5f/AMt5PZw==
   dependencies:
     classnames "^2.2.6"
     formsy-react "^2.0.0"
     styled-components "^5.0.0"
 
-"@uidu/fs-loader@^0.1.28", "@uidu/fs-loader@^0.1.29":
-  version "0.1.29"
-  resolved "https://registry.yarnpkg.com/@uidu/fs-loader/-/fs-loader-0.1.29.tgz#827bef9c8c6dd8cab93a213ffa6ba4e95b00332b"
-  integrity sha512-dQVIoS85z6XLKZyGyyBzZhWURNeroIjpGr3x4MMgj9ex56pnzwMfMlORlBQyOuQoWlrAKa94yF6kqA0mwMbG4g==
+"@uidu/fs-loader@^0.1.28", "@uidu/fs-loader@^0.1.30":
+  version "0.1.30"
+  resolved "https://registry.yarnpkg.com/@uidu/fs-loader/-/fs-loader-0.1.30.tgz#67004d75346878b9f1b3efdfcf41468297b1222c"
+  integrity sha512-2/fOvmkDHE5nii0zkXA0a71ZgiXIHnrKack6Xi8XZ1P9Bmk5jPayWOKvHxRvwwJeAWsUgWZOpfEfy7CY1r4hYA==
   dependencies:
-    bolt "^0.24.1"
+    bolt "^0.24.3"
     globby "^11.0.0"
     loader-utils "^1.2.3"
 
-"@uidu/inline-dialog@^0.1.16":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@uidu/inline-dialog/-/inline-dialog-0.1.16.tgz#7ccd6c3160441ecb29e7d6d38959b71de76d9e8e"
-  integrity sha512-b8OHLpayNOJyix3BBqNMft0Ij77M0kN9eAExxmd1ibSigh6N/6VOSRKKq8p4NnVANiXbXBONnDcZ63hKg6YpKg==
+"@uidu/inline-dialog@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@uidu/inline-dialog/-/inline-dialog-0.1.17.tgz#5b83416a0c5d01bdd1ed16e6cb5d8d768681cb03"
+  integrity sha512-M3y6raFqr90YuEiw5QyCHjxOnDeIaM0Jxf25TA8SUAmiYGfrMY5rN4OsHyzX6K/89NjXLVuDss7/t41cSwNc5Q==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/popper" "^0.1.17"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/popper" "^0.1.19"
+    "@uidu/theme" "^0.2.3"
     react-node-resolver "^2.0.1"
 
-"@uidu/item@^0.1.22", "@uidu/item@^0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@uidu/item/-/item-0.1.24.tgz#1bfac1021ed2d6edf4dcd344978221f89be932f8"
-  integrity sha512-dvXSn3QKAj4X21uMbjlvJ15lIUOLBY1N+rGBVz39w3UCcw/lep2L5GCHgUCO9evP0D/cCGhBRI7eLqGj+IwxRA==
+"@uidu/item@^0.1.25":
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/@uidu/item/-/item-0.1.25.tgz#e7bf14e021b8940f741b528b88c42b73c5c54ab3"
+  integrity sha512-ScnXxQjSybRBcwhDQHlWrpfcYFogCZik/+RnJi//h/7UZiMzD5Xf93WNin/3TfxDC+03IvjxNMS2tLTaiY82cw==
   dependencies:
-    "@uidu/avatar" "^0.3.0"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/avatar" "^0.3.1"
+    "@uidu/theme" "^0.2.3"
     polished "^3.0.3"
     prop-types "^15.6.0"
     react-addons-text-content "^0.0.4"
     uuid "^7.0.0"
 
-"@uidu/layer@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@uidu/layer/-/layer-0.1.11.tgz#f282868a01d8dc67b41902cab7a94fb407699219"
-  integrity sha512-0JT5igdHSvWSG/Oscc8Hnl8Urv8X0IDxHTR17pnoV++rWT4ZwomO4tkOR9ZdubsKWUbIAf8Rh1JUIJS1hj+AjQ==
+"@uidu/layer@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@uidu/layer/-/layer-0.1.12.tgz#aa13cffc34f1f3af237dc50bc83acec6afc43952"
+  integrity sha512-GHs4CzjFlYy4Kd3GmrSbBKQkCSX1EXoByTBV+wuHySHALIfTS9zMVoAe5pUfvalfPqaZW4pwn7NO0HG0D959og==
   dependencies:
     popper.js "^1.14.4"
     raf-schd "^4.0.0"
     react-scrolllock "^5.0.0"
 
 "@uidu/modal-dialog@^0.1.24":
-  version "0.1.31"
-  resolved "https://registry.yarnpkg.com/@uidu/modal-dialog/-/modal-dialog-0.1.31.tgz#efb5aec9413c30116a8ff94b948bf2fbb5534812"
-  integrity sha512-+yIyKhGFval/2PCiRBNsNE2wrU7zrNVZdJxjrt7e9DY8RBXTAWcxUryLA7GM3k2UJ0zDXPP0TcF6H5ANCVfgbQ==
+  version "0.1.32"
+  resolved "https://registry.yarnpkg.com/@uidu/modal-dialog/-/modal-dialog-0.1.32.tgz#f41eee110c7c68cf4fb7c0a33d83248d9680390c"
+  integrity sha512-JY25VtEPEF+qP9pQQItFCm/0tTwaCdNF0xcQqdUwDxMM+JrevM1xPIIWTAKDYgXFt8ToY+Fc6aKGKeMM0+rftw==
   dependencies:
     "@atlaskit/icon" "^20.0.2"
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/blanket" "^0.1.18"
-    "@uidu/button" "^0.1.56"
-    "@uidu/form" "^0.2.0"
-    "@uidu/portal" "^0.1.16"
-    "@uidu/theme" "^0.2.1"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/blanket" "^0.1.19"
+    "@uidu/button" "^0.1.57"
+    "@uidu/form" "^0.2.2"
+    "@uidu/portal" "^0.1.17"
+    "@uidu/theme" "^0.2.3"
     exenv "^1.2.2"
     prop-types "^15.6.0"
     raf-schd "^4.0.0"
@@ -1101,30 +1101,30 @@
     react-transition-group "^4.0.0"
     tiny-invariant "^1.0.3"
 
-"@uidu/multi-entry-tools@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@uidu/multi-entry-tools/-/multi-entry-tools-0.0.11.tgz#d8ce5f4ed7f0a36252e6d31b978bc65e75a7809c"
-  integrity sha512-bZwye5jUJpD0ZZFdy1icvHFuLXmsOzwzetcr2ExCGw1BjhxPxH/ln/wVQGwkpOBAGnAxnBfBP5M7dMZ1AJKNSQ==
+"@uidu/multi-entry-tools@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@uidu/multi-entry-tools/-/multi-entry-tools-0.0.12.tgz#77ac941035da67ec4bb89867602f753bbb70bf8d"
+  integrity sha512-Os9UoficlRJVT5M9qsTE8bAeWu9Z8jjvIqBx1WoxxWsXxgk5ctWmv4LQdVE8tVvEt57pWIbM7Dzq4hhlRjfrGg==
 
-"@uidu/nav-info-loader@^0.1.29", "@uidu/nav-info-loader@^0.1.30":
-  version "0.1.30"
-  resolved "https://registry.yarnpkg.com/@uidu/nav-info-loader/-/nav-info-loader-0.1.30.tgz#37ce3c264dfc2913ffae0a86fb4b5d119bd7dbab"
-  integrity sha512-r/CzzFJ+ef3c7ZqWvugpUbh/C/Lmr37uOHwGg5ONyr8MB8h9TGjPJLEMdQzMZVJDRLApaEef/xO2ZAqBN5ZyGg==
+"@uidu/nav-info-loader@^0.1.29", "@uidu/nav-info-loader@^0.1.31":
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/@uidu/nav-info-loader/-/nav-info-loader-0.1.31.tgz#6bcd02dc86307188c12f7ecdef59c2d3176011ff"
+  integrity sha512-szRNZnz/g4TDW9NfO16z+4ISVg1cMyLyiG+eBs/dIaoL/2/nNDMT/RX5+AaICwy1fnxnH2Wd8cSTY5mJw3FVhg==
   dependencies:
-    bolt "^0.24.1"
+    bolt "^0.24.3"
     globby "^11.0.0"
     loader-utils "^1.2.3"
 
 "@uidu/navigation@^0.2.17":
-  version "0.2.23"
-  resolved "https://registry.yarnpkg.com/@uidu/navigation/-/navigation-0.2.23.tgz#21ca0fe55c1c6ed15bbf0043668f98509d539e8c"
-  integrity sha512-4kqd0vp4NyNv9rkq5c/qPyOUILObU3YJ5R1gY4eEYTYeOrw/leIiJK4S3uKtzAX6X/O1bA4pcyIsi659EwCnEg==
+  version "0.2.24"
+  resolved "https://registry.yarnpkg.com/@uidu/navigation/-/navigation-0.2.24.tgz#8b345b0e1b1a520627c946a6101e367d84b902ad"
+  integrity sha512-sNtATagv8UzEw/2LTslCAx2/D1UEqPVGjfJ5GDrxg8I+JWRW972mmekWuo/fBAumSeTk6H3ieuV7N2iHHCI4fw==
   dependencies:
-    "@uidu/dropdown-menu" "^0.1.22"
-    "@uidu/inline-dialog" "^0.1.16"
-    "@uidu/shell" "^0.2.2"
-    "@uidu/theme" "^0.2.0"
-    "@uidu/tooltip" "^0.1.24"
+    "@uidu/dropdown-menu" "^0.1.23"
+    "@uidu/inline-dialog" "^0.1.17"
+    "@uidu/shell" "^0.2.14"
+    "@uidu/theme" "^0.2.3"
+    "@uidu/tooltip" "^0.1.25"
     hoverintent "^2.2.1"
     polished "^3.0.3"
     react-animate-height "^2.0.15"
@@ -1135,98 +1135,98 @@
     react-transition-group "^4.0.0"
     styled-components "^5.0.0"
 
-"@uidu/popper@^0.1.17":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@uidu/popper/-/popper-0.1.18.tgz#da0fb55de6e4ef06730473f86fbb9f3f1ff79ba9"
-  integrity sha512-zFSCTAUTU9E9+nUDmVI6DTvRWZO7ZZckZ5faWsJu2BJVnd3daGCmGD729YSoDky5VLCGIeC/pnOychLqbicJNA==
+"@uidu/popper@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@uidu/popper/-/popper-0.1.19.tgz#495c9c7b7a93edb84a1142300ace197badbb7e1b"
+  integrity sha512-x7FsQ3BrzIcSHAOt8KnGEmSy5O5BnO216ByU8cmrmN9E5jOy2Wo9IFpOzUGqy6jY1o2UJ51hYaIad64uQxor2g==
   dependencies:
     memoize-one "^5.0.0"
     react-popper "^1.3.6"
 
-"@uidu/portal@^0.1.16":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@uidu/portal/-/portal-0.1.16.tgz#0d9b4ff168ba376049eba4a1d197141fae3a9457"
-  integrity sha512-aWVAkMCoqjeRXnMHolAucHfRRMF/ephRgUGUWSx0OkKnuN6JIdSW+HKUPrHdQJI8PT232DiWauywMUpHb6F0IQ==
+"@uidu/portal@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@uidu/portal/-/portal-0.1.17.tgz#6e47050f6bea3f4078641bb515fad44e097a3072"
+  integrity sha512-urWhKMMLD7VONgcwikST1qqnQIgWu9EAMrxrGr0PSauapuH7B78MgfyE3SyPyFAr/3uZGy5xw2NMqIpnziC18w==
   dependencies:
-    "@uidu/theme" "^0.2.0"
+    "@uidu/theme" "^0.2.3"
     tiny-invariant "^1.0.3"
 
-"@uidu/section-message@^0.1.19":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@uidu/section-message/-/section-message-0.1.20.tgz#166bf79295fde183f42532c59770c8dc679c83a9"
-  integrity sha512-j0CCTfwa6YLNTF1h/ESZrIFxwqcamLnAJ+/KnVZpcERvwQzikVPjBawt0EtZgcMS3lmjYW3Eil5CgcJUQQ9KxA==
+"@uidu/section-message@^0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@uidu/section-message/-/section-message-0.1.21.tgz#e35807d8f1029de9811d4a743677f8949586e51d"
+  integrity sha512-nkLOWhUHDcmkpGuCbefbTAP07bB1d/PEtPh3O5+hd1wLkmbaKRj15YxPZeAnOnOFajOOeZJPh/kGcPbvzu8yVQ==
   dependencies:
-    "@uidu/button" "^0.1.56"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/button" "^0.1.57"
+    "@uidu/theme" "^0.2.3"
 
 "@uidu/select@^0.4.0":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@uidu/select/-/select-0.4.2.tgz#4120f541589596d207e1c3f40979221963e3ce66"
-  integrity sha512-fLlgUaGdSm2cum8J8JkZz588ggHHeyqYuiR5zfeQaZZNQB/n8F+ISy1hNxmYRoruxVWF3mzAEfju1/E6g6PsXw==
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@uidu/select/-/select-0.4.3.tgz#668f0768b98d88522e5cb3ba49240ab5a56457a1"
+  integrity sha512-0lItcJsHLy9MZwck3SBW2WShzBKaPIHff8G5jztM9kcU/qBi5POZM24HbQh239JygaMQyNmepuHKxQJ6TBHOfw==
   dependencies:
-    "@uidu/analytics" "^0.1.19"
-    "@uidu/checkbox" "^0.2.0"
-    "@uidu/field-base" "^0.2.0"
-    "@uidu/form" "^0.2.0"
-    "@uidu/spinner" "^0.1.16"
-    "@uidu/theme" "^0.2.1"
-    "@uidu/tooltip" "^0.1.23"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/checkbox" "^0.2.1"
+    "@uidu/field-base" "^0.2.1"
+    "@uidu/form" "^0.2.2"
+    "@uidu/spinner" "^0.1.17"
+    "@uidu/theme" "^0.2.3"
+    "@uidu/tooltip" "^0.1.25"
     focus-trap "^5.0.0"
     react-fast-compare "^3.0.1"
     react-number-format "^4.0.6"
     react-select "^3.0.3"
 
-"@uidu/shell@^0.2.1", "@uidu/shell@^0.2.2":
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/@uidu/shell/-/shell-0.2.13.tgz#0a27ee8fbed78c89fd071b2d5a5fe66364a5c556"
-  integrity sha512-yZnSXmxRVfs3iop1/Jj7U3Cb5ZcxKR02LqGzDbi1pX9xxY+n1hcajdPOopZFTyf1mcBN/0dvyv4CBljPr0H0vg==
+"@uidu/shell@^0.2.1", "@uidu/shell@^0.2.14":
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@uidu/shell/-/shell-0.2.14.tgz#fb1f79c36febf233cf004b183a2e938b7daad21d"
+  integrity sha512-u3+YeN/orbTjTFRVf3DLEbZITjhNm+P3OVd3dnk6PESgoqDm5zFf0aMAJe1exkiE13FMrGgnIucZOROmgaIUiw==
   dependencies:
     "@researchgate/react-intersection-observer" "^1.0.1"
-    "@uidu/spinner" "^0.1.15"
+    "@uidu/spinner" "^0.1.17"
     body-scroll-lock "^2.6.1"
     react-intl "^4.0.0"
     styled-components "^5.0.0"
 
-"@uidu/spinner@^0.1.14", "@uidu/spinner@^0.1.15", "@uidu/spinner@^0.1.16":
-  version "0.1.16"
-  resolved "https://registry.yarnpkg.com/@uidu/spinner/-/spinner-0.1.16.tgz#153a7abc9b5c33a122f689e98d893df0745037ad"
-  integrity sha512-5rxj4M1A64kwvqnd6QGLX0KG/h0Vl3dj2VFQR9u5rZ8/unAdZ/AW9gwjFA4EtLE0Yv7q13AbCukWwZXi7E728g==
+"@uidu/spinner@^0.1.14", "@uidu/spinner@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@uidu/spinner/-/spinner-0.1.17.tgz#13609f5dded1f6759efb8d8291768d3439d28f14"
+  integrity sha512-T1fCoxhLNlv9tmIAwKi+d1+mlpAjoYCgIZpy1ufm1yUAyuPMOnaCo7+q4qQYkLkz61aSd9FVQY8KOLxF3xRknw==
   dependencies:
-    "@uidu/theme" "^0.2.0"
+    "@uidu/theme" "^0.2.3"
     react-dom "^16.4.0"
     react-transition-group "^4.0.0"
 
-"@uidu/theme@^0.2.0", "@uidu/theme@^0.2.1", "@uidu/theme@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@uidu/theme/-/theme-0.2.2.tgz#b97b0d29beadb43590b812a16c33bd7aec18370d"
-  integrity sha512-3CvrZqpoYVQvP/qQL4OwEQl9hPpUTkIu4UJ875g176vrU69gElKtVGAORNX/z4bTDFrgpJeIQYXm8YHMrZXDsg==
+"@uidu/theme@^0.2.2", "@uidu/theme@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@uidu/theme/-/theme-0.2.3.tgz#667aca7e517fbdee214faff53cce36adcf7da225"
+  integrity sha512-T9LoG/aB5saISU9yFRqLH4+rhiuTcbfVevo6lkOwPo6AMd5BTXosJZ0mWNYWMfKowFtxFfb+PBtJ7jG6STZesw==
   dependencies:
     exenv "^1.2.2"
     prop-types "^15.6.0"
 
-"@uidu/tooltip@^0.1.23", "@uidu/tooltip@^0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@uidu/tooltip/-/tooltip-0.1.24.tgz#69ebc0605eea559e8086786576368277529d0397"
-  integrity sha512-nfBD4b47d7FGZbEh1FDzGpK9KFjYERIfWXqup3/q/SK9e7/bifUlvNVAT9o79YmUyM0VRo+brtucUA7aS7W97Q==
+"@uidu/tooltip@^0.1.25":
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/@uidu/tooltip/-/tooltip-0.1.25.tgz#bbc8f849f55a4b3882228b539af45996b8ca14c9"
+  integrity sha512-25j6OhBUts4wbYdnajlAKYfY1kHm0WQjmQvK/sceCpwquuZqUSYGs5wYkVC2U3Yl9Bft/u3J1OBnRfv8H6j+Dg==
   dependencies:
     "@atlaskit/icon" "^20.0.2"
-    "@uidu/analytics" "^0.1.17"
-    "@uidu/popper" "^0.1.17"
-    "@uidu/portal" "^0.1.16"
-    "@uidu/theme" "^0.2.0"
+    "@uidu/analytics" "^0.1.20"
+    "@uidu/popper" "^0.1.19"
+    "@uidu/portal" "^0.1.17"
+    "@uidu/theme" "^0.2.3"
     flushable "^1.0.0"
     react-node-resolver "^2.0.1"
     react-transition-group "^4.0.0"
 
 "@uidu/webpack-config@^0.1.47":
-  version "0.1.55"
-  resolved "https://registry.yarnpkg.com/@uidu/webpack-config/-/webpack-config-0.1.55.tgz#fa1454f06f8623a6d7a1d9bae32b5fb817e2132e"
-  integrity sha512-yE8Fyc6ltqjf6wogbR6/3M/EinGys9qUY70ntM/kFq1xJDdEwINUO/Vy1C2+dms5XRAjwHRh0VzzWi63upd+8A==
+  version "0.1.56"
+  resolved "https://registry.yarnpkg.com/@uidu/webpack-config/-/webpack-config-0.1.56.tgz#decfa3c2fd5abc4d0fd245f1d6080afdb0c270d8"
+  integrity sha512-C3JPYWiwLAXyyUeOdATAKeqAGdlKc6mVvkSGRM4ZzdkZTUV0ApVf8j8PkEBpZ/SaXcnseXicrktxw7Q9ZoaURQ==
   dependencies:
-    "@uidu/changelog-loader" "^0.1.17"
-    "@uidu/fs-loader" "^0.1.29"
-    "@uidu/multi-entry-tools" "^0.0.11"
-    "@uidu/nav-info-loader" "^0.1.30"
+    "@uidu/changelog-loader" "^0.1.18"
+    "@uidu/fs-loader" "^0.1.30"
+    "@uidu/multi-entry-tools" "^0.0.12"
+    "@uidu/nav-info-loader" "^0.1.31"
     babel-loader "^8.0.4"
     bolt "^0.24.3"
     case-sensitive-paths-webpack-plugin "^2.2.0"
@@ -2242,11 +2242,11 @@ body-parser@1.19.0:
     type-is "~1.6.17"
 
 body-scroll-lock@^2.6.1:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-2.7.0.tgz#b76f16d89eb33ec0310d045a6e3f3c33837bfee4"
-  integrity sha512-k7Ld9YTMzuK6BGuJZQiG7pyE+BKDkZhJ2GkzVhpiCu1V6y/CKyyBdI2MOCvyvtNjhiavdHLcTlykWf/gcyaeEg==
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/body-scroll-lock/-/body-scroll-lock-2.7.1.tgz#caf3f9c91773af1ffb684cd66ed9137b5b737014"
+  integrity sha512-hS53SQ8RhM0e4DsQ3PKz6Gr2O7Kpdh59TWU98GHjaQznL7y4dFycEPk7pFQAikqBaUSCArkc5E3pe7CWIt2fZA==
 
-bolt@^0.24.1, bolt@^0.24.3, bolt@^0.24.4:
+bolt@^0.24.3, bolt@^0.24.4:
   version "0.24.5"
   resolved "https://registry.yarnpkg.com/bolt/-/bolt-0.24.5.tgz#6dc21e5628a928a3d547a0bd959fb15540b5149e"
   integrity sha512-tVeTuboDbCQVWQxbsDA8ZXp20j82XN/QxRbzvqMfjgXSV8NoEWYBGhBaOndewnIehvAaHYBSML1ICZRbwMQe6Q==
@@ -4264,9 +4264,9 @@ ejs@^2.6.1:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.341, electron-to-chromium@^1.3.363:
-  version "1.3.377"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.377.tgz#b49d420b36ee6c48b0cd3137bfc7fec75f369b2e"
-  integrity sha512-cm2WzMKf/3dW5+hNANKm8GAW6SwIWOqLTJ6GPCD0Bbw1qJ9Wzm9nmx9M+byzSsgw8CdCv5fb/wzLFqVS5h6QrA==
+  version "1.3.378"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.378.tgz#18c572cbb54bf5b2769855597cdc7511c02b481f"
+  integrity sha512-nBp/AfhaVIOnfwgL1CZxt80IcqWcyYXiX6v5gflAksxy+SzBVz7A7UWR1Nos92c9ofXW74V9PoapzRb0jJfYXw==
 
 elliptic@^6.0.0:
   version "6.5.2"
@@ -6054,25 +6054,25 @@ internal-ip@^4.3.0:
     default-gateway "^4.2.0"
     ipaddr.js "^1.9.0"
 
-intl-format-cache@^4.2.21:
-  version "4.2.21"
-  resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.21.tgz#d8e0bdfc357448f48dc1ab44670dc64a19b24f51"
-  integrity sha512-6pZlBdqTRUuuwRWywPItHY1JQwzQxWcpBHv6w4M8T6bGzAsiL/QmI+XsdOhsqJLaL4ZmTATn1kIkNlMk4VzSLQ==
+intl-format-cache@^4.2.21, intl-format-cache@^4.2.22:
+  version "4.2.22"
+  resolved "https://registry.yarnpkg.com/intl-format-cache/-/intl-format-cache-4.2.22.tgz#b5a7e8af2f439eafebd0c40e3fe6cd8a54e79d1d"
+  integrity sha512-LFa7/3bUN5v6/QqOkcjSryPwffjnX+YiLgYQa9QJqNiHJfFgAnr0ssM/davI1FhgoW398SR36HHhm1X2Poq6NQ==
 
-intl-messageformat-parser@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-4.1.0.tgz#a961385c99318eeaf7721faf9ac8a0f7fea8e391"
-  integrity sha512-FhbRqxBGMifTpsWC0af2w1E0tksU9YzJnYqFJyPYVA5xTLY2pGHHAm/6aWGioDW9MI8p4nDrzJNwlweDq48i1Q==
+intl-messageformat-parser@^4.1.0, intl-messageformat-parser@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-4.1.1.tgz#33a3ac1854a8b9adc18dfc73db018abf91be4c32"
+  integrity sha512-RDmhjncV9VOKZ5nkoeeTxVy6G2kV5ZZNtewT89vj7vkr5NAPjw8/q6xYjUxdLnxNbQPcwno6zTD6j9VC0PW+Ag==
   dependencies:
-    "@formatjs/intl-unified-numberformat" "^3.2.0"
+    "@formatjs/intl-unified-numberformat" "^3.3.0"
 
 intl-messageformat@^8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-8.2.1.tgz#11a539ad7ba815c511d8dafdda66e80fb2e5609d"
-  integrity sha512-ErWE/TIefwVn/0dA3u1haLOpBxe8Gxc0fA4spT6e93eZks+KZiYnGJP/wMnjwxoBnKbBxg18P1nxwBMBQ25f1Q==
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-8.2.2.tgz#4018b9a4576231d651e8745e2c3fe112a5a791a6"
+  integrity sha512-Hmhno0mlmVF27G6M/47TZ2TGH8mjZcuBKtDwu5Db1yEJ/3C4lwEvoDPOYLgHGw7r+qkZAHUMst3UQtKfXf6Ikw==
   dependencies:
-    intl-format-cache "^4.2.21"
-    intl-messageformat-parser "^4.1.0"
+    intl-format-cache "^4.2.22"
+    intl-messageformat-parser "^4.1.1"
 
 invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
@@ -7371,12 +7371,19 @@ mixme@^0.3.1:
   resolved "https://registry.yarnpkg.com/mixme/-/mixme-0.3.5.tgz#304652cdaf24a3df0487205e61ac6162c6906ddd"
   integrity sha512-SyV9uPETRig5ZmYev0ANfiGeB+g6N2EnqqEfBbCGmmJ6MgZ3E4qv5aPbnHVdZ60KAHHXV+T3sXopdrnIXQdmjQ==
 
-mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
+mkdirp@0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+"mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.3.tgz#5a514b7179259287952881e94410ec5465659f8c"
+  integrity sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==
+  dependencies:
+    minimist "^1.2.5"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -11107,7 +11114,7 @@ style-loader@^1.0.0:
     loader-utils "^1.2.3"
     schema-utils "^2.6.4"
 
-styled-components@^5.0.0:
+styled-components@^5.0.0, styled-components@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.0.1.tgz#57782a6471031abefb2db5820a1876ae853bc619"
   integrity sha512-E0xKTRIjTs4DyvC1MHu/EcCXIj6+ENCP8hP01koyoADF++WdBUOrSGwU1scJRw7/YaYOhDvvoad6VlMG+0j53A==

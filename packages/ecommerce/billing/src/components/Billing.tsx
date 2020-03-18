@@ -84,8 +84,9 @@ export default function Billing({
             name="billing_fiscal_code"
             label="Codice fiscale"
             required
+            // @ts-ignore
             validations={{
-              isValidCodiceFiscale: function(values, value: string) {
+              isValidCodiceFiscale: (values, value) => {
                 if (value && value !== '') {
                   try {
                     const cf = new CodiceFiscale(value);
@@ -115,6 +116,7 @@ export default function Billing({
         label="Comune"
         required
         onGeocode={console.log}
+        countryRestricted="it"
       />
       <FieldNumber
         name="billing_zip"
