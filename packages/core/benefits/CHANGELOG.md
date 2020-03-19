@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.5
+
+### Patch Changes
+
+- ff8e5b0: Fix image url for benefits
+
 ## 0.1.4
 
 ### Patch Changes
