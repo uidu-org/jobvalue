@@ -15,7 +15,10 @@ export default function Basic() {
         >
           <fieldset>
             <legend>Default</legend>
-            <Billing provinces={[{ name: 'Bergamo', id: '1', abbr: 'BG' }]} />
+            <Billing
+              provinces={[{ name: 'Bergamo', id: '1', abbr: 'BG' }]}
+              defaultValues={{ billing_zip: 24069 }}
+            />
           </fieldset>
         </Form>
       </div>

@@ -14,12 +14,12 @@ export type BillingProps = {
   billingKinds?: Array<BillingKind>;
   provinces?: Array<Province>;
   defaultValues?: {
-    billing_first_name: string;
-    billing_last_name: string;
-    billing_fiscal_code: string;
-    billing_address: string;
-    billing_city: string;
-    billing_zip: string;
-    billing_province: string;
+    billing_first_name?: string;
+    billing_last_name?: string;
+    billing_fiscal_code?: string;
+    billing_address?: string;
+    billing_city?: string;
+    billing_zip?: number;
+    billing_province?: string;
   };
 };
