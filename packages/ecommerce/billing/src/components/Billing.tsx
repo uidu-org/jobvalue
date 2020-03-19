@@ -11,6 +11,7 @@ export default function Billing({
   defaultBillingKind = 'personal',
   billingKinds = [{ id: 'personal', name: 'Persona Fisica' }],
   provinces = [],
+  defaultValues = null,
 }: BillingProps) {
   const [billingKind, setBillingKind] = useState(defaultBillingKind);
   return (
@@ -49,13 +50,15 @@ export default function Billing({
             <FieldText
               name="billing_first_name"
               label="Nome su fattura"
+              value={defaultValues?.billing_first_name}
               required
             />
           </div>
           <div className="col-sm-6">
             <FieldText
-              name="billing_first_name"
+              name="billing_last_name"
               label="Cognome su fattura"
+              value={defaultValues?.billing_last_name}
               required
             />
           </div>
@@ -84,6 +87,7 @@ export default function Billing({
             name="billing_fiscal_code"
             label="Codice fiscale"
             required
+            value={defaultValues?.billing_fiscal_code}
             // @ts-ignore
             validations={{
               isValidCodiceFiscale: (values, value) => {
@@ -109,18 +113,21 @@ export default function Billing({
       <FieldTextarea
         label="Indirizzo"
         name="billing_address"
+        value={defaultValues?.billing_address}
         required={billingKind === 'company'}
       />
       <FieldGeosuggest
         name="billing_city"
         label="Comune"
         required
+        value={defaultValues?.billing_city}
         onGeocode={console.log}
         countryRestricted="it"
       />
       <FieldNumber
         name="billing_zip"
         label="CAP"
+        value={defaultValues?.billing_zip}
         required
         options={{ format: '#####', mask: '_', allowEmptyFormatting: true }}
       />
@@ -131,6 +138,7 @@ export default function Billing({
         getOptionValue={({ abbr }) => abbr}
         required={provinces.length > 0}
         isLoading={provinces.length === 0}
+        value={defaultValues?.billing_province}
       />
     </>
   );
