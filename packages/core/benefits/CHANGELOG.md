@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.4
+
+### Patch Changes
+
+- 7b2f227: New benefits chart
+
 ## 0.1.3
 
 ### Patch Changes
