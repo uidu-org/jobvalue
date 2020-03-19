@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/benefits",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
