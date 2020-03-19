@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.8
+
+### Patch Changes
+
+- 7690c00: FIX billing default props
+
 ## 0.1.7
 
 ### Patch Changes
