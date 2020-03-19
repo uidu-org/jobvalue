@@ -110,14 +110,7 @@ export default class Benefits extends PureComponent<any> {
       image.height = 20;
       image.verticalCenter = 'middle';
       image.fill = am4core.color('white');
-      image.adapter.add('href', (href, target) => {
-        let category = (target.dataItem as any).categoryY;
-        if (category) {
-          return require(`../assets/${category}.svg`);
-        }
-
-        return href;
-      });
+      image.propertyFields.href = 'image';
 
       this.chart = chart;
     }
