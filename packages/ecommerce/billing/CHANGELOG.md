@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.9
+
+### Patch Changes
+
+- 21a3350: small fixes to billing types
+
 ## 0.1.8
 
 ### Patch Changes
