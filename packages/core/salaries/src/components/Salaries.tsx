@@ -40,7 +40,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
     if (salaryDataForChart && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;
-      chart.paddingTop = compactMode ? 16 : 48;
+      chart.paddingTop = compactMode ? 32 : 48;
       if (fullWidth) {
         chart.paddingRight = 0;
         chart.paddingLeft = 0;
