@@ -94,7 +94,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
       valueAxis.extraMax = series.length === 2 || compactMode ? 0.05 : 0.15;
       valueAxis.renderer.baseGrid.strokeOpacity = 0;
       valueAxis.renderer.labels.template.fillOpacity = 0.3;
-      valueAxis.renderer.grid.template.strokeOpacity = 0.05;
+      valueAxis.renderer.grid.template.strokeOpacity = 0;
 
       if (series.includes('ral')) {
         const ral = chart.series.push(new am4charts.ColumnSeries());
