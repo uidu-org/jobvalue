@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.9
+
+### Patch Changes
+
+- 6e93de7: Remove valueaxis lines
+
 ## 0.1.8
 
 ### Patch Changes
