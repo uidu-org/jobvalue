@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.11
+
+### Patch Changes
+
+- a1fe482: Locale
+
 ## 0.1.10
 
 ### Patch Changes

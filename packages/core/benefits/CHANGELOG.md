@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.7
+
+### Patch Changes
+
+- a1fe482: Locale
+
 ## 0.1.6
 
 ### Patch Changes

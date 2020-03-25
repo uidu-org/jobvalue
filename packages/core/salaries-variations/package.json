@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/salaries-variations",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/salaries": "^0.1.5",
+    "@jobvalue/salaries": "^0.1.11",
     "@jobvalue/utils": "^0.1.4",
     "@uidu/spinner": "^0.1.14",
     "uuid": "^3.4.0"
