@@ -64,12 +64,12 @@ export default class ExVar extends PureComponent<ExVarProps> {
       } else {
         chart.data = [
           {
-            name: 'VAR di mercato (%)',
+            name: 'VAR di mercato (% RAL)',
             value: (salaryDataForChart[1] as any).ex_var,
             color: 'rgb(243, 141, 13)',
           },
           {
-            name: 'La tua VAR (%)',
+            name: 'La tua VAR (% RAL)',
             value: ((mySalary.exVar / mySalary.ral) * 100).toFixed(2),
             color: 'rgba(56, 109, 166, .7)',
           },

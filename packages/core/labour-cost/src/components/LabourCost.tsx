@@ -32,7 +32,7 @@ const manipulate = ({
   });
   res.push({
     color: 'rgba(56, 109, 166, .7)',
-    name: 'Cuneo fiscale azienda',
+    name: 'Cuneo Fiscale Azienda',
     open: isAutonomous ? labourCost.yearlyGross : mySalary,
     value: isAutonomous ? mySalary : labourCost.yearlyCompany,
     stepValue: isAutonomous ? labourCost.yearlyGross : mySalary,
