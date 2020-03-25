@@ -1,5 +1,11 @@
 # @jobvalue/province
 
+## 0.1.3
+
+### Patch Changes
+
+- a1fe482: Locale
+
 ## 0.1.2
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 0.1.9
+
+### Patch Changes
+
+- a1fe482: Locale
+- Updated dependencies [a1fe482]
+  - @jobvalue/salaries@0.1.11
+
 ## 0.1.8
 
 ### Patch Changes
