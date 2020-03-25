@@ -1,5 +1,11 @@
 # @jobvalue/labour-cost
 
+## 0.1.8
+
+### Patch Changes
+
+- 400f5b7: Small copy fixes
+
 ## 0.1.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @jobvalue/salaries-variations
 
+## 0.1.10
+
+### Patch Changes
+
+- 400f5b7: Small copy fixes
+
 ## 0.1.9
 
 ### Patch Changes
