@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.10
+
+### Patch Changes
+
+- e47800f: Added padding
+
 ## 0.1.9
 
 ### Patch Changes
