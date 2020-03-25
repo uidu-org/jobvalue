@@ -1,5 +1,6 @@
 import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
+import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
@@ -27,6 +28,7 @@ export default class Benefits extends PureComponent<any> {
     if (data && !this.chart) {
       // Create chart instance
       let chart = am4core.create(this.uuid, am4charts.XYChart);
+      chart.language.locale = am4lang_it_IT;
       // chart.scrollbarX = new am4core.Scrollbar();
       console.log(data);
       chart.maskBullets = true;

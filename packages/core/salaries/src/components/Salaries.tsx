@@ -9,6 +9,7 @@ import { SalariesProps } from '../types';
 
 am4core.useTheme(am4themesAnimated);
 am4core.options.commercialLicense = true;
+am4core.options.commercialLicense = true;
 
 export default class Salaries extends PureComponent<SalariesProps> {
   private chart: am4charts.XYChart = undefined;
@@ -50,13 +51,13 @@ export default class Salaries extends PureComponent<SalariesProps> {
       chart.responsive.enabled = true;
 
       chart.responsive.rules.push({
-        relevant: function(target) {
+        relevant: function (target) {
           if (target.pixelWidth <= 400) {
             return true;
           }
           return false;
         },
-        state: function(target, stateId) {
+        state: function (target, stateId) {
           if (target instanceof am4charts.Chart) {
             let state = target.states.create(stateId);
             state.properties.paddingTop = 0;

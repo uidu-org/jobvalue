@@ -2,11 +2,13 @@ import * as am4core from '@amcharts/amcharts4/core';
 import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
+import { am4themesJobValue } from '@jobvalue/utils';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 import provinces from '../data/provinces';
 
 am4core.useTheme(am4themesAnimated);
+am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 export default class LabourCostChart extends PureComponent<any> {

@@ -1,5 +1,6 @@
 import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
+import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import * as am4plugins_bullets from '@amcharts/amcharts4/plugins/bullets';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { am4themesJobValue } from '@jobvalue/utils';
@@ -125,6 +126,7 @@ export default class SalariesComparator extends PureComponent<any> {
 
     if (salaryDataForChart && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
+      chart.language.locale = am4lang_it_IT;
       chart.paddingTop = 0;
       chart.paddingBottom = 0;
       chart.paddingRight = 24;

@@ -1,5 +1,6 @@
 import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
+import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { am4themesJobValue, toEur, toPerc } from '@jobvalue/utils';
 import React, { PureComponent } from 'react';
@@ -32,6 +33,7 @@ export default class JobSalarySummary extends PureComponent<
     const { mySalary, isAutonomous } = this.props;
     if (!this.chart && !isAutonomous) {
       const chart = am4core.create(this.uuid, am4charts.PieChart);
+      chart.language.locale = am4lang_it_IT;
       // const chart = am4core.create(this.uuid, am4charts.TreeMap);
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
       // chart.paddingTop = 5;
@@ -41,13 +43,13 @@ export default class JobSalarySummary extends PureComponent<
       chart.tooltip.disabled = true;
       const data = [
         {
-          country: 'RAL',
+          category: 'RAL',
           value: mySalary.ral,
         },
       ];
       if (mySalary.addToRal) {
         data.push({
-          country: 'Var',
+          category: 'VAR',
           value: mySalary.addToRal,
         });
       }
@@ -58,13 +60,21 @@ export default class JobSalarySummary extends PureComponent<
       chart.endAngle = 360;
 
       let series = chart.series.push(new am4charts.PieSeries());
-      series.dataFields.category = 'country';
+      series.dataFields.category = 'category';
       series.dataFields.value = 'value';
       series.slices.template.cornerRadius = 10;
       series.slices.template.innerCornerRadius = 7;
 
       series.hiddenState.properties.startAngle = 90;
       series.hiddenState.properties.endAngle = 90;
+      series.ticks.template.disabled = true;
+      series.alignLabels = false;
+      series.labels.template.fontSize = 14;
+      series.labels.template.textAlign = 'middle';
+      series.labels.template.text =
+        "[bold]{category}[/]\n{value.percent.formatNumber('#.0')}%";
+      series.labels.template.radius = am4core.percent(-20);
+      series.labels.template.fill = am4core.color('white');
 
       this.chart = chart;
     }

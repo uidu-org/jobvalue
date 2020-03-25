@@ -3,11 +3,13 @@ import * as am4core from '@amcharts/amcharts4/core';
 import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { SalaryData } from '@jobvalue/salaries';
+import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 
 am4core.useTheme(am4themesAnimated);
+am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 export default class ExPerc extends PureComponent<{
@@ -54,13 +56,6 @@ export default class ExPerc extends PureComponent<{
       const pieSeries = chart.series.push(new am4charts.PieSeries());
       pieSeries.dataFields.value = 'count';
       pieSeries.dataFields.category = 'country';
-
-      const colorSet = new am4core.ColorSet();
-      colorSet.list = ['#DA291C', '#F8F9FA'].map(color => {
-        // @ts-ignore
-        return new am4core.color(color);
-      });
-      pieSeries.colors = colorSet;
 
       // Let's cut a hole in our Pie chart the size of 40% the radius
       chart.innerRadius = am4core.percent(70);
