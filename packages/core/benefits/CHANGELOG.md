@@ -1,5 +1,13 @@
 # @jobvalue/benefits
 
+## 0.1.6
+
+### Patch Changes
+
+- f271d7f: Color sets
+- Updated dependencies [f271d7f]
+  - @jobvalue/utils@0.1.5
+
 ## 0.1.5
 
 ### Patch Changes

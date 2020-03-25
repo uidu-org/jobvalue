@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/benefits",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.4"
+    "@jobvalue/utils": "^0.1.5"
   },
   "devDependencies": {
     "@uidu/docs": "^0.1.39"

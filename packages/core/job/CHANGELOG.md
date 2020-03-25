@@ -1,5 +1,14 @@
 # @jobvalue/job
 
+## 0.1.12
+
+### Patch Changes
+
+- 7d033c3: Fixed salary summary chart
+- f271d7f: Color sets
+- Updated dependencies [f271d7f]
+  - @jobvalue/utils@0.1.5
+
 ## 0.1.11
 
 ### Patch Changes
