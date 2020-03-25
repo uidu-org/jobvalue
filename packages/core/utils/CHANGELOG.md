@@ -1,5 +1,11 @@
 # @jobvalue/utils
 
+## 0.1.5
+
+### Patch Changes
+
+- f271d7f: Color sets
+
 ## 0.1.4
 
 ### Patch Changes

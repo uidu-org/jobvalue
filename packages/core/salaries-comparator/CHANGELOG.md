@@ -1,5 +1,13 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.11
+
+### Patch Changes
+
+- f271d7f: Color sets
+- Updated dependencies [f271d7f]
+  - @jobvalue/utils@0.1.5
+
 ## 0.1.10
 
 ### Patch Changes
