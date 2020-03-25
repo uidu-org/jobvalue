@@ -1,3 +1,4 @@
+export * from './charts';
 export { default as ArrowUpDown } from './components/ArrowUpDown';
 export * from './converters';
 export * from './formatters';

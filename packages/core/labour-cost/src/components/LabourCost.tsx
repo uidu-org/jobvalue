@@ -2,12 +2,14 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
 import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
+import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 import { LabourCostProps, LabourCostRecord } from '../types';
 
 am4core.useTheme(am4themesAnimated);
+am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 const manipulate = ({
@@ -30,7 +32,7 @@ const manipulate = ({
   });
   res.push({
     color: 'rgba(56, 109, 166, .7)',
-    name: 'Costo del lavoro',
+    name: 'Cuneo fiscale azienda',
     open: isAutonomous ? labourCost.yearlyGross : mySalary,
     value: isAutonomous ? mySalary : labourCost.yearlyCompany,
     stepValue: isAutonomous ? labourCost.yearlyGross : mySalary,
@@ -48,7 +50,7 @@ const manipulate = ({
   });
   res.push({
     color: 'rgba(56, 109, 166, .3)',
-    name: 'Imposte sul lavoro',
+    name: 'Cuneo Fiscale Lavoratore',
     open: labourCost.yearlyNet,
     value: isAutonomous ? labourCost.yearlyGross : mySalary,
     displayValue:

@@ -8,6 +8,7 @@
   "jobvalue:src": "index.ts",
   "private": false,
   "dependencies": {
-    "@amcharts/amcharts4": "^4.8.0"
+    "@amcharts/amcharts4": "^4.8.0",
+    "@jobvalue/utils": "^0.1.4"
   }
 }

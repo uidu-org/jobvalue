@@ -1,11 +1,13 @@
 import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
+import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 
 am4core.useTheme(am4themesAnimated);
+am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 export default class Benefits extends PureComponent<any> {
@@ -76,7 +78,7 @@ export default class Benefits extends PureComponent<any> {
       series.columns.template.strokeWidth = 0;
       series.columns.template.column.cornerRadius(0, 3, 0, 3);
       series.tooltipText = '{valueX}';
-      series.columns.template.adapter.add('fill', function(fill, target) {
+      series.columns.template.adapter.add('fill', function (fill, target) {
         return chart.colors.getIndex(target.dataItem.index);
       });
       series.mainContainer.mask = undefined;

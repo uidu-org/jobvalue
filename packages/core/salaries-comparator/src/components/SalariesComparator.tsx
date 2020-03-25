@@ -2,12 +2,14 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4plugins_bullets from '@amcharts/amcharts4/plugins/bullets';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
+import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 import { manipulateSalariesData } from '../utils';
 
 am4core.useTheme(am4themesAnimated);
+am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 function createGrid(valueAxis: am4charts.ValueAxis, value, text) {
@@ -55,8 +57,8 @@ export default class SalariesComparator extends PureComponent<any> {
 
     // Configure columns
     series.columns.template.height = am4core.percent(15);
-    series.columns.template.fill = am4core.color(color);
-    series.columns.template.stroke = am4core.color(color);
+    // series.columns.template.fill = am4core.color(color);
+    // series.columns.template.stroke = am4core.color(color);
     series.columns.template.fillOpacity = 0.6;
     // series.columns.template.strokeWidth = 0;
     if (field === 'lessThan') {
@@ -89,7 +91,7 @@ export default class SalariesComparator extends PureComponent<any> {
     percentage_range.label.dy = 14;
     percentage_range.label.dx = field === 'lessThan' ? -70 : 70;
     // percentage_range.label.fill = am4core.color('#0c0');
-    percentage_range.label.adapter.add('horizontalCenter', function() {
+    percentage_range.label.adapter.add('horizontalCenter', function () {
       return field === 'lessThan' ? 'left' : 'right';
     });
 

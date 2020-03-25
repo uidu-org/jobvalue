@@ -1,12 +1,13 @@
 import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
-import { toEur, toPerc } from '@jobvalue/utils';
+import { am4themesJobValue, toEur, toPerc } from '@jobvalue/utils';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 import { JobSalarySummaryProps } from '../types';
 
 am4core.useTheme(am4themesAnimated);
+am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 export default class JobSalarySummary extends PureComponent<
@@ -33,10 +34,10 @@ export default class JobSalarySummary extends PureComponent<
       const chart = am4core.create(this.uuid, am4charts.PieChart);
       // const chart = am4core.create(this.uuid, am4charts.TreeMap);
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-      chart.paddingTop = 5;
-      chart.paddingLeft = 5;
-      chart.paddingRight = 5;
-      chart.paddingBottom = 5;
+      // chart.paddingTop = 5;
+      // chart.paddingLeft = 5;
+      // chart.paddingRight = 5;
+      // chart.paddingBottom = 5;
       chart.tooltip.disabled = true;
 
       chart.data = [
@@ -45,7 +46,7 @@ export default class JobSalarySummary extends PureComponent<
           value: mySalary.ral,
         },
         {
-          country: 'Variabile',
+          country: 'Var',
           value: mySalary.addToRal,
         },
       ];
@@ -54,35 +55,11 @@ export default class JobSalarySummary extends PureComponent<
       chart.startAngle = 180;
       chart.endAngle = 360;
 
-      // chart.dataFields.value = 'value';
-      // chart.dataFields.name = 'country';
-
-      //  var level1 = chart.seriesTemplates.create('0');
-      //  level1.tooltip.disabled = true;
-
-      //  var level1_column = level1.columns.template;
-      //  level1_column.column.cornerRadius(10, 10, 10, 10);
-      //  level1_column.fillOpacity = 0.8;
-      //  level1_column.stroke = am4core.color('#f8f9fa');
-      //  level1_column.strokeWidth = 10;
-      //  level1_column.strokeOpacity = 1;
-
-      //  let level1_bullet = level1.bullets.push(
-      //    new am4charts.LabelBullet(),
-      //  );
-      //  level1_bullet.locationY = 0.5;
-      //  level1_bullet.locationX = 0.5;
-      //  level1_bullet.label.text = '{name}\n{value}';
-      //  level1_bullet.label.fill = am4core.color('#fff');
-
       let series = chart.series.push(new am4charts.PieSeries());
       series.dataFields.category = 'country';
       series.dataFields.value = 'value';
       series.slices.template.cornerRadius = 10;
       series.slices.template.innerCornerRadius = 7;
-      series.slices.template.draggable = true;
-      series.slices.template.inert = true;
-      series.alignLabels = false;
 
       series.hiddenState.properties.startAngle = 90;
       series.hiddenState.properties.endAngle = 90;
@@ -105,7 +82,7 @@ export default class JobSalarySummary extends PureComponent<
           <div
             id={this.uuid}
             className="bg-light"
-            style={{ width: '100%', height: 150 }}
+            style={{ width: '100%', height: 200 }}
           />
         )}
         <table className="table mb-0">
