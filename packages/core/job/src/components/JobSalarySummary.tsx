@@ -39,17 +39,19 @@ export default class JobSalarySummary extends PureComponent<
       // chart.paddingRight = 5;
       // chart.paddingBottom = 5;
       chart.tooltip.disabled = true;
-
-      chart.data = [
+      const data = [
         {
           country: 'RAL',
           value: mySalary.ral,
         },
-        {
+      ];
+      if (mySalary.addToRal) {
+        data.push({
           country: 'Var',
           value: mySalary.addToRal,
-        },
-      ];
+        });
+      }
+      chart.data = data;
       chart.radius = am4core.percent(70);
       chart.innerRadius = am4core.percent(40);
       chart.startAngle = 180;
