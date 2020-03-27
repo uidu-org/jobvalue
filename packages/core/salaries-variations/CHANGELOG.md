@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 0.1.11
+
+### Patch Changes
+
+- c72c974: Pdf helpers
+- Updated dependencies [c72c974]
+  - @jobvalue/salaries@0.1.12
+
 ## 0.1.10
 
 ### Patch Changes
