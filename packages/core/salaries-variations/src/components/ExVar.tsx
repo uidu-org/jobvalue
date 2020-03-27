@@ -40,7 +40,6 @@ export default class ExVar extends PureComponent<ExVarProps> {
   drawChart() {
     const { salaryDataForChart, mySalary, mode } = this.props;
     if (salaryDataForChart && !this.chart) {
-      console.log(salaryDataForChart);
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;
 

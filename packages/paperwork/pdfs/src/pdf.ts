@@ -3,24 +3,24 @@ import { toDataURL } from './utils';
 
 export const preparePDF = ({
   charts,
-  content = args => [],
+  content = (args) => [],
   webpackImages = [],
   fonts,
   vfs,
-  ...rest
+  docProps,
 }: PreparePdfProps) => {
-  const chartIds = charts.map(c => c.htmlContainer.id);
+  const chartIds = charts.map((c) => c.htmlContainer.id);
   console.log(chartIds);
   const promises = [charts[0].exporting.pdfmake];
-  charts.forEach(chart => {
+  charts.forEach((chart) => {
     promises.push(chart.exporting.getImage('jpg'));
   });
-  webpackImages.forEach(element => {
+  webpackImages.forEach((element) => {
     promises.push(toDataURL(element));
     promises.push(toDataURL(element));
   });
 
-  return Promise.all(promises).then(res => {
+  return Promise.all(promises).then((res) => {
     // pdfmake is ready in global scope
     // Create document template
     console.log(res);
@@ -97,6 +97,7 @@ export const preparePDF = ({
         chartIds,
         chartImages,
       }),
+      ...docProps,
     };
 
     // @ts-ignore

@@ -30,7 +30,6 @@ export default class Benefits extends PureComponent<any> {
       let chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;
       // chart.scrollbarX = new am4core.Scrollbar();
-      console.log(data);
       chart.maskBullets = true;
       chart.paddingLeft = 24;
       // chart.startAngle = -170;

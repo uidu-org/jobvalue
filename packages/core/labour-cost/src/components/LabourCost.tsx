@@ -88,7 +88,6 @@ export default class LabourCostChart extends PureComponent<LabourCostProps> {
 
   drawChart = () => {
     const { labourCost, fullWidth } = this.props;
-    console.log(labourCost);
     if (labourCost && !this.chart) {
       const chart = am4core.create(this.uuid, am4charts.XYChart);
       chart.language.locale = am4lang_it_IT;

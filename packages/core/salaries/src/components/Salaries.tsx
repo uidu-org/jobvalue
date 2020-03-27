@@ -205,8 +205,6 @@ export default class Salaries extends PureComponent<SalariesProps> {
   render() {
     const { salaryDataForChart } = this.props;
 
-    console.log(this.uuid);
-
     return (
       <>
         {salaryDataForChart ? (

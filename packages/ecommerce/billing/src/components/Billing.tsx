@@ -93,7 +93,7 @@ export default function Billing({
               isValidCodiceFiscale: (values, value) => {
                 if (value && value !== '') {
                   try {
-                    const cf = new CodiceFiscale(value);
+                    const cf = new CodiceFiscale(value.toUpperCase());
                     return cf.isValid();
                   } catch (error) {
                     return 'Inserisci un codice fiscale valido';

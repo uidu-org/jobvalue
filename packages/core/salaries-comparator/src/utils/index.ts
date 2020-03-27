@@ -12,14 +12,11 @@ export const closest = (array, num) => {
 };
 
 export const manipulateSalariesData = (salaries, mySalary) => {
-  console.log(salaries);
-  console.log(mySalary);
-  const valueData = salaries.map(d => d.value);
+  const valueData = salaries.map((d) => d.value);
   // salaries is an array
   const previousPercentage =
     salaries[valueData.indexOf(closest(valueData, mySalary))].percentage;
 
-  console.log(previousPercentage);
   return [
     {
       category: 'A',

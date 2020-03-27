@@ -36,7 +36,6 @@ export default class ExPerc extends PureComponent<{
   drawChart() {
     const { salaryDataForChart } = this.props;
     if (salaryDataForChart && !this.chart) {
-      console.log(salaryDataForChart);
       const chart = am4core.create(this.uuid, am4charts.PieChart);
       chart.language.locale = am4lang_it_IT;
 

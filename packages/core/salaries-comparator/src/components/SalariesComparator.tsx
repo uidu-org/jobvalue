@@ -44,7 +44,6 @@ export default class SalariesComparator extends PureComponent<any> {
     name,
     color,
   ) => {
-    console.log(chart.series);
     const series = chart.series.push(new am4charts.ColumnSeries());
     series.name = name;
     series.dataFields.valueX = field;

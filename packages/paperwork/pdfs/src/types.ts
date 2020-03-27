@@ -4,6 +4,7 @@ export type PreparePdfProps = {
   charts?: Sprite[];
   content?: (args) => [];
   webpackImages?: [];
-  fonts?: string;
-  vfs?: string;
+  fonts?: any;
+  vfs?: any;
+  docProps: any;
 };

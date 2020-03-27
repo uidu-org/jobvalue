@@ -16,8 +16,6 @@ export default function Basic() {
     savePDF(pdf, name);
   };
 
-  console.log(pdf);
-
   return (
     <>
       <p>Example button for pdf</p>
