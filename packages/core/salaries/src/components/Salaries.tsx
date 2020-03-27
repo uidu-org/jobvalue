@@ -103,14 +103,32 @@ export default class Salaries extends PureComponent<SalariesProps> {
         ral.dataFields.categoryX = 'name';
         ral.tooltipText = '{valueY.key}';
         ral.columns.template.width = am4core.percent(100);
-        ral.fillOpacity = 0.6;
+        ral.fillOpacity = 0.4;
         ral.fill = am4core.color(colors.ral);
         ral.stroke = am4core.color(colors.ral);
         ral.tooltipText = 'RAL: [bold]{valueY}[/]';
         ral.columns.template.propertyFields.fill = 'color';
-        ral.columns.template.propertyFields.stroke = 'color';
+        // ral.columns.template.propertyFields.stroke = 'color';
         ral.columns.template.column.cornerRadius(3, 3, 0, 0);
         ral.columns.template.strokeOpacity = 0.5;
+
+        ral.columns.template.adapter.add('fillOpacity', (fill, target) => {
+          // @ts-ignore
+          if (target.dataItem && target.dataItem.categoryX === 'Tu') {
+            return 1;
+          } else {
+            return fill;
+          }
+        });
+
+        ral.columns.template.adapter.add('fill', (fill, target) => {
+          // @ts-ignore
+          if (target.dataItem && target.dataItem.categoryX === 'Offerta') {
+            return am4core.color('rgba(56,109,166,0.3)');
+          } else {
+            return fill;
+          }
+        });
 
         if (!series.includes('rga')) {
           ral.tooltip.disabled = true;
@@ -127,13 +145,31 @@ export default class Salaries extends PureComponent<SalariesProps> {
         rga.tooltipText = '{valueY.key}';
         rga.columns.template.width = am4core.percent(100);
         rga.fill = am4core.color(colors.rga);
-        rga.fillOpacity = 0.6;
+        rga.fillOpacity = 0.4;
         rga.stroke = am4core.color(colors.rga);
         rga.tooltipText = 'RGA: [bold]{valueY}[/]';
         rga.columns.template.propertyFields.fill = 'color';
-        rga.columns.template.propertyFields.stroke = 'color';
+        // rga.columns.template.propertyFields.stroke = 'color';
         rga.columns.template.column.cornerRadius(3, 3, 0, 0);
         rga.columns.template.strokeOpacity = 0.5;
+
+        rga.columns.template.adapter.add('fillOpacity', (fill, target) => {
+          // @ts-ignore
+          if (target.dataItem && target.dataItem.categoryX === 'Tu') {
+            return 1;
+          } else {
+            return fill;
+          }
+        });
+
+        rga.columns.template.adapter.add('fill', (fill, target) => {
+          // @ts-ignore
+          if (target.dataItem && target.dataItem.categoryX === 'Offerta') {
+            return am4core.color('rgba(242,141,12,0.15)');
+          } else {
+            return fill;
+          }
+        });
 
         if (!series.includes('ral')) {
           rga.tooltip.disabled = true;

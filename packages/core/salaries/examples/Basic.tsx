@@ -18,12 +18,18 @@ export default function Basic() {
       <div className="card mb-5">
         <div className="card-header">Dati retributivi (RGA)</div>
         <Salaries
-          salaryDataForChart={salaryForChart(salaryDataForChart, {
-            color: '#386da7',
-            ral: 24000,
-            rga: 25000,
-          })}
-          series={['rga']}
+          salaryDataForChart={salaryForChart(
+            salaryDataForChart,
+            {
+              ral: 24000,
+              rga: 25000,
+            },
+            {
+              ral: 32000,
+              rga: 37000,
+            },
+          )}
+          series={['rga', 'ral']}
         />
         <SalariesTable salaryDataForChart={salaries} />
       </div>

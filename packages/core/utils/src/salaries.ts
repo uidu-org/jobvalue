@@ -5,24 +5,26 @@ import { apiBaseUrl } from '..';
 
 export const salaryDiff = (mine, other): number => (mine - other) / other;
 
-export const salaryBySenses = state => {
+export const salaryBySenses = (state) => {
   const { salary } = state;
   return groupBy(salary.items, 'sense_id');
 };
 
 export const salaryForChartCompactMode = (
   salaries: Array<Salary>,
-  mySalary?: { ral: number; rga: number; color?: string },
+  mySalary?: { ral: number; rga: number },
+  jobOffer?: { ral: number; rga: number },
   curves = [
     { name: 'Minimo', key: 'perc_10' },
     { name: 'Medio', key: 'average' },
     { name: 'Massimo', key: 'perc_90' },
   ],
-) => salaryForChart(salaries, mySalary, curves);
+) => salaryForChart(salaries, mySalary, jobOffer, curves);
 
 export const salaryForChart = (
   salaries: Array<Salary>,
-  mySalary?: { ral: number; rga: number; color?: string },
+  mySalary?: { ral: number; rga: number },
+  jobOffer?: { ral: number; rga: number },
   curves = [
     // { name: 'Media', key: 'average' },
     { name: '1° Decile', key: 'perc_10' },
@@ -32,11 +34,11 @@ export const salaryForChart = (
     { name: '9° Decile', key: 'perc_90' },
   ],
 ) => {
-  const out = curves.map(legend => {
+  const out = curves.map((legend) => {
     const res: { name: string; rga?: number; ral?: number; color?: string } = {
       name: legend.name,
     };
-    const foo = salaries.filter(s => !s.codesense_id && !s.sense_id)[0];
+    const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[0];
     res.rga = foo[`ex_rga_${legend.key}`];
     res.ral = foo[`ex_ral_${legend.key}`];
     return res;
@@ -46,7 +48,13 @@ export const salaryForChart = (
       name: 'Tu',
       rga: mySalary.rga,
       ral: mySalary.ral,
-      color: mySalary.color,
+    });
+  }
+  if (jobOffer) {
+    out.push({
+      name: 'Offerta',
+      rga: jobOffer.rga,
+      ral: jobOffer.ral,
     });
   }
   return out.sort((a, b) => a.rga - b.rga);
@@ -56,13 +64,13 @@ export const salaryForChart = (
 export const fetchSalary = ({ report }) => {
   const { classifications } = report;
   const industryApiId = classifications.filter(
-    c => c.provider === 'Jobpricing_Industries',
+    (c) => c.provider === 'Jobpricing_Industries',
   )[0].value;
   const jobApiId = classifications.filter(
-    c => c.provider === 'Jobpricing_Jobs',
+    (c) => c.provider === 'Jobpricing_Jobs',
   )[0].value;
   const regionApiId = classifications.filter(
-    c => c.provider === 'Jobpricing_Regions',
+    (c) => c.provider === 'Jobpricing_Regions',
   )[0].value;
   return axios
     .get(
@@ -72,5 +80,5 @@ export const fetchSalary = ({ report }) => {
         report.sizeId
       }&industry=${industryApiId}&region=${regionApiId}`,
     )
-    .then(response => response.data);
+    .then((response) => response.data);
 };
