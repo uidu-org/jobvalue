@@ -1,5 +1,13 @@
 # @jobvalue/salaries
 
+## 0.1.13
+
+### Patch Changes
+
+- 8c092f4: FIX multiple salaries options
+- Updated dependencies [8c092f4]
+  - @jobvalue/utils@0.1.6
+
 ## 0.1.12
 
 ### Patch Changes
