@@ -20,7 +20,9 @@ export default class Benefits extends PureComponent<any> {
   }
 
   componentDidUpdate() {
+    const { data } = this.props;
     this.drawChart();
+    this.chart.data = data;
   }
 
   drawChart = () => {

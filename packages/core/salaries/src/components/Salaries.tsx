@@ -27,7 +27,9 @@ export default class Salaries extends PureComponent<SalariesProps> {
   }
 
   componentDidUpdate() {
+    const { salaryDataForChart } = this.props;
     this.drawChart();
+    this.chart.data = salaryDataForChart;
   }
 
   drawChart = () => {
