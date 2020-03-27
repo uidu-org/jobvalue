@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.13
+
+### Patch Changes
+
+- c72c974: Pdf helpers
+
 ## 0.1.12
 
 ### Patch Changes

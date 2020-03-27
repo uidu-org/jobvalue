@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.12
+
+### Patch Changes
+
+- c72c974: Pdf helpers
+
 ## 0.1.11
 
 ### Patch Changes
