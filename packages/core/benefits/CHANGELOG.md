@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.9
+
+### Patch Changes
+
+- cf3c692: Update data for charts
+
 ## 0.1.8
 
 ### Patch Changes
