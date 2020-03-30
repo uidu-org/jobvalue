@@ -15,6 +15,10 @@ export default class Benefits extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
   private uuid = uuid();
 
+  static defaultProps = {
+    currentBenefits: [],
+  };
+
   componentDidMount() {
     this.drawChart();
   }
@@ -26,7 +30,7 @@ export default class Benefits extends PureComponent<any> {
   }
 
   drawChart = () => {
-    const { data } = this.props;
+    const { data, currentBenefits } = this.props;
     if (data && !this.chart) {
       // Create chart instance
       let chart = am4core.create(this.uuid, am4charts.XYChart);
@@ -98,7 +102,14 @@ export default class Benefits extends PureComponent<any> {
       columnTemplate.maxHeight = 50;
       columnTemplate.strokeOpacity = 0;
 
-      var bullet = columnTemplate.createChild(am4charts.CircleBullet);
+      // let starBullet = columnTemplate.createChild(
+      //   new am4plugins_bullets.Star(),
+      // );
+      // starBullet.align = 'right';
+      // starBullet.radius = 20;
+      // starBullet.pointCount = 5;
+
+      const bullet = columnTemplate.createChild(am4charts.CircleBullet);
       bullet.circle.radius = 15;
       bullet.valign = 'middle';
       bullet.align = 'left';
@@ -108,7 +119,25 @@ export default class Benefits extends PureComponent<any> {
       bullet.interactionsEnabled = false;
       bullet.fillOpacity = 1;
 
-      var image = bullet.createChild(am4core.Image);
+      const star = bullet.createChild(am4core.Image);
+      star.href = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/star.svg';
+      star.width = 14;
+      star.height = 14;
+      star.horizontalCenter = 'left';
+      star.verticalCenter = 'bottom';
+      star.dx = 6;
+      star.dy = -3;
+      star.zIndex = 20;
+
+      star.adapter.add('disabled', function (center, target) {
+        if (!target.dataItem) {
+          return true;
+        }
+        // @ts-ignore
+        return !currentBenefits.includes(target.dataItem.categoryY);
+      });
+
+      const image = bullet.createChild(am4core.Image);
       image.horizontalCenter = 'middle';
       image.verticalCenter = 'middle';
       image.width = 20;
