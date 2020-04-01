@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 0.1.3
+
+### Patch Changes
+
+- ccdb7d0: Fix colors, pdf extend and billing geosuggest
+
 ## 0.1.2
 
 ### Patch Changes

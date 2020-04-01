@@ -1,5 +1,13 @@
 # @jobvalue/utils
 
+## 0.1.7
+
+### Patch Changes
+
+- ccdb7d0: Fix colors, pdf extend and billing geosuggest
+- Updated dependencies [ccdb7d0]
+  - @jobvalue/salaries@0.1.15
+
 ## 0.1.6
 
 ### Patch Changes
