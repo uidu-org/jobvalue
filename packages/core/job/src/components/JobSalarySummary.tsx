@@ -15,7 +15,12 @@ export default class JobSalarySummary extends PureComponent<
   JobSalarySummaryProps
 > {
   private chart: am4charts.PieChart = undefined;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   static defaultProps = {
     isAutonomous: false,

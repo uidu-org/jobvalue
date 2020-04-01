@@ -13,7 +13,12 @@ am4core.options.commercialLicense = true;
 
 export default class Benefits extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   static defaultProps = {
     currentBenefits: [],

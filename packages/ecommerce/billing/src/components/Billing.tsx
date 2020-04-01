@@ -121,8 +121,12 @@ export default function Billing({
         label="Comune"
         required
         value={defaultValues?.billing_city}
-        onGeocode={console.log}
         countryRestricted="it"
+        geocoderType={['(cities)']}
+        geolocationEnabled={false}
+        valueGetter={(suggestion) => {
+          return suggestion.structured_formatting.main_text;
+        }}
       />
       <FieldNumber
         name="billing_zip"

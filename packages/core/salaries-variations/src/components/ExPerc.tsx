@@ -17,7 +17,12 @@ export default class ExPerc extends PureComponent<{
   loaded?: boolean;
 }> {
   private chart: am4charts.PieChart;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   componentWillUnmount() {
     if (this.chart) {

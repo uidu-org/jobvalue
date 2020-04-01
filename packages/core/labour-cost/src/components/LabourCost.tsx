@@ -70,7 +70,12 @@ const manipulate = ({
 
 export default class LabourCostChart extends PureComponent<LabourCostProps> {
   private chart: am4charts.XYChart = undefined;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   static defaultProps = {
     aspect: 2,

@@ -17,13 +17,11 @@ export const preparePDF = ({
   });
   webpackImages.forEach((element) => {
     promises.push(toDataURL(element));
-    promises.push(toDataURL(element));
   });
 
   return Promise.all(promises).then((res) => {
     // pdfmake is ready in global scope
     // Create document template
-    console.log(res);
     const chartImages = res.slice(1, res.length - 2);
     const doc = {
       pageSize: 'A4',
@@ -97,7 +95,7 @@ export const preparePDF = ({
         chartIds,
         chartImages,
       }),
-      ...docProps,
+      ...docProps(res),
     };
 
     // @ts-ignore

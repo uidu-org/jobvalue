@@ -13,7 +13,12 @@ am4core.options.commercialLicense = true;
 
 export default class LabourCostChart extends PureComponent<any> {
   private chart: am4maps.MapChart = undefined;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   static defaultProps = {
     aspect: 2,

@@ -6,5 +6,5 @@ export type PreparePdfProps = {
   webpackImages?: [];
   fonts?: any;
   vfs?: any;
-  docProps: any;
+  docProps: (result: any) => any;
 };

@@ -21,7 +21,12 @@ export type ExVarProps = {
 
 export default class ExVar extends PureComponent<ExVarProps> {
   private chart: am4charts.XYChart;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   componentDidMount() {
     this.drawChart();

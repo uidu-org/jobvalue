@@ -22,7 +22,12 @@ function createGrid(valueAxis: am4charts.ValueAxis, value, text) {
 
 export default class SalariesComparator extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
-  private uuid = uuid();
+  private uuid;
+
+  constructor(props) {
+    super(props);
+    this.uuid = props.id || uuid();
+  }
 
   static defaultProps = {
     height: 128,
