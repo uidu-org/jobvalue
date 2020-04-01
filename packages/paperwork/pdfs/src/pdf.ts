@@ -1,3 +1,4 @@
+import * as am4core from '@amcharts/amcharts4/core';
 import { PreparePdfProps } from './types';
 import { toDataURL } from './utils';
 
@@ -10,9 +11,12 @@ export const preparePDF = ({
   docProps,
 }: PreparePdfProps) => {
   const chartIds = charts.map((c) => c.htmlContainer.id);
-  console.log(chartIds);
   const promises = [charts[0].exporting.pdfmake];
   charts.forEach((chart) => {
+    let options = chart.exporting.getFormatOptions('jpg');
+    chart.exporting.backgroundColor = am4core.color('white');
+    options.keepTainted = true;
+    chart.exporting.setFormatOptions('jpg', options);
     promises.push(chart.exporting.getImage('jpg'));
   });
   webpackImages.forEach((element) => {
@@ -22,7 +26,7 @@ export const preparePDF = ({
   return Promise.all(promises).then((res) => {
     // pdfmake is ready in global scope
     // Create document template
-    const chartImages = res.slice(1, res.length - 2);
+    const chartImages = res.slice(1, res.length - webpackImages.length);
     const doc = {
       pageSize: 'A4',
       pageOrientation: 'portrait',
@@ -31,7 +35,7 @@ export const preparePDF = ({
         margin: 30,
         columns: [
           {
-            image: res[res.length - 2],
+            image: res[res.length - webpackImages.length],
             width: 80,
           },
           {
@@ -46,7 +50,7 @@ export const preparePDF = ({
         margin: 30,
         columns: [
           {
-            image: res[res.length - 1],
+            image: res[res.length - webpackImages.length - 1],
             width: 20,
           },
           {
