@@ -57,7 +57,7 @@ export const salaryForChart = (
       ral: jobOffer.ral,
     });
   }
-  return out.sort((a, b) => a.rga - b.rga);
+  return out.slice().sort((a, b) => a.rga - b.rga);
 };
 
 // Action creators
