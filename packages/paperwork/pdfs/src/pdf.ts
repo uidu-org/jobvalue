@@ -96,6 +96,7 @@ export const preparePDF = ({
         font: 'houschkahead',
       },
       content: content({
+        charts,
         chartIds,
         chartImages,
       }),
