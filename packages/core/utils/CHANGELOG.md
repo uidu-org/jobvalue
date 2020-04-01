@@ -1,5 +1,11 @@
 # @jobvalue/utils
 
+## 0.1.8
+
+### Patch Changes
+
+- 128ce1a: Slice data for sorting
+
 ## 0.1.7
 
 ### Patch Changes

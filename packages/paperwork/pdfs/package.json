@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/pdfs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Pdf scaffold for JobValue",
   "main": "index.js",
   "author": "uidu",

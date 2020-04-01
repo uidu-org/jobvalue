@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 0.1.5
+
+### Patch Changes
+
+- 78a81a5: Export chart instances to pdf
+
 ## 0.1.4
 
 ### Patch Changes
