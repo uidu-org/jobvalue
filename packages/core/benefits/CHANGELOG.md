@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.10
+
+### Patch Changes
+
+- 18c2569: Show star for current benefits
+
 ## 0.1.9
 
 ### Patch Changes
