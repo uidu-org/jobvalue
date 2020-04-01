@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/salaries-comparator",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
@@ -9,6 +9,6 @@
   "private": false,
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.5"
+    "@jobvalue/utils": "^0.1.7"
   }
 }

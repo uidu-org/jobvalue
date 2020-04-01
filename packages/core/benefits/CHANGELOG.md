@@ -1,5 +1,13 @@
 # @jobvalue/benefits
 
+## 0.1.11
+
+### Patch Changes
+
+- ccdb7d0: Fix colors, pdf extend and billing geosuggest
+- Updated dependencies [ccdb7d0]
+  - @jobvalue/utils@0.1.7
+
 ## 0.1.10
 
 ### Patch Changes
