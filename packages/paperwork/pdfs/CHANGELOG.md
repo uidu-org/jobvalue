@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 0.1.6
+
+### Patch Changes
+
+- 70713dc: Publish pdf again
+
 ## 0.1.5
 
 ### Patch Changes
