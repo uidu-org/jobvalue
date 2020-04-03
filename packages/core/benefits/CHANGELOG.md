@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.12
+
+### Patch Changes
+
+- 54c93fe: Fix benefit height
+
 ## 0.1.11
 
 ### Patch Changes
