@@ -1,5 +1,13 @@
 # @jobvalue/salaries
 
+## 0.1.16
+
+### Patch Changes
+
+- b881c63: Fix salaries rga label and colors"
+- Updated dependencies [b881c63]
+  - @jobvalue/utils@0.1.9
+
 ## 0.1.15
 
 ### Patch Changes
