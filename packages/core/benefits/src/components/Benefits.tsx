@@ -162,19 +162,22 @@ export default class Benefits extends PureComponent<any> {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, height } = this.props;
     return (
       <>
         {data ? (
           <>
             <div style={{ overflowX: 'auto' }}>
-              <div id={this.uuid} style={{ width: '100%', height: 400 }} />
+              <div
+                id={this.uuid}
+                style={{ width: '100%', height: height || data.length * 42 }}
+              />
             </div>
           </>
         ) : (
           <div
             className="d-flex align-items-center justify-content-center"
-            style={{ height: '400px' }}
+            style={{ height: 400 }}
           >
             <Spinner />
           </div>
