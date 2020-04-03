@@ -1,13 +1,13 @@
 {
   "name": "@jobvalue/salaries",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "module": "index.js",
   "types": "index.d.ts",
   "license": "MIT",
   "jobvalue:src": "index.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.7",
+    "@jobvalue/utils": "^0.1.9",
     "@uidu/spinner": "^0.1.14",
     "axios": "^0.19.1",
     "numeral": "^2.0.6",
