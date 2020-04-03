@@ -61,7 +61,7 @@ export default class Benefits extends PureComponent<any> {
       categoryAxis.dataFields.category = 'identifier';
       categoryAxis.renderer.disabled = true;
       categoryAxis.renderer.grid.template.strokeOpacity = 0;
-      categoryAxis.renderer.minGridDistance = 10;
+      categoryAxis.renderer.minGridDistance = 20;
       categoryAxis.renderer.labels.template.dx = -40;
       // categoryAxis.renderer.minWidth = 120;
       categoryAxis.renderer.tooltip.dx = -40;
@@ -103,8 +103,8 @@ export default class Benefits extends PureComponent<any> {
       categoryLabel.label.truncate = false;
 
       var columnTemplate = series.columns.template;
-      columnTemplate.height = am4core.percent(80);
-      columnTemplate.maxHeight = 50;
+      columnTemplate.height = am4core.percent(70);
+      columnTemplate.maxHeight = 30;
       columnTemplate.strokeOpacity = 0;
 
       // let starBullet = columnTemplate.createChild(
@@ -170,7 +170,7 @@ export default class Benefits extends PureComponent<any> {
             <div style={{ overflowX: 'auto' }}>
               <div
                 id={this.uuid}
-                style={{ width: '100%', height: height || data.length * 42 }}
+                style={{ width: '100%', height: height || data.length * 48 }}
               />
             </div>
           </>
