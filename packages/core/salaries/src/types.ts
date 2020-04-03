@@ -21,16 +21,19 @@ export type Salary = {
   codesense_name?: string;
 };
 
+export type SalaryDataNameKeys =
+  | '1° Decile'
+  | '1° Quartile'
+  | 'Mediana'
+  | '3° Quartile'
+  | '9° Decile'
+  | 'Tu'
+  | 'Offerta';
+
 export type SalaryData = {
-  name:
-    | '1° Decile'
-    | '1° Quartile'
-    | 'Mediana'
-    | '3° Quartile'
-    | '9° Decile'
-    | 'Tu';
-  rga: number;
-  ral: number;
+  name: SalaryDataNameKeys;
+  rga?: number;
+  ral?: number;
 };
 
 export type SalaryKinds = 'ral' | 'rga';

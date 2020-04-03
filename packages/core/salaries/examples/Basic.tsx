@@ -5,6 +5,12 @@ import { salaryDataForChart } from '../examples-utils';
 
 export default function Basic() {
   const salaries = salaryForChart(salaryDataForChart);
+  const compactSalaries = salaryForChartCompactMode(salaryDataForChart, {
+    ral: 22000,
+    rga: 22000,
+  });
+
+  console.log(compactSalaries);
   return (
     <>
       <div className="card mb-5">
@@ -46,17 +52,11 @@ export default function Basic() {
         <div className="card-header">Dati retributivi (RGA) compact mode</div>
         <Salaries
           compactMode
-          salaryDataForChart={salaryForChartCompactMode(salaryDataForChart, {
-            color: '#386da7',
-            ral: 24000,
-            rga: 25000,
-          })}
+          salaryDataForChart={compactSalaries}
           series={['rga']}
-          colors={{ rga: '#f28d0e', ral: '#f28d0e' }}
         />
         <SalariesTable
           salaryDataForChart={salaryForChartCompactMode(salaryDataForChart, {
-            color: '#386da7',
             ral: 24000,
             rga: 25000,
           })}

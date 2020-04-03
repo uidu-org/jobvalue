@@ -1,4 +1,4 @@
-import { Salary } from '@jobvalue/salaries';
+import { Salary, SalaryData, SalaryDataNameKeys } from '@jobvalue/salaries';
 import axios from 'axios';
 import groupBy from 'lodash/groupBy';
 import { apiBaseUrl } from '..';
@@ -33,10 +33,15 @@ export const salaryForChart = (
     { name: '3° Quartile', key: 'perc_75' },
     { name: '9° Decile', key: 'perc_90' },
   ],
-) => {
+): SalaryData[] => {
   const out = curves.map((legend) => {
-    const res: { name: string; rga?: number; ral?: number; color?: string } = {
-      name: legend.name,
+    const res: {
+      name: SalaryDataNameKeys;
+      rga?: number;
+      ral?: number;
+      color?: string;
+    } = {
+      name: legend.name as SalaryDataNameKeys,
     };
     const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[0];
     res.rga = foo[`ex_rga_${legend.key}`];
@@ -45,14 +50,14 @@ export const salaryForChart = (
   });
   if (mySalary) {
     out.push({
-      name: 'Tu',
+      name: 'Tu' as SalaryDataNameKeys,
       rga: mySalary.rga,
       ral: mySalary.ral,
     });
   }
   if (jobOffer) {
     out.push({
-      name: 'Offerta',
+      name: 'Offerta' as SalaryDataNameKeys,
       rga: jobOffer.rga,
       ral: jobOffer.ral,
     });

@@ -141,6 +141,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
           ral.tooltip.disabled = true;
           var bullet = ral.bullets.push(new am4charts.LabelBullet());
           bullet.label.text = "€ {ral.formatNumber('#,###')}";
+          bullet.label.fontSize = 14;
           bullet.dy = -16;
         }
       }
@@ -181,7 +182,8 @@ export default class Salaries extends PureComponent<SalariesProps> {
         if (!series.includes('ral')) {
           rga.tooltip.disabled = true;
           var bullet = rga.bullets.push(new am4charts.LabelBullet());
-          bullet.label.text = "€ {ral.formatNumber('#,###')}";
+          bullet.label.text = "€ {rga.formatNumber('#,###')}";
+          bullet.label.fontSize = 14;
           bullet.dy = -16;
         }
       }
