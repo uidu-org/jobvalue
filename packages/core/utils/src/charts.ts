@@ -8,7 +8,7 @@ export function am4themesJobValue(target) {
     target.minLightness = 0.2;
     target.maxLightness = 0.7;
     target.stepOptions = {
-      hue: 0.08,
+      // hue: 0.08,
       brighten: 0.4,
       lightness: 0.8,
       // lighten: 15,

@@ -53,10 +53,11 @@ export default class ExVar extends PureComponent<ExVarProps> {
         chart.data = [
           {
             name: 'VAR di mercato (€)',
-            value:
+            value: (
               ((salaryDataForChart[1] as any).ex_var *
                 (salaryDataForChart[1] as any).ex_ral_average) /
-              100,
+              100
+            ).toFixed(2),
             color: 'rgb(243, 141, 13)',
           },
           {

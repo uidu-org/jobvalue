@@ -2,17 +2,17 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import * as am4core from '@amcharts/amcharts4/core';
 import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
-import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
 import uuid from 'uuid/v4';
 
 am4core.useTheme(am4themesAnimated);
-am4core.useTheme(am4themesJobValue);
+// am4core.useTheme(am4themesJobValue);
 am4core.options.commercialLicense = true;
 
 export default class Benefits extends PureComponent<any> {
   private chart: am4charts.XYChart = undefined;
+  private star: am4core.Image;
   private uuid;
 
   constructor(props) {
@@ -32,6 +32,7 @@ export default class Benefits extends PureComponent<any> {
     const { data } = this.props;
     this.drawChart();
     this.chart.data = data;
+    this.showStars();
   }
 
   drawChart = () => {
@@ -53,7 +54,7 @@ export default class Benefits extends PureComponent<any> {
       //      value: Math.round(Math.random() * 100),
       //    });
       //  }
-      chart.data = data;
+      chart.data = data.sort((a, b) => a.value - b.value);
       // chart.radius = am4core.percent(100);
       // chart.innerRadius = am4core.percent(50);
       // Create axes
@@ -82,10 +83,11 @@ export default class Benefits extends PureComponent<any> {
       let series = chart.series.push(new am4charts.ColumnSeries());
       series.sequencedInterpolation = true;
       series.dataFields.valueX = 'value';
-      series.fillOpacity = 0.6;
+      series.fillOpacity = 0.5;
       series.tooltip.dy = -30;
       series.columnsContainer.zIndex = 100;
 
+      const columnTemplate = series.columns.template;
       series.dataFields.categoryY = 'identifier';
       series.columns.template.strokeWidth = 0;
       series.columns.template.column.cornerRadius(0, 3, 0, 3);
@@ -93,6 +95,14 @@ export default class Benefits extends PureComponent<any> {
       series.columns.template.adapter.add('fill', function (fill, target) {
         return chart.colors.getIndex(target.dataItem.index);
       });
+      series.heatRules.push({
+        target: columnTemplate,
+        property: 'fill',
+        dataField: 'valueX',
+        min: am4core.color('#a6ddff'),
+        max: am4core.color('#386da7'),
+      });
+
       series.mainContainer.mask = undefined;
 
       let categoryLabel = series.bullets.push(new am4charts.LabelBullet());
@@ -102,17 +112,9 @@ export default class Benefits extends PureComponent<any> {
       categoryLabel.locationX = 1;
       categoryLabel.label.truncate = false;
 
-      var columnTemplate = series.columns.template;
       columnTemplate.height = am4core.percent(70);
       columnTemplate.maxHeight = 30;
       columnTemplate.strokeOpacity = 0;
-
-      // let starBullet = columnTemplate.createChild(
-      //   new am4plugins_bullets.Star(),
-      // );
-      // starBullet.align = 'right';
-      // starBullet.radius = 20;
-      // starBullet.pointCount = 5;
 
       const bullet = columnTemplate.createChild(am4charts.CircleBullet);
       bullet.circle.radius = 15;
@@ -133,14 +135,9 @@ export default class Benefits extends PureComponent<any> {
       star.dx = 6;
       star.dy = -3;
       star.zIndex = 20;
+      this.star = star;
 
-      star.adapter.add('disabled', function (center, target) {
-        if (!target.dataItem) {
-          return true;
-        }
-        // @ts-ignore
-        return !currentBenefits.includes(target.dataItem.categoryY);
-      });
+      this.showStars();
 
       const image = bullet.createChild(am4core.Image);
       image.horizontalCenter = 'middle';
@@ -153,6 +150,17 @@ export default class Benefits extends PureComponent<any> {
 
       this.chart = chart;
     }
+  };
+
+  showStars = () => {
+    const { currentBenefits } = this.props;
+    this.star.adapter.add('disabled', function (center, target) {
+      if (!target.dataItem) {
+        return true;
+      }
+      // @ts-ignore
+      return !currentBenefits.includes(target.dataItem.categoryY);
+    });
   };
 
   componentWillUnmount() {
