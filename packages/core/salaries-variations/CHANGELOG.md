@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 0.1.13
+
+### Patch Changes
+
+- 273c5b8: Fixes to chart colors
+- Updated dependencies [273c5b8]
+  - @jobvalue/utils@0.1.10
+
 ## 0.1.12
 
 ### Patch Changes

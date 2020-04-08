@@ -1,5 +1,13 @@
 # @jobvalue/benefits
 
+## 0.1.14
+
+### Patch Changes
+
+- 273c5b8: Fixes to chart colors
+- Updated dependencies [273c5b8]
+  - @jobvalue/utils@0.1.10
+
 ## 0.1.13
 
 ### Patch Changes
