@@ -14,8 +14,8 @@ export const preparePDF = ({
   const promises = [charts[0].exporting.pdfmake];
   charts.forEach((chart) => {
     let options = chart.exporting.getFormatOptions('jpg');
-    chart.exporting.backgroundColor = am4core.color('white');
     options.keepTainted = true;
+    chart.exporting.backgroundColor = am4core.color('white');
     chart.exporting.setFormatOptions('jpg', options);
     promises.push(chart.exporting.getImage('jpg'));
   });

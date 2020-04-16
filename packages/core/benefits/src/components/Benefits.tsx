@@ -44,6 +44,9 @@ export default class Benefits extends PureComponent<any> {
       // chart.scrollbarX = new am4core.Scrollbar();
       chart.maskBullets = true;
       chart.paddingLeft = 24;
+
+      let options = chart.exporting.getFormatOptions('jpg');
+      options.keepTainted = true;
       // chart.startAngle = -170;
       // chart.endAngle = -10;
       // chart.innerRadius = am4core.percent(50);

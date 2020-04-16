@@ -139,6 +139,9 @@ export default class SalariesComparator extends PureComponent<any> {
       chart.maskBullets = true;
       chart.responsive.enabled = true;
 
+      let options = chart.exporting.getFormatOptions('jpg');
+      options.keepTainted = true;
+
       const categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
       categoryAxis.dataFields.category = 'category';
       categoryAxis.renderer.disabled = true;

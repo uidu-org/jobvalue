@@ -33,28 +33,25 @@ const manipulate = ({
   res.push({
     color: 'rgba(56, 109, 166, .7)',
     name: 'Cuneo Fiscale Azienda',
-    open: isAutonomous ? labourCost.yearlyGross : mySalary,
+    open: isAutonomous ? mySalary : mySalary,
     value: isAutonomous ? mySalary : labourCost.yearlyCompany,
-    stepValue: isAutonomous ? labourCost.yearlyGross : mySalary,
-    displayValue: isAutonomous
-      ? mySalary - labourCost.yearlyGross
-      : labourCost.yearlyCompany - mySalary,
+    stepValue: isAutonomous ? mySalary : mySalary,
+    displayValue: isAutonomous ? 0 : labourCost.yearlyCompany - mySalary,
   });
   res.push({
     color: 'rgba(56, 109, 166, .7)',
     name: 'Retribuzione Annua Lorda',
     open: 0,
-    value: isAutonomous ? labourCost.yearlyGross : mySalary,
-    displayValue: isAutonomous ? labourCost.yearlyGross : mySalary,
-    stepValue: isAutonomous ? labourCost.yearlyGross : mySalary,
+    value: mySalary,
+    displayValue: mySalary,
+    stepValue: mySalary,
   });
   res.push({
     color: 'rgba(56, 109, 166, .3)',
     name: 'Cuneo Fiscale Lavoratore',
-    open: labourCost.yearlyNet,
-    value: isAutonomous ? labourCost.yearlyGross : mySalary,
-    displayValue:
-      (isAutonomous ? labourCost.yearlyGross : mySalary) - labourCost.yearlyNet,
+    open: isAutonomous ? labourCost.yearlyNet : labourCost.yearlyNet,
+    value: isAutonomous ? mySalary : mySalary,
+    displayValue: (isAutonomous ? mySalary : mySalary) - labourCost.yearlyNet,
     stepValue: labourCost.yearlyNet,
   });
   res.push({
