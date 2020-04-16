@@ -1,5 +1,11 @@
 # @jobvalue/labour-cost
 
+## 0.1.11
+
+### Patch Changes
+
+- 1fc3a97: Fix labourcost
+
 ## 0.1.10
 
 ### Patch Changes
