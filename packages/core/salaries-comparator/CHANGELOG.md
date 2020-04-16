@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.15
+
+### Patch Changes
+
+- 1fc3a97: Fix labourcost
+
 ## 0.1.14
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/labour-cost",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "module": "index.js",
   "types": "index.d.ts",
