@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.16
+
+### Patch Changes
+
+- 432243c: Try to fix chart exports
+
 ## 0.1.15
 
 ### Patch Changes

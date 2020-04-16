@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 0.1.8
+
+### Patch Changes
+
+- 432243c: Try to fix chart exports
+
 ## 0.1.7
 
 ### Patch Changes
