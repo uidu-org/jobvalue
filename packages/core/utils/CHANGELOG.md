@@ -1,5 +1,11 @@
 # @jobvalue/utils
 
+## 0.1.10
+
+### Patch Changes
+
+- 273c5b8: Fixes to chart colors
+
 ## 0.1.9
 
 ### Patch Changes
