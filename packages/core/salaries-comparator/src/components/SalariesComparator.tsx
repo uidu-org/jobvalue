@@ -139,6 +139,7 @@ export default class SalariesComparator extends PureComponent<any> {
       chart.maskBullets = true;
       chart.responsive.enabled = true;
 
+      chart.exporting.menu = new am4core.ExportMenu();
       let options = chart.exporting.getFormatOptions('jpg');
       options.keepTainted = true;
 
@@ -177,73 +178,6 @@ export default class SalariesComparator extends PureComponent<any> {
         'Più di me',
         '#f28d0e',
       );
-
-      // const series = chart.series.push(new am4charts.ColumnSeries());
-      // series.fillOpacity = 0.3;
-      // series.dataFields.categoryY = 'category';
-      // series.dataFields.valueX = 'percentageX';
-
-      // const series2 = chart.series.push(new am4charts.ColumnSeries());
-      // series2.fillOpacity = 0.3;
-      // series2.dataFields.categoryY = 'category';
-      // series2.dataFields.valueX = 'percentageY';
-
-      // series.stacked = true;
-      // series2.stacked = true;
-      // series.sequencedInterpolation = true;
-      // series2.sequencedInterpolation = true;
-
-      // var columnTemplate = series.columns.template;
-
-      // var bullet = columnTemplate.createChild(am4charts.CircleBullet);
-      // bullet.locationX = 0.5;
-      // bullet.locationY = 0.5;
-      // bullet.circle.radius = 30;
-      // bullet.valign = 'middle';
-      // bullet.align = 'center';
-      // bullet.isMeasured = true;
-      // // // bullet.mouseEnabled = false;
-      // bullet.verticalCenter = 'bottom';
-      // bullet.interactionsEnabled = false;
-      // series.tensionY = 1;
-      // const previousPercentage =
-      //   data[
-      //     valueData.indexOf(
-      //       closest(
-      //         data.map(d => d.value),
-      //         mySalary,
-      //       ),
-      //     )
-      //   ].percentage;
-
-      // const previousRange = valueAxis.createSeriesRange(series);
-      // previousRange.value = data[0].value;
-      // previousRange.endValue = mySalary;
-      // previousRange.contents.stroke = am4core.color('#396478');
-      // previousRange.contents.fill = previousRange.contents.stroke;
-      // previousRange.contents.fillOpacity = 0.3;
-      // previousRange.label.disabled = false;
-      // previousRange.label.inside = true;
-      // previousRange.label.text = `${previousPercentage}%`;
-
-      // const rangeGuide = valueAxis.axisRanges.create();
-      // rangeGuide.value = mySalary;
-      // rangeGuide.grid.stroke = am4core.color('#A96478');
-      // rangeGuide.grid.strokeWidth = 2;
-      // rangeGuide.grid.strokeOpacity = 1;
-      // rangeGuide.label.text = 'La mia RGA\n{value}';
-      // rangeGuide.label.location = 0.5;
-      // rangeGuide.label.fill = rangeGuide.grid.stroke;
-
-      // const nextRange = valueAxis.createSeriesRange(series);
-      // nextRange.value = mySalary;
-      // nextRange.endValue = data[99].value;
-      // // nextRange.contents.stroke = am4core.color('#396478');
-      // nextRange.contents.fill = nextRange.contents.stroke;
-      // nextRange.contents.fillOpacity = 0.3;
-      // nextRange.label.disabled = false;
-      // nextRange.label.inside = true;
-      // nextRange.label.text = `${100 - previousPercentage}%`;
     }
   };
 

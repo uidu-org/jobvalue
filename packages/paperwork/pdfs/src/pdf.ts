@@ -1,4 +1,5 @@
 import * as am4core from '@amcharts/amcharts4/core';
+import * as am4plugins_bullets from '@amcharts/amcharts4/plugins/bullets';
 import { PreparePdfProps } from './types';
 import { toDataURL } from './utils';
 
@@ -14,6 +15,7 @@ export const preparePDF = ({
   const promises = [charts[0].exporting.pdfmake];
   charts.forEach((chart) => {
     let options = chart.exporting.getFormatOptions('jpg');
+    console.log(am4plugins_bullets);
     options.keepTainted = true;
     chart.exporting.backgroundColor = am4core.color('white');
     chart.exporting.setFormatOptions('jpg', options);
