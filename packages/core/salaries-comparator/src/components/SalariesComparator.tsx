@@ -139,7 +139,7 @@ export default class SalariesComparator extends PureComponent<any> {
       chart.maskBullets = true;
       chart.responsive.enabled = true;
 
-      chart.exporting.menu = new am4core.ExportMenu();
+      // chart.exporting.menu = new am4core.ExportMenu();
       let options = chart.exporting.getFormatOptions('jpg');
       options.keepTainted = true;
 
