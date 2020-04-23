@@ -1,15 +1,7 @@
-export const closest = (array, num) => {
-  var minDiff = 1000;
-  var ans;
-  for (let i = 0; i < array.length; i++) {
-    var m = Math.abs(num - array[i]);
-    if (m < minDiff) {
-      minDiff = m;
-      ans = array[i];
-    }
-  }
-  return ans;
-};
+const closestReducer = (g) => (a, b) =>
+  Math.abs(g - a) < Math.abs(g - b) ? a : b;
+
+export const closest = (array, num) => array.reduce(closestReducer(num));
 
 export const manipulateSalariesData = (salaries, mySalary) => {
   const valueData = salaries.map((d) => d.value);

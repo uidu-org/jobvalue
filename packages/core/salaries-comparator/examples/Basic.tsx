@@ -10,7 +10,7 @@ export default function Basic() {
           salaryDataForChart={salaries.filter(
             (item) => item.exSense === 1 && item.exCodesense === 1,
           )}
-          mySalary={28000}
+          mySalary={88000}
         />
       </div>
       <div className="mb-4">
