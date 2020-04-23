@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.17
+
+### Patch Changes
+
+- eac036f: Remove exportr menu
+
 ## 0.1.16
 
 ### Patch Changes
