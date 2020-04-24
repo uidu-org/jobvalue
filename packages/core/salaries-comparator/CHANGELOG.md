@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.18
+
+### Patch Changes
+
+- 3620c10: FIX comparator function
+
 ## 0.1.17
 
 ### Patch Changes
