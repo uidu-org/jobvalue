@@ -1,14 +1,14 @@
 {
   "name": "@jobvalue/pdfs",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Pdf scaffold for JobValue",
   "main": "index.js",
   "author": "uidu",
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@jobvalue/benefits": "^0.1.15",
-    "@jobvalue/salaries-comparator": "^0.1.17",
+    "@jobvalue/benefits": "^0.1.16",
+    "@jobvalue/salaries-comparator": "^0.1.19",
     "@uidu/docs": "^0.1.39"
   },
   "dependencies": {
