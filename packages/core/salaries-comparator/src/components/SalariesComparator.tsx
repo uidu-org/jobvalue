@@ -41,6 +41,12 @@ export default class SalariesComparator extends PureComponent<any> {
     this.drawChart();
   }
 
+  componentWillUnmount() {
+    if (this.chart) {
+      this.chart.dispose();
+    }
+  }
+
   createSeries = (
     chart: am4charts.XYChart,
     data,
@@ -140,8 +146,8 @@ export default class SalariesComparator extends PureComponent<any> {
       chart.responsive.enabled = true;
 
       // chart.exporting.menu = new am4core.ExportMenu();
-      let options = chart.exporting.getFormatOptions('jpg');
-      options.keepTainted = true;
+      // let options = chart.exporting.getFormatOptions('jpg');
+      // options.keepTainted = true;
 
       const categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
       categoryAxis.dataFields.category = 'category';
@@ -178,6 +184,7 @@ export default class SalariesComparator extends PureComponent<any> {
         'Più di me',
         '#f28d0e',
       );
+      this.chart = chart;
     }
   };
 

@@ -1,5 +1,4 @@
 import * as am4core from '@amcharts/amcharts4/core';
-import * as am4plugins_bullets from '@amcharts/amcharts4/plugins/bullets';
 import { PreparePdfProps } from './types';
 import { toDataURL } from './utils';
 
@@ -10,13 +9,14 @@ export const preparePDF = ({
   fonts,
   vfs,
   docProps,
+  exportingOptions,
 }: PreparePdfProps) => {
   const chartIds = charts.map((c) => c.htmlContainer.id);
   const promises = [charts[0].exporting.pdfmake];
   charts.forEach((chart) => {
     let options = chart.exporting.getFormatOptions('jpg');
-    console.log(am4plugins_bullets);
-    options.keepTainted = true;
+    options.keepTainted = exportingOptions?.keepTainted || true;
+    chart.exporting.useWebFonts = exportingOptions?.useWebFonts || true;
     chart.exporting.backgroundColor = am4core.color('white');
     chart.exporting.setFormatOptions('jpg', options);
     promises.push(chart.exporting.getImage('jpg'));
@@ -95,7 +95,7 @@ export const preparePDF = ({
       },
       defaultStyle: {
         fontSize: 11,
-        font: 'houschkahead',
+        // font: 'houschkahead',
       },
       content: content({
         charts,

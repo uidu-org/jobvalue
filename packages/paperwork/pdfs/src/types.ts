@@ -7,4 +7,8 @@ export type PreparePdfProps = {
   fonts?: any;
   vfs?: any;
   docProps: (result: any) => any;
+  exportingOptions?: {
+    useWebFonts?: boolean;
+    keepTainted?: boolean;
+  };
 };

@@ -28,11 +28,13 @@ export default class Benefits extends PureComponent<any> {
     this.drawChart();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(oldProps) {
     const { data } = this.props;
-    this.drawChart();
-    this.chart.data = data;
-    this.showStars();
+    if (data !== oldProps.data) {
+      this.drawChart();
+      this.chart.data = data;
+      this.showStars();
+    }
   }
 
   drawChart = () => {
@@ -45,8 +47,8 @@ export default class Benefits extends PureComponent<any> {
       chart.maskBullets = true;
       chart.paddingLeft = 24;
 
-      let options = chart.exporting.getFormatOptions('jpg');
-      options.keepTainted = true;
+      // let options = chart.exporting.getFormatOptions('jpg');
+      // options.keepTainted = true;
       // chart.startAngle = -170;
       // chart.endAngle = -10;
       // chart.innerRadius = am4core.percent(50);
