@@ -1,5 +1,11 @@
 # @jobvalue/themes-stipendiogiusto
 
+## 0.1.3
+
+### Patch Changes
+
+- da50b51: Better debugging pdf
+
 ## 0.1.2
 
 ### Patch Changes

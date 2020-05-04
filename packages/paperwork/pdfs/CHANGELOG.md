@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 0.1.9
+
+### Patch Changes
+
+- da50b51: Better debugging pdf
+
 ## 0.1.8
 
 ### Patch Changes

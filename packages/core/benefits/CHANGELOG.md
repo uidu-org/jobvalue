@@ -1,5 +1,11 @@
 # @jobvalue/benefits
 
+## 0.1.16
+
+### Patch Changes
+
+- da50b51: Better debugging pdf
+
 ## 0.1.15
 
 ### Patch Changes

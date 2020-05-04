@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.19
+
+### Patch Changes
+
+- da50b51: Better debugging pdf
+
 ## 0.1.18
 
 ### Patch Changes
