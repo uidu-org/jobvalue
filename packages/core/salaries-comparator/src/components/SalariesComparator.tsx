@@ -67,7 +67,7 @@ export default class SalariesComparator extends PureComponent<any> {
     series.stacked = true;
 
     // Configure columns
-    series.columns.template.height = am4core.percent(15);
+    series.columns.template.height = 24;
     // series.columns.template.fill = am4core.color(color);
     // series.columns.template.stroke = am4core.color(color);
     series.columns.template.fillOpacity = 0.6;
@@ -88,7 +88,7 @@ export default class SalariesComparator extends PureComponent<any> {
     label.fontSize = 14;
     label.fill = am4core.color('#000');
     label.strokeWidth = 0;
-    label.dx = 0;
+    label.dx = field === 'lessThan' ? -24 : 24;
     label.dy = 24;
 
     // percentage
@@ -99,10 +99,14 @@ export default class SalariesComparator extends PureComponent<any> {
     percentage_range.label.text = `${data[0][field]}%`;
     percentage_range.label.disabled = false;
     percentage_range.label.rotation = 0;
-    percentage_range.label.dy = 14;
+    percentage_range.label.dy = 16;
     percentage_range.label.wrap = false;
     percentage_range.label.fontSize = 14;
-    percentage_range.label.dx = field === 'lessThan' ? -64 : 64;
+    if (field === 'lessThan') {
+      percentage_range.label.dx = data[0][field] > 10 ? -56 : -48;
+    } else {
+      percentage_range.label.dx = data[0][field] > 10 ? 56 : 48;
+    }
     // percentage_range.label.fill = am4core.color('#0c0');
     percentage_range.label.adapter.add('horizontalCenter', function () {
       return field === 'lessThan' ? 'left' : 'right';
@@ -117,15 +121,18 @@ export default class SalariesComparator extends PureComponent<any> {
     percentage_range.bullet = pin;
 
     // Configure
-    pin.dy = -64;
+    pin.dy = -74;
     pin.layout = 'none';
     pin.valign = 'top';
     pin.horizontalCenter = 'left';
     pin.background.pointerAngle = 90;
-    pin.background.radius = 18;
+    pin.background.pointerBaseWidth = 10;
+    pin.background.pointerY = 10;
+    pin.background.radius = 14;
     pin.background.fill = am4core.color('#868e96');
     pin.label = new am4core.Label();
     pin.label.fontSize = 14;
+
     pin.label.text = 'Tu';
     // pin.image = new am4core.Image();
     // pin.image.href =
@@ -162,7 +169,7 @@ export default class SalariesComparator extends PureComponent<any> {
       valueAxis.renderer.baseGrid.disabled = true;
       valueAxis.renderer.grid.template.disabled = true;
       valueAxis.renderer.labels.template.disabled = true;
-      valueAxis.min = -10;
+      valueAxis.min = -20;
       valueAxis.max = 120;
       valueAxis.strictMinMax = true;
       valueAxis.calculateTotals = true;
