@@ -101,7 +101,8 @@ export default class SalariesComparator extends PureComponent<any> {
     percentage_range.label.rotation = 0;
     percentage_range.label.dy = 14;
     percentage_range.label.wrap = false;
-    percentage_range.label.dx = field === 'lessThan' ? -70 : 70;
+    percentage_range.label.fontSize = 14;
+    percentage_range.label.dx = field === 'lessThan' ? -64 : 64;
     // percentage_range.label.fill = am4core.color('#0c0');
     percentage_range.label.adapter.add('horizontalCenter', function () {
       return field === 'lessThan' ? 'left' : 'right';
@@ -124,6 +125,7 @@ export default class SalariesComparator extends PureComponent<any> {
     pin.background.radius = 18;
     pin.background.fill = am4core.color('#868e96');
     pin.label = new am4core.Label();
+    pin.label.fontSize = 14;
     pin.label.text = 'Tu';
     // pin.image = new am4core.Image();
     // pin.image.href =
