@@ -100,6 +100,7 @@ export default class SalariesComparator extends PureComponent<any> {
     percentage_range.label.disabled = false;
     percentage_range.label.rotation = 0;
     percentage_range.label.dy = 14;
+    percentage_range.label.wrap = false;
     percentage_range.label.dx = field === 'lessThan' ? -70 : 70;
     // percentage_range.label.fill = am4core.color('#0c0');
     percentage_range.label.adapter.add('horizontalCenter', function () {
@@ -139,8 +140,8 @@ export default class SalariesComparator extends PureComponent<any> {
       chart.language.locale = am4lang_it_IT;
       chart.paddingTop = 0;
       chart.paddingBottom = 0;
-      chart.paddingRight = 24;
-      chart.paddingLeft = 24;
+      chart.paddingRight = 0;
+      chart.paddingLeft = 0;
       chart.data = data;
       chart.maskBullets = true;
       chart.responsive.enabled = true;
@@ -159,8 +160,8 @@ export default class SalariesComparator extends PureComponent<any> {
       valueAxis.renderer.baseGrid.disabled = true;
       valueAxis.renderer.grid.template.disabled = true;
       valueAxis.renderer.labels.template.disabled = true;
-      valueAxis.min = 0;
-      valueAxis.max = 100;
+      valueAxis.min = -10;
+      valueAxis.max = 120;
       valueAxis.strictMinMax = true;
       valueAxis.calculateTotals = true;
       //valueAxis.title.text = "Litres sold (M)";
