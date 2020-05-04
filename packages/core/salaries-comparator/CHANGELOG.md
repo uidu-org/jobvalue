@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.21
+
+### Patch Changes
+
+- 4be3445: Reduced label in salaries-comparatot
+
 ## 0.1.20
 
 ### Patch Changes
