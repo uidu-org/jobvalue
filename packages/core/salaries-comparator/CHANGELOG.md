@@ -1,5 +1,11 @@
 # @jobvalue/salaries-comparator
 
+## 0.1.22
+
+### Patch Changes
+
+- 755a465: Small fixes to salaries
+
 ## 0.1.21
 
 ### Patch Changes
