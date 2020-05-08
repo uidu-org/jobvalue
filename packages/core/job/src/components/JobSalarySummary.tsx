@@ -133,7 +133,7 @@ export default class JobSalarySummary extends PureComponent<
                   </td>
                 </tr>
                 <tr>
-                  <td>Retribuzione variabile (%)</td>
+                  <td>Retribuzione variabile (% su RAL)</td>
                   <td className="text-right text-nowrap">
                     {toPerc(mySalary.addToRal / mySalary.ral)}
                   </td>
