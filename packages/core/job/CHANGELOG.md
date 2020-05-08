@@ -1,5 +1,11 @@
 # @jobvalue/job
 
+## 0.1.15
+
+### Patch Changes
+
+- 595d451: FIX naming and bump dependencies
+
 ## 0.1.14
 
 ### Patch Changes
