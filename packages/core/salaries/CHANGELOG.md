@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 0.1.17
+
+### Patch Changes
+
+- 6247101: Small fixes
+
 ## 0.1.16
 
 ### Patch Changes
