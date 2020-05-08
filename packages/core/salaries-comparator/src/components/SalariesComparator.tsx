@@ -204,7 +204,7 @@ export default class SalariesComparator extends PureComponent<any> {
     return (
       <>
         {salaryDataForChart ? (
-          <div style={{ overflowX: 'auto' }}>
+          <div>
             <div id={this.uuid} style={{ width: '100%', height: height }} />
           </div>
         ) : (

@@ -119,7 +119,6 @@ export default function Billing({
       <FieldGeosuggest
         name="billing_city"
         label="Comune"
-        required
         value={defaultValues?.billing_city}
         countryRestricted="it"
         geocoderType={['(cities)']}
@@ -127,6 +126,7 @@ export default function Billing({
         valueGetter={(suggestion) => {
           return suggestion.structured_formatting.main_text;
         }}
+        required
       />
       <FieldNumber
         name="billing_zip"

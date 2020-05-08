@@ -253,7 +253,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
     return (
       <>
         {salaryDataForChart ? (
-          <div style={{ overflowX: 'auto' }}>
+          <div>
             <div id={this.uuid} style={{ width: '100%', height: 400 }} />
           </div>
         ) : (
