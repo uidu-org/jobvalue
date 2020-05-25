@@ -1,5 +1,13 @@
 # @jobvalue/utils
 
+## 0.1.11
+
+### Patch Changes
+
+- c7bc2fb: Added salariesIndex for premium reports
+- Updated dependencies [c7bc2fb]
+  - @jobvalue/salaries@0.1.18
+
 ## 0.1.10
 
 ### Patch Changes
