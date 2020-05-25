@@ -4,21 +4,17 @@ import Salaries, { SalariesTable } from '..';
 import { salaryDataForChart } from '../examples-utils';
 
 export default function Basic() {
-  const salaries = salaryForChart(salaryDataForChart);
+  const salaries = salaryForChart(salaryDataForChart, 0);
   const compactSalaries = salaryForChartCompactMode(salaryDataForChart, {
     ral: 22000,
     rga: 22000,
   });
 
-  console.log(compactSalaries);
   return (
     <>
       <div className="card mb-5">
         <div className="card-header">Dati retributivi (RAL e RGA)</div>
-        <Salaries
-          salaryDataForChart={salaryForChart(salaryDataForChart)}
-          series={['rga', 'ral']}
-        />
+        <Salaries salaryDataForChart={salaries} series={['rga', 'ral']} />
         <SalariesTable salaryDataForChart={salaries} />
       </div>
       <div className="card mb-5">
@@ -26,6 +22,7 @@ export default function Basic() {
         <Salaries
           salaryDataForChart={salaryForChart(
             salaryDataForChart,
+            0,
             {
               ral: 24000,
               rga: 25000,

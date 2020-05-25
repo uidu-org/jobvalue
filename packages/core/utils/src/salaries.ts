@@ -19,10 +19,12 @@ export const salaryForChartCompactMode = (
     { name: 'Medio', key: 'average' },
     { name: 'Massimo', key: 'perc_90' },
   ],
-) => salaryForChart(salaries, mySalary, jobOffer, curves);
+) => salaryForChart(salaries, 0, mySalary, jobOffer, curves);
 
 export const salaryForChart = (
   salaries: Array<Salary>,
+  /** In case of PRO payment data, at 0 we have the national curve, at 1 we have the detailed one */
+  salariesIndex: number,
   mySalary?: { ral: number; rga: number },
   jobOffer?: { ral: number; rga: number },
   curves = [
@@ -43,7 +45,9 @@ export const salaryForChart = (
     } = {
       name: legend.name as SalaryDataNameKeys,
     };
-    const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[0];
+    const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[
+      salariesIndex
+    ];
     res.rga = foo[`ex_rga_${legend.key}`];
     res.ral = foo[`ex_ral_${legend.key}`];
     return res;
