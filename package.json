@@ -38,7 +38,7 @@
     "@babel/preset-flow": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
-    "@changesets/cli": "^2.4.1",
+    "@changesets/cli": "2.7.2",
     "@popperjs/core": "^2.0.0-rc.3",
     "@types/react-dom": "^16.9.4",
     "@types/react-router-dom": "^5.1.3",
