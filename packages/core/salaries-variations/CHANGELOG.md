@@ -1,5 +1,16 @@
 # @jobvalue/salaries-variations
 
+## 0.1.14
+
+### Patch Changes
+
+- 36e3687: Bump dependencies
+- 36e3687: Bump dependencies
+- Updated dependencies [36e3687]
+- Updated dependencies [36e3687]
+  - @jobvalue/salaries@0.1.19
+  - @jobvalue/utils@0.1.12
+
 ## 0.1.13
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @jobvalue/themes-stipendiogiusto
 
+## 0.1.4
+
+### Patch Changes
+
+- 36e3687: Bump dependencies
+- 36e3687: Bump dependencies
+
 ## 0.1.3
 
 ### Patch Changes
