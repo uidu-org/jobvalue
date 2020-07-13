@@ -138,7 +138,7 @@ export default function Billing({
       <Select
         options={provinces}
         name="billing_province"
-        label="Provincia (Sigla)"
+        label="Provincia"
         getOptionValue={({ abbr }) => abbr}
         required={provinces.length > 0}
         isLoading={provinces.length === 0}
