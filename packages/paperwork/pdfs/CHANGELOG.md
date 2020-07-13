@@ -1,5 +1,12 @@
 # @jobvalue/pdfs
 
+## 0.1.10
+
+### Patch Changes
+
+- 36e3687: Bump dependencies
+- 36e3687: Bump dependencies
+
 ## 0.1.9
 
 ### Patch Changes

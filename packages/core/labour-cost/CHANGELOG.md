@@ -1,5 +1,15 @@
 # @jobvalue/labour-cost
 
+## 0.1.12
+
+### Patch Changes
+
+- 36e3687: Bump dependencies
+- 36e3687: Bump dependencies
+- Updated dependencies [36e3687]
+- Updated dependencies [36e3687]
+  - @jobvalue/utils@0.1.12
+
 ## 0.1.11
 
 ### Patch Changes

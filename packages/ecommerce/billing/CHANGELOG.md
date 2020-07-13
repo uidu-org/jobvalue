@@ -1,5 +1,12 @@
 # @jobvalue/billing
 
+## 0.1.13
+
+### Patch Changes
+
+- 36e3687: Bump dependencies
+- 36e3687: Bump dependencies
+
 ## 0.1.12
 
 ### Patch Changes
