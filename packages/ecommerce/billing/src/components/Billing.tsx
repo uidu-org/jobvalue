@@ -114,7 +114,7 @@ export default function Billing({
         label="Indirizzo"
         name="billing_address"
         value={defaultValues?.billing_address}
-        required={billingKind === 'company'}
+        required
       />
       <FieldGeosuggest
         name="billing_city"
