@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/salaries-comparator",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "private": false,
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.12",
+    "@jobvalue/utils": "^0.1.13",
     "@uidu/spinner": "^0.3.4",
     "react": "^16.13.1",
     "uuid": "^8.3.0"

@@ -1,5 +1,13 @@
 # @jobvalue/company-benchmarks
 
+## 0.1.5
+
+### Patch Changes
+
+- 704ecf8: All packages are now built with preconstruct
+- Updated dependencies [704ecf8]
+  - @jobvalue/utils@0.1.13
+
 ## 0.1.4
 
 ### Patch Changes

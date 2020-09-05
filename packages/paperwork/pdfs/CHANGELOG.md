@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 0.1.11
+
+### Patch Changes
+
+- 704ecf8: All packages are now built with preconstruct
+
 ## 0.1.10
 
 ### Patch Changes

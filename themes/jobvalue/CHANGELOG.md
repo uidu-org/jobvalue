@@ -1,5 +1,11 @@
 # @jobvalue/themes-stipendiogiusto
 
+## 0.1.5
+
+### Patch Changes
+
+- 704ecf8: All packages are now built with preconstruct
+
 ## 0.1.4
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/company-benchmarks",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.12",
+    "@jobvalue/utils": "^0.1.13",
     "react": "^16.13.1",
     "react-feather": "^2.0.8"
   },
