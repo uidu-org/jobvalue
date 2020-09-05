@@ -1,5 +1,13 @@
 # @jobvalue/job
 
+## 0.1.17
+
+### Patch Changes
+
+- 704ecf8: All packages are now built with preconstruct
+- Updated dependencies [704ecf8]
+  - @jobvalue/utils@0.1.13
+
 ## 0.1.16
 
 ### Patch Changes

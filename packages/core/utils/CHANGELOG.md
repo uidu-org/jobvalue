@@ -1,5 +1,13 @@
 # @jobvalue/utils
 
+## 0.1.13
+
+### Patch Changes
+
+- 704ecf8: All packages are now built with preconstruct
+- Updated dependencies [704ecf8]
+  - @jobvalue/salaries@0.1.20
+
 ## 0.1.12
 
 ### Patch Changes

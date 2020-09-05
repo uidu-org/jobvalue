@@ -1,13 +1,13 @@
 {
   "name": "@jobvalue/province",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "description": "Province highlight",
   "license": "MIT",
   "main": "dist/province.cjs.js",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.12",
+    "@jobvalue/utils": "^0.1.13",
     "react": "^16.13.1",
     "uuid": "^8.3.0"
   },

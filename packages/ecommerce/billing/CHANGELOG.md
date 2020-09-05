@@ -1,5 +1,11 @@
 # @jobvalue/billing
 
+## 0.1.16
+
+### Patch Changes
+
+- 704ecf8: All packages are now built with preconstruct
+
 ## 0.1.15
 
 ### Patch Changes
