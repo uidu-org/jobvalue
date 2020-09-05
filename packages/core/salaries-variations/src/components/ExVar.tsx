@@ -4,7 +4,7 @@ import am4lang_it_IT from '@amcharts/amcharts4/lang/it_IT';
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { am4themesJobValue } from '@jobvalue/utils';
 import React, { PureComponent } from 'react';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 
 am4core.useTheme(am4themesAnimated);
 am4core.useTheme(am4themesJobValue);

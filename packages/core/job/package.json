@@ -1,20 +1,22 @@
 {
   "name": "@jobvalue/job",
   "version": "0.1.16",
-  "description": "Components to show user current job position",
-  "module": "index.js",
-  "types": "index.d.ts",
-  "license": "MIT",
-  "jobvalue:src": "index.ts",
-  "author": "uidu",
   "private": false,
-  "devDependencies": {
-    "@uidu/docs": "^0.1.39"
-  },
+  "description": "Components to show user current job position",
+  "license": "MIT",
+  "author": "uidu",
+  "main": "dist/job.cjs.js",
+  "module": "dist/job.esm.js",
+  "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
     "@jobvalue/utils": "^0.1.12",
-    "react-feather": "^2.0.3",
-    "uuid": "^3.4.0"
-  }
+    "react": "^16.13.1",
+    "react-feather": "^2.0.8",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@uidu/docs": "^0.2.5"
+  },
+  "jobvalue:src": "src/index.ts"
 }

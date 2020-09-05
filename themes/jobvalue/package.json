@@ -5,12 +5,13 @@
   "repository": "https://github.com/uidu-org/jobvalue.git",
   "license": "ISC",
   "author": "",
+  "main": "index.scss",
   "files": [
+    "dist",
     "index.scss"
   ],
-  "main": "index.scss",
   "devDependencies": {
-    "@uidu/docs": "^0.1.39"
+    "@uidu/docs": "^0.2.5"
   },
   "publishConfig": {
     "access": "public"

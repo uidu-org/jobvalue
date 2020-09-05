@@ -1,16 +1,18 @@
 {
   "name": "@jobvalue/salaries",
   "version": "0.1.19",
-  "module": "index.js",
-  "types": "index.d.ts",
   "license": "MIT",
-  "jobvalue:src": "index.ts",
+  "main": "dist/salaries.cjs.js",
+  "module": "dist/salaries.esm.js",
+  "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
     "@jobvalue/utils": "^0.1.12",
-    "@uidu/spinner": "^0.1.14",
-    "axios": "^0.19.1",
+    "@uidu/spinner": "^0.3.4",
+    "axios": "^0.20.0",
     "numeral": "^2.0.6",
-    "uuid": "^3.4.0"
-  }
+    "react": "^16.13.1",
+    "uuid": "^8.3.0"
+  },
+  "jobvalue:src": "src/index.ts"
 }

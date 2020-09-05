@@ -6,7 +6,7 @@ import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import { am4themesJobValue } from '@jobvalue/utils';
 import Spinner from '@uidu/spinner';
 import React, { PureComponent } from 'react';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import { manipulateSalariesData } from '../utils';
 
 am4core.useTheme(am4themesAnimated);

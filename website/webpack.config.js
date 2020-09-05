@@ -6,10 +6,15 @@ runDevServer({
   },
   webpackOptions: {
     resolve: {
-      mainFields: ['jobvalue:src', 'module', 'atlaskit:src', 'browser', 'main'],
+      mainFields: [
+        'jobvalue:src',
+        'module',
+        'main',
+        'atlaskit:src',
+      ],
     },
   },
-}).catch(err => {
+}).catch((err) => {
   console.log(err);
   process.exit(err);
 });

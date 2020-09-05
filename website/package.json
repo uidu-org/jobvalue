@@ -2,10 +2,6 @@
   "name": "@jobvalue/website",
   "version": "0.1.6",
   "private": true,
-  "devDependencies": {
-    "@types/node": "^13.1.8",
-    "typescript": "^3.7.5"
-  },
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "node --max-old-space-size=8192 ./node_modules/@uidu/webpack-config/bin/build.js && yarn build:copy",
@@ -18,23 +14,24 @@
   },
   "dependencies": {
     "@jobvalue/themes-stipendiogiusto": "^0.1.2",
-    "@uidu/drawer": "^0.2.10",
-    "@uidu/field-text": "^0.2.0",
-    "@uidu/modal-dialog": "^0.1.24",
-    "@uidu/navigation": "^0.2.17",
-    "@uidu/select": "^0.4.0",
-    "@uidu/shell": "^0.2.1",
-    "@uidu/theme": "^0.2.2",
+    "@uidu/drawer": "^0.4.6",
+    "@uidu/field-text": "^0.3.4",
+    "@uidu/modal-dialog": "^0.3.4",
+    "@uidu/navigation": "^0.4.3",
+    "@uidu/select": "^0.5.4",
+    "@uidu/shell": "^1.0.7",
+    "@uidu/side-navigation": "^0.1.4",
+    "@uidu/theme": "^0.4.4",
     "avataaars": "^1.2.1",
     "codesandboxer": "^1.0.3",
     "hoverintent": "^2.2.1",
     "lodash.debounce": "^4.0.8",
-    "react": "^16.12.0",
+    "react": "^16.13.1",
     "react-codesandboxer": "^3.1.5",
     "react-dom": "^16.12.0",
-    "react-feather": "^2.0.3",
-    "react-ga": "^2.7.0",
-    "react-helmet": "^5.2.1",
+    "react-feather": "^2.0.8",
+    "react-ga": "^3.1.2",
+    "react-helmet": "^6.1.0",
     "react-loadable": "^5.5.0",
     "react-markdown": "^4.3.1",
     "react-media": "^1.10.0",
@@ -44,5 +41,9 @@
     "shallow-equal": "^1.2.1",
     "snake-case": "^3.0.3",
     "tti-polyfill": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.4",
+    "typescript": "^4.0.2"
   }
 }

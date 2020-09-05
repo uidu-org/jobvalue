@@ -1,17 +1,21 @@
 {
   "name": "@jobvalue/benefits",
   "version": "0.1.17",
-  "description": "Serve a mostrare quanto guadagno rispetto agli altri",
-  "module": "index.js",
-  "types": "index.d.ts",
-  "license": "MIT",
-  "jobvalue:src": "index.ts",
   "private": false,
+  "description": "Serve a mostrare quanto guadagno rispetto agli altri",
+  "license": "MIT",
+  "main": "dist/benefits.cjs.js",
+  "module": "dist/benefits.esm.js",
+  "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.12"
+    "@jobvalue/utils": "^0.1.12",
+    "@uidu/spinner": "^0.3.4",
+    "react": "^16.13.1",
+    "uuid": "^8.3.0"
   },
   "devDependencies": {
-    "@uidu/docs": "^0.1.39"
-  }
+    "@uidu/docs": "^0.2.5"
+  },
+  "jobvalue:src": "src/index.ts"
 }

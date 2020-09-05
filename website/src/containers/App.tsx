@@ -1,5 +1,5 @@
 import { ModalTransition } from '@uidu/modal-dialog';
-import Shell, { ShellContent, ShellMain, ShellNavigation } from '@uidu/shell';
+import Shell, { ShellMain, ShellSidebar } from '@uidu/shell';
 import GlobalTheme from '@uidu/theme';
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
@@ -100,8 +100,7 @@ export default class App extends React.Component<{}, State> {
               />
               <Route>
                 <Shell>
-                  <ShellContent>
-                    <ShellNavigation
+                    <ShellSidebar
                       className="d-lg-flex d-none shadow-sm bg-white"
                       style={{
                         flex: '1 0 22%',
@@ -110,7 +109,7 @@ export default class App extends React.Component<{}, State> {
                       }}
                     >
                       <Nav />
-                    </ShellNavigation>
+                    </ShellSidebar>
                     <ShellMain>
                       <Boundary>
                         <Switch>
@@ -160,7 +159,6 @@ export default class App extends React.Component<{}, State> {
                         />
                       </Boundary>
                     </ShellMain>
-                  </ShellContent>
                 </Shell>
               </Route>
             </Switch>

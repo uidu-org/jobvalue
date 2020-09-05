@@ -1,18 +1,20 @@
 {
   "name": "@jobvalue/company-benchmarks",
   "version": "0.1.4",
-  "description": "Serve a mostrare quanto guadagno rispetto agli altri",
-  "module": "index.js",
-  "types": "index.d.ts",
-  "license": "MIT",
-  "jobvalue:src": "index.ts",
   "private": false,
+  "description": "Serve a mostrare quanto guadagno rispetto agli altri",
+  "license": "MIT",
+  "main": "dist/company-benchmarks.cjs.js",
+  "module": "dist/company-benchmarks.esm.js",
+  "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
     "@jobvalue/utils": "^0.1.12",
-    "react-feather": "^2.0.3"
+    "react": "^16.13.1",
+    "react-feather": "^2.0.8"
   },
   "devDependencies": {
-    "@uidu/docs": "^0.1.39"
-  }
+    "@uidu/docs": "^0.2.5"
+  },
+  "jobvalue:src": "src/index.ts"
 }

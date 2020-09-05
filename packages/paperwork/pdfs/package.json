@@ -1,17 +1,17 @@
 {
   "name": "@jobvalue/pdfs",
   "version": "0.1.10",
-  "description": "Pdf scaffold for JobValue",
-  "main": "index.js",
-  "author": "uidu",
-  "license": "MIT",
   "private": false,
+  "description": "Pdf scaffold for JobValue",
+  "license": "MIT",
+  "author": "uidu",
+  "main": "dist/pdfs.cjs.js",
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.8.0"
+  },
   "devDependencies": {
     "@jobvalue/benefits": "^0.1.17",
     "@jobvalue/salaries-comparator": "^0.1.24",
-    "@uidu/docs": "^0.1.39"
-  },
-  "dependencies": {
-    "@amcharts/amcharts4": "^4.8.0"
+    "@uidu/docs": "^0.2.5"
   }
 }
