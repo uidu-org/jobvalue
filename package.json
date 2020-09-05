@@ -1,34 +1,27 @@
 {
   "name": "jobvalue",
   "private": true,
-  "scripts": {
-    "build": "                               yarn preconstruct build && run-p build:pkg build:typescript --print-label --continue-on-error",
-    "build:pkg": "                           bolt workspaces exec --only-fs 'packages/**' -- copy-pkg package.json tmp/package.json --only name,version,sideEffects && bolt workspaces exec --only-fs 'packages/**' -- mv ./tmp/package.json ./version.json",
-    "build:typescript": "                    NODE_ENV=production bolt workspaces exec --only-fs 'packages/**' -- tsc --project ./build/es2015",
-    "build:website": "                       bolt install --pure-lockfile && cd website && yarn build",
-    "delete": "                              yarn run delete:build && yarn run delete:tmp && yarn run delete:modules",
-    "delete:build": "                        manypkg exec rm -rf dist",
-    "delete:tmp": "                          manypkg exec rm -rf tmp",
-    "delete:modules": "                      manypkg exec rm -rf node_modules && rm -rf node_modules",
-    "postinstall": "                         manypkg check && preconstruct dev",
-    "pkg:sort": "                            npx sort-package-json package.json && yarn manypkg exec npx sort-package-json package.json",
-    "changeset": "                           changeset",
-    "start": "                               dotenv yarn run website:start",
-    "typecheck:typescript": "                tsc --noEmit",
-    "website:start": "                       cd website && yarn start"
-  },
-  "bolt": {
-    "workspaces": [
-      "packages/*/*",
-      "themes/*",
-      "website"
-    ]
-  },
   "workspaces": [
     "packages/*/*",
     "themes/*",
     "website"
   ],
+  "scripts": {
+    "build": "                               yarn preconstruct build && run-p build:pkg",
+    "build:pkg": "                           bolt workspaces exec --only-fs 'packages/**' -- copy-pkg package.json tmp/package.json --only name,version,sideEffects && bolt workspaces exec --only-fs 'packages/**' -- mv ./tmp/package.json ./version.json",
+    "build:typescript": "                    NODE_ENV=production bolt workspaces exec --only-fs 'packages/**' -- tsc --project ./build/es2015",
+    "build:website": "                       bolt install --pure-lockfile && cd website && yarn build",
+    "changeset": "                           changeset",
+    "delete": "                              yarn run delete:build && yarn run delete:tmp && yarn run delete:modules",
+    "delete:build": "                        manypkg exec rm -rf dist",
+    "delete:modules": "                      manypkg exec rm -rf node_modules && rm -rf node_modules",
+    "delete:tmp": "                          manypkg exec rm -rf tmp",
+    "postinstall": "                         manypkg check && preconstruct dev",
+    "pkg:sort": "                            npx sort-package-json package.json && yarn manypkg exec npx sort-package-json package.json",
+    "start": "                               dotenv yarn run website:start",
+    "typecheck:typescript": "                tsc --noEmit",
+    "website:start": "                       cd website && yarn start"
+  },
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
     "@babel/cli": "^7.1.0",
@@ -72,6 +65,7 @@
     "@uidu/navigation": "^0.4.3",
     "@uidu/select": "^0.5.4",
     "@uidu/shell": "^1.0.7",
+    "@uidu/side-navigation": "^0.1.4",
     "@uidu/spinner": "^0.3.4",
     "@uidu/theme": "^0.4.4",
     "@uidu/webpack-config": "^0.1.47",
@@ -154,6 +148,13 @@
     "webpack-bundle-analyzer": "^3.0.4",
     "webpack-dev-server": "^3.2.1",
     "webpack-manifest-plugin": "^2.0.4"
+  },
+  "bolt": {
+    "workspaces": [
+      "packages/*/*",
+      "themes/*",
+      "website"
+    ]
   },
   "preconstruct": {
     "packages": [
