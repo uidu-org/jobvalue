@@ -70,7 +70,7 @@
     "@uidu/theme": "^0.4.4",
     "@uidu/webpack-config": "^0.1.47",
     "avataaars": "^1.2.1",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "babel-eslint": "^10.0.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-add-module-exports": "^1.0.0",
