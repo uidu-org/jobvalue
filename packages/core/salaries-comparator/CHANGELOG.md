@@ -1,5 +1,16 @@
 # @jobvalue/salaries-comparator
 
+## 1.0.0
+
+### Major Changes
+
+- cd5a330: Bump dependencies and sync schema to japis interface
+
+### Patch Changes
+
+- Updated dependencies [cd5a330]
+  - @jobvalue/utils@1.0.0
+
 ## 0.1.25
 
 ### Patch Changes

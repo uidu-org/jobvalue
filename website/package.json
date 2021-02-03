@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/website",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "prebuild": "rm -rf dist",
@@ -13,7 +13,7 @@
     "start": "node webpack.config.js"
   },
   "dependencies": {
-    "@jobvalue/themes-stipendiogiusto": "^0.1.5",
+    "@jobvalue/themes-stipendiogiusto": "^1.0.0",
     "@uidu/drawer": "^0.5.7",
     "@uidu/field-text": "^0.4.8",
     "@uidu/modal-dialog": "^0.4.8",

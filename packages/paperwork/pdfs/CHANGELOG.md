@@ -1,5 +1,11 @@
 # @jobvalue/pdfs
 
+## 1.0.0
+
+### Major Changes
+
+- cd5a330: Bump dependencies and sync schema to japis interface
+
 ## 0.1.11
 
 ### Patch Changes

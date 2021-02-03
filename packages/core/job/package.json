@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/job",
-  "version": "0.1.17",
+  "version": "1.0.0",
   "private": false,
   "description": "Components to show user current job position",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^0.1.13",
+    "@jobvalue/utils": "^1.0.0",
     "react": "^17.0.1",
     "react-feather": "^2.0.8",
     "uuid": "^8.3.0"

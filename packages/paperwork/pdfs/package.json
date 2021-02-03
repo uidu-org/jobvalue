@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/pdfs",
-  "version": "0.1.11",
+  "version": "1.0.0",
   "private": false,
   "description": "Pdf scaffold for JobValue",
   "license": "MIT",
@@ -10,8 +10,8 @@
     "@amcharts/amcharts4": "^4.8.0"
   },
   "devDependencies": {
-    "@jobvalue/benefits": "^0.1.18",
-    "@jobvalue/salaries-comparator": "^0.1.25",
+    "@jobvalue/benefits": "^1.0.0",
+    "@jobvalue/salaries-comparator": "^1.0.0",
     "@uidu/docs": "^0.3.6"
   }
 }
