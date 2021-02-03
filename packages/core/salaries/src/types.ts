@@ -1,17 +1,17 @@
 export type Salary = {
   id: number;
-  ex_ral_average: number;
-  ex_ral_perc_10: number;
-  ex_ral_perc_25: number;
-  ex_ral_perc_50: number;
-  ex_ral_perc_75: number;
-  ex_ral_perc_90: number;
-  ex_rga_average: number;
-  ex_rga_perc_10: number;
-  ex_rga_perc_25: number;
-  ex_rga_perc_50: number;
-  ex_rga_perc_75: number;
-  ex_rga_perc_90: number;
+  absAverage: number;
+  absPerc10: number;
+  absPerc25: number;
+  absPerc50: number;
+  absPerc75: number;
+  absPerc90: number;
+  atsAverage: number;
+  atsPerc10: number;
+  atsPerc25: number;
+  atsPerc50: number;
+  atsPerc75: number;
+  atsPerc90: number;
   ex_perc?: number;
   ex_count?: number;
   ex_var?: number;
@@ -32,11 +32,11 @@ export type SalaryDataNameKeys =
 
 export type SalaryData = {
   name: SalaryDataNameKeys;
-  rga?: number;
-  ral?: number;
+  ats?: number;
+  abs?: number;
 };
 
-export type SalaryKinds = 'ral' | 'rga';
+export type SalaryKinds = 'abs' | 'ats';
 
 export type SalariesProps = {
   salaryDataForChart: Array<SalaryData>;
@@ -45,7 +45,7 @@ export type SalariesProps = {
   fullWidth?: boolean;
   compactMode?: boolean;
   colors: {
-    ral?: string;
-    rga?: string;
+    abs?: string;
+    ats?: string;
   };
 };

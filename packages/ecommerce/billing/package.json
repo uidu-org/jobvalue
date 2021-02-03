@@ -6,17 +6,19 @@
   "license": "MIT",
   "author": "uidu",
   "main": "dist/billing.cjs.js",
+  "module": "dist/billing.esm.js",
+  "types": "index.d.ts",
   "dependencies": {
-    "@uidu/field-geosuggest": "^0.2.0",
-    "@uidu/field-number": "^0.3.4",
-    "@uidu/field-text": "^0.3.4",
-    "@uidu/field-textarea": "^0.2.0",
-    "@uidu/form": "^0.3.4",
-    "@uidu/select": "^0.5.4",
+    "@uidu/field-geosuggest": "^0.3.7",
+    "@uidu/field-number": "^0.4.8",
+    "@uidu/field-text": "^0.4.8",
+    "@uidu/field-textarea": "^0.3.7",
+    "@uidu/form": "^0.4.11",
+    "@uidu/select": "^0.6.9",
     "codice-fiscale-js": "^2.2.4",
-    "react": "^16.13.1"
+    "react": "^17.0.1"
   },
   "devDependencies": {
-    "@uidu/docs": "^0.2.5"
+    "@uidu/docs": "^0.3.6"
   }
 }

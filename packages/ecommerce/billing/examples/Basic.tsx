@@ -8,22 +8,22 @@ export default function Basic() {
       <div className="mb-4">
         <Form
           onChange={console.log}
-          handleSubmit={async model => console.log(model)}
+          handleSubmit={async (model) => console.log(model)}
           footerRenderer={({ loading, canSubmit }) => (
             <FormSubmit loading={loading} canSubmit={canSubmit} label="Invia" />
           )}
         >
           <fieldset>
             <legend>Default</legend>
-            <Billing
+            {/* <Billing
               provinces={[{ name: 'Bergamo', id: '1', abbr: 'BG' }]}
               defaultValues={{ billing_zip: 24069 }}
-            />
+            /> */}
           </fieldset>
         </Form>
       </div>
       <Form
-        handleSubmit={async model => console.log(model)}
+        handleSubmit={async (model) => console.log(model)}
         footerRenderer={({ loading, canSubmit }) => (
           <FormSubmit loading={loading} canSubmit={canSubmit} label="Invia" />
         )}

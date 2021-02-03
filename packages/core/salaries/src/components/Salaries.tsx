@@ -22,8 +22,8 @@ export default class Salaries extends PureComponent<SalariesProps> {
 
   static defaultProps = {
     colors: {
-      ral: '#386da7',
-      rga: '#f28d0e',
+      abs: '#386da7',
+      ats: '#f28d0e',
     },
   };
 
@@ -104,22 +104,22 @@ export default class Salaries extends PureComponent<SalariesProps> {
       valueAxis.renderer.labels.template.fillOpacity = 0.3;
       valueAxis.renderer.grid.template.strokeOpacity = 0;
 
-      if (series.includes('ral')) {
-        const ral = chart.series.push(new am4charts.ColumnSeries());
-        ral.dataFields.valueY = 'ral';
-        ral.dataFields.categoryX = 'name';
-        ral.tooltipText = '{valueY.key}';
-        ral.columns.template.width = am4core.percent(100);
-        ral.fillOpacity = 0.4;
-        ral.fill = am4core.color(colors.ral);
-        ral.stroke = am4core.color(colors.ral);
-        ral.tooltipText = 'RAL: [bold]{valueY}[/]';
-        ral.columns.template.propertyFields.fill = 'color';
-        // ral.columns.template.propertyFields.stroke = 'color';
-        ral.columns.template.column.cornerRadius(3, 3, 0, 0);
-        ral.columns.template.strokeOpacity = 0.5;
+      if (series.includes('abs')) {
+        const abs = chart.series.push(new am4charts.ColumnSeries());
+        abs.dataFields.valueY = 'abs';
+        abs.dataFields.categoryX = 'name';
+        abs.tooltipText = '{valueY.key}';
+        abs.columns.template.width = am4core.percent(100);
+        abs.fillOpacity = 0.4;
+        abs.fill = am4core.color(colors.abs);
+        abs.stroke = am4core.color(colors.abs);
+        abs.tooltipText = 'abs: [bold]{valueY}[/]';
+        abs.columns.template.propertyFields.fill = 'color';
+        // abs.columns.template.propertyFields.stroke = 'color';
+        abs.columns.template.column.cornerRadius(3, 3, 0, 0);
+        abs.columns.template.strokeOpacity = 0.5;
 
-        ral.columns.template.adapter.add('fillOpacity', (fill, target) => {
+        abs.columns.template.adapter.add('fillOpacity', (fill, target) => {
           // @ts-ignore
           if (target.dataItem && target.dataItem.categoryX === 'Tu') {
             return 1;
@@ -128,7 +128,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
           }
         });
 
-        ral.columns.template.adapter.add('fill', (fill, target) => {
+        abs.columns.template.adapter.add('fill', (fill, target) => {
           // @ts-ignore
           if (target.dataItem && target.dataItem.categoryX === 'Offerta') {
             return am4core.color('rgba(56,109,166,0.3)');
@@ -137,31 +137,31 @@ export default class Salaries extends PureComponent<SalariesProps> {
           }
         });
 
-        if (!series.includes('rga')) {
-          ral.tooltip.disabled = true;
-          var bullet = ral.bullets.push(new am4charts.LabelBullet());
-          bullet.label.text = "€ {ral.formatNumber('#,###')}";
+        if (!series.includes('ats')) {
+          abs.tooltip.disabled = true;
+          var bullet = abs.bullets.push(new am4charts.LabelBullet());
+          bullet.label.text = "€ {abs.formatNumber('#,###')}";
           bullet.label.fontSize = 14;
           bullet.dy = -16;
         }
       }
 
-      if (series.includes('rga')) {
-        const rga = chart.series.push(new am4charts.ColumnSeries());
-        rga.dataFields.valueY = 'rga';
-        rga.dataFields.categoryX = 'name';
-        rga.tooltipText = '{valueY.key}';
-        rga.columns.template.width = am4core.percent(100);
-        rga.fill = am4core.color(colors.rga);
-        rga.fillOpacity = 0.4;
-        rga.stroke = am4core.color(colors.rga);
-        rga.tooltipText = 'RGA: [bold]{valueY}[/]';
-        rga.columns.template.propertyFields.fill = 'color';
-        // rga.columns.template.propertyFields.stroke = 'color';
-        rga.columns.template.column.cornerRadius(3, 3, 0, 0);
-        rga.columns.template.strokeOpacity = 0.5;
+      if (series.includes('ats')) {
+        const ats = chart.series.push(new am4charts.ColumnSeries());
+        ats.dataFields.valueY = 'ats';
+        ats.dataFields.categoryX = 'name';
+        ats.tooltipText = '{valueY.key}';
+        ats.columns.template.width = am4core.percent(100);
+        ats.fill = am4core.color(colors.ats);
+        ats.fillOpacity = 0.4;
+        ats.stroke = am4core.color(colors.ats);
+        ats.tooltipText = 'ats: [bold]{valueY}[/]';
+        ats.columns.template.propertyFields.fill = 'color';
+        // ats.columns.template.propertyFields.stroke = 'color';
+        ats.columns.template.column.cornerRadius(3, 3, 0, 0);
+        ats.columns.template.strokeOpacity = 0.5;
 
-        rga.columns.template.adapter.add('fillOpacity', (fill, target) => {
+        ats.columns.template.adapter.add('fillOpacity', (fill, target) => {
           // @ts-ignore
           if (target.dataItem && target.dataItem.categoryX === 'Tu') {
             return 1;
@@ -170,7 +170,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
           }
         });
 
-        rga.columns.template.adapter.add('fill', (fill, target) => {
+        ats.columns.template.adapter.add('fill', (fill, target) => {
           // @ts-ignore
           if (target.dataItem && target.dataItem.categoryX === 'Offerta') {
             return am4core.color('rgba(242,141,12,0.15)');
@@ -179,10 +179,10 @@ export default class Salaries extends PureComponent<SalariesProps> {
           }
         });
 
-        if (!series.includes('ral')) {
-          rga.tooltip.disabled = true;
-          var bullet = rga.bullets.push(new am4charts.LabelBullet());
-          bullet.label.text = "€ {rga.formatNumber('#,###')}";
+        if (!series.includes('abs')) {
+          ats.tooltip.disabled = true;
+          var bullet = ats.bullets.push(new am4charts.LabelBullet());
+          bullet.label.text = "€ {ats.formatNumber('#,###')}";
           bullet.label.fontSize = 14;
           bullet.dy = -16;
         }

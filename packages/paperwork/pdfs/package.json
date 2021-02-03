@@ -12,6 +12,6 @@
   "devDependencies": {
     "@jobvalue/benefits": "^0.1.18",
     "@jobvalue/salaries-comparator": "^0.1.25",
-    "@uidu/docs": "^0.2.5"
+    "@uidu/docs": "^0.3.6"
   }
 }

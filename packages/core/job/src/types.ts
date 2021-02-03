@@ -16,10 +16,10 @@ export type FunctionalArea = {
 
 export type MySalary = {
   months?: number;
-  ral: number;
-  addToRal?: number;
-  rga: number;
-  ralMonthly: number;
+  abs: number;
+  addToAbs?: number;
+  ats: number;
+  absMonthly: number;
   partTimePerc?: number;
 };
 

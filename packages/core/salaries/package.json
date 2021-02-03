@@ -8,10 +8,10 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
     "@jobvalue/utils": "^0.1.13",
-    "@uidu/spinner": "^0.3.4",
-    "axios": "^0.20.0",
+    "@uidu/spinner": "^0.4.6",
+    "axios": "^0.21.1",
     "numeral": "^2.0.6",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "uuid": "^8.3.0"
   },
   "jobvalue:src": "src/index.ts"

@@ -1,4 +1,4 @@
-import { ShellBody, ShellHeader } from '@uidu/shell';
+import { ScrollableContainer, ShellBody, ShellHeader } from '@uidu/shell';
 import React, { Fragment } from 'react';
 import { match } from 'react-router';
 import { Redirect } from 'react-router-dom';
@@ -52,14 +52,16 @@ export default function Document({
       <ShellHeader className="px-3 px-xl-4 border-bottom">
         Documentation
       </ShellHeader>
-      <ShellBody scrollable>
-        <div className="container my-3 my-sm-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <Content />
+      <ShellBody>
+        <ScrollableContainer>
+          <div className="container my-3 my-sm-5">
+            <div className="row justify-content-center">
+              <div className="col-lg-10">
+                <Content />
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollableContainer>
       </ShellBody>
     </Fragment>
   );

@@ -49,13 +49,13 @@ export default class JobSalarySummary extends PureComponent<
       const data = [
         {
           category: 'RAL',
-          value: mySalary.ral,
+          value: mySalary.abs,
         },
       ];
-      if (mySalary.addToRal) {
+      if (mySalary.addToAbs) {
         data.push({
           category: 'VAR',
-          value: mySalary.addToRal,
+          value: mySalary.addToAbs,
         });
       }
       chart.data = data;
@@ -108,7 +108,7 @@ export default class JobSalarySummary extends PureComponent<
               <td className="font-weight-light">
                 Retribuzione fissa mensile lorda
               </td>
-              <td className="font-weight-light">{toEur(mySalary.ralMonthly)}</td>
+              <td className="font-weight-light">{toEur(mySalary.absMonthly)}</td>
             </tr>
             <tr>
               <td className="font-weight-light">Mensilità</td>
@@ -117,25 +117,25 @@ export default class JobSalarySummary extends PureComponent<
             {!isAutonomous && (
               <tr>
                 <th scope="row">
-                  RAL <small>Retribuzione annua lorda</small>
+                  abs <small>Retribuzione annua lorda</small>
                 </th>
                 <th scope="row" className="text-right text-nowrap">
-                  {toEur(mySalary.ral)}
+                  {toEur(mySalary.abs)}
                 </th>
               </tr>
             )}
-            {mySalary.addToRal && (
+            {mySalary.addToAbs && (
               <>
                 <tr>
                   <td>Retribuzione variabile (€)</td>
                   <td className="text-right text-nowrap">
-                    {toEur(mySalary.addToRal)}
+                    {toEur(mySalary.addToAbs)}
                   </td>
                 </tr>
                 <tr>
-                  <td>Retribuzione variabile (% su RAL)</td>
+                  <td>Retribuzione variabile (% su abs)</td>
                   <td className="text-right text-nowrap">
-                    {toPerc(mySalary.addToRal / mySalary.ral)}
+                    {toPerc(mySalary.addToAbs / mySalary.abs)}
                   </td>
                 </tr>
               </>
@@ -145,7 +145,7 @@ export default class JobSalarySummary extends PureComponent<
                 RGA <small>Retribuzione globale annua</small>
               </th>
               <th scope="row" className="text-right text-nowrap">
-                {toEur(mySalary.rga)}
+                {toEur(mySalary.ats)}
               </th>
             </tr>
           </tbody>

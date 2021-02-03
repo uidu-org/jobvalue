@@ -8,7 +8,7 @@ export default function SalariesTable({ salaryDataForChart }) {
         <thead>
           <tr>
             <th />
-            {salaryDataForChart.map(datum => (
+            {salaryDataForChart.map((datum) => (
               <th className="text-nowrap text-right" key={datum.name}>
                 {datum.name}
               </th>
@@ -18,17 +18,17 @@ export default function SalariesTable({ salaryDataForChart }) {
         <tbody>
           <tr>
             <th scope="row">Ral</th>
-            {salaryDataForChart.map(datum => (
+            {salaryDataForChart.map((datum) => (
               <td className="text-right text-nowrap" key={`${datum.name}-ral`}>
-                {toEur(datum.ral)}
+                {toEur(datum.abs)}
               </td>
             ))}
           </tr>
           <tr>
-            <th scope="row">Rga</th>
-            {salaryDataForChart.map(datum => (
-              <td className="text-right text-nowrap" key={`${datum.name}-rga`}>
-                {toEur(datum.rga)}
+            <th scope="row">ats</th>
+            {salaryDataForChart.map((datum) => (
+              <td className="text-right text-nowrap" key={`${datum.name}-ats`}>
+                {toEur(datum.ats)}
               </td>
             ))}
           </tr>

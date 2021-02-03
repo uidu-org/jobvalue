@@ -1,4 +1,4 @@
-import Navigation from '@uidu/navigation';
+import Navigation from '@uidu/side-navigation';
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import logo from '../../assets/atlaskit-logo-monochrome.png';

@@ -12,12 +12,12 @@ export const salaryBySenses = (state) => {
 
 export const salaryForChartCompactMode = (
   salaries: Array<Salary>,
-  mySalary?: { ral: number; rga: number },
-  jobOffer?: { ral: number; rga: number },
+  mySalary?: { abs: number; ats: number },
+  jobOffer?: { abs: number; ats: number },
   curves = [
-    { name: 'Minimo', key: 'perc_10' },
-    { name: 'Medio', key: 'average' },
-    { name: 'Massimo', key: 'perc_90' },
+    { name: 'Minimo', key: 'Perc10' },
+    { name: 'Medio', key: 'Average' },
+    { name: 'Massimo', key: 'Perc90' },
   ],
 ) => salaryForChart(salaries, 0, mySalary, jobOffer, curves);
 
@@ -25,22 +25,22 @@ export const salaryForChart = (
   salaries: Array<Salary>,
   /** In case of PRO payment data, at 0 we have the national curve, at 1 we have the detailed one */
   salariesIndex: number,
-  mySalary?: { ral: number; rga: number },
-  jobOffer?: { ral: number; rga: number },
+  mySalary?: { abs: number; ats: number },
+  jobOffer?: { abs: number; ats: number },
   curves = [
     // { name: 'Media', key: 'average' },
-    { name: '1° Decile', key: 'perc_10' },
-    { name: '1° Quartile', key: 'perc_25' },
-    { name: 'Mediana', key: 'perc_50' },
-    { name: '3° Quartile', key: 'perc_75' },
-    { name: '9° Decile', key: 'perc_90' },
+    { name: '1° Decile', key: 'Perc10' },
+    { name: '1° Quartile', key: 'Perc25' },
+    { name: 'Mediana', key: 'Perc50' },
+    { name: '3° Quartile', key: 'Perc75' },
+    { name: '9° Decile', key: 'Perc90' },
   ],
 ): SalaryData[] => {
   const out = curves.map((legend) => {
     const res: {
       name: SalaryDataNameKeys;
-      rga?: number;
-      ral?: number;
+      ats?: number;
+      abs?: number;
       color?: string;
     } = {
       name: legend.name as SalaryDataNameKeys,
@@ -48,25 +48,28 @@ export const salaryForChart = (
     const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[
       salariesIndex
     ];
-    res.rga = foo[`ex_rga_${legend.key}`];
-    res.ral = foo[`ex_ral_${legend.key}`];
+    console.log(foo);
+    console.log(legend);
+    res.ats = foo[`ats${legend.key}`];
+    res.abs = foo[`abs${legend.key}`];
+    console.log(res);
     return res;
   });
   if (mySalary) {
     out.push({
       name: 'Tu' as SalaryDataNameKeys,
-      rga: mySalary.rga,
-      ral: mySalary.ral,
+      ats: mySalary.ats,
+      abs: mySalary.abs,
     });
   }
   if (jobOffer) {
     out.push({
       name: 'Offerta' as SalaryDataNameKeys,
-      rga: jobOffer.rga,
-      ral: jobOffer.ral,
+      ats: jobOffer.ats,
+      abs: jobOffer.abs,
     });
   }
-  return out.slice().sort((a, b) => a.rga - b.rga);
+  return out.slice().sort((a, b) => a.ats - b.ats);
 };
 
 // Action creators

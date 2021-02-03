@@ -1,4 +1,4 @@
-import { ShellBody } from '@uidu/shell';
+import { ScrollableContainer, ShellBody } from '@uidu/shell';
 import * as React from 'react';
 
 export type FourOhFourProps = {};
@@ -20,9 +20,11 @@ export default class FourOhFour extends React.PureComponent<FourOhFourProps> {
 
   render() {
     return (
-      <ShellBody scrollable>
-        <h1>Oops!</h1>
-        <p>{"Couldn't find this page."}</p>
+      <ShellBody>
+        <ScrollableContainer>
+          <h1>Oops!</h1>
+          <p>{"Couldn't find this page."}</p>
+        </ScrollableContainer>
       </ShellBody>
     );
   }

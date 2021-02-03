@@ -16,7 +16,7 @@ export default md`
       packageName="@jobvalue/salaries"
       Component={require('../examples/Basic').default}
       title="Basic"
-      source={require('!!raw-loader!../examples/Basic').default}
+      source={require('!!raw-loader!../examples/Basic')}
     />
   )}
 

@@ -132,15 +132,15 @@ export default class LabourCostChart extends PureComponent<LabourCostProps> {
       valueAxis.renderer.labels.template.fillOpacity = 0.3;
       valueAxis.renderer.grid.template.strokeOpacity = 0;
 
-      const ral = chart.series.push(new am4charts.ColumnSeries());
-      ral.dataFields.valueY = 'value';
-      ral.dataFields.openValueY = 'open';
-      ral.dataFields.categoryX = 'name';
-      ral.tooltip.disabled = true;
-      ral.fillOpacity = 0.5;
-      ral.columns.template.strokeOpacity = 0.5;
+      const abs = chart.series.push(new am4charts.ColumnSeries());
+      abs.dataFields.valueY = 'value';
+      abs.dataFields.openValueY = 'open';
+      abs.dataFields.categoryX = 'name';
+      abs.tooltip.disabled = true;
+      abs.fillOpacity = 0.5;
+      abs.columns.template.strokeOpacity = 0.5;
 
-      var bullet = ral.bullets.push(new am4charts.LabelBullet());
+      var bullet = abs.bullets.push(new am4charts.LabelBullet());
       bullet.label.text = "€ {displayValue.formatNumber('#,###')}";
       bullet.locationY = 0.5;
       // bullet.dx = 0;
@@ -149,10 +149,10 @@ export default class LabourCostChart extends PureComponent<LabourCostProps> {
       bullet.label.truncate = false;
       bullet.label.hideOversized = false;
 
-      ral.tooltipText = 'RAL: [bold]{valueX}[/]';
-      ral.columns.template.propertyFields.fill = 'color';
-      ral.columns.template.propertyFields.stroke = 'color';
-      ral.columns.template.column.cornerRadius(3, 3, 3, 3);
+      abs.tooltipText = 'abs: [bold]{valueX}[/]';
+      abs.columns.template.propertyFields.fill = 'color';
+      abs.columns.template.propertyFields.stroke = 'color';
+      abs.columns.template.column.cornerRadius(3, 3, 3, 3);
 
       let stepSeries = chart.series.push(new am4charts.StepLineSeries());
       stepSeries.dataFields.categoryX = 'name';

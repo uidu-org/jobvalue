@@ -8,11 +8,11 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
     "@jobvalue/utils": "^0.1.13",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "uuid": "^8.3.0"
   },
   "devDependencies": {
-    "@uidu/docs": "^0.2.5"
+    "@uidu/docs": "^0.3.6"
   },
   "jobvalue:src": "src/index.ts"
 }

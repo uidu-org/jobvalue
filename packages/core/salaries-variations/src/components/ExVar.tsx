@@ -14,7 +14,7 @@ export type ExVarProps = {
   mode: 'perc' | 'value';
   mySalary: {
     exVar: number;
-    ral: number;
+    abs: number;
   };
   salaryDataForChart?: any;
 };
@@ -55,7 +55,7 @@ export default class ExVar extends PureComponent<ExVarProps> {
             name: 'VAR di mercato (€)',
             value: (
               ((salaryDataForChart[1] as any).ex_var *
-                (salaryDataForChart[1] as any).ex_ral_average) /
+                (salaryDataForChart[1] as any).ex_abs_average) /
               100
             ).toFixed(2),
             color: 'rgb(243, 141, 13)',
@@ -69,13 +69,13 @@ export default class ExVar extends PureComponent<ExVarProps> {
       } else {
         chart.data = [
           {
-            name: 'VAR di mercato (% RAL)',
+            name: 'VAR di mercato (% abs)',
             value: (salaryDataForChart[1] as any).ex_var,
             color: 'rgb(243, 141, 13)',
           },
           {
-            name: 'La tua VAR (% RAL)',
-            value: ((mySalary.exVar / mySalary.ral) * 100).toFixed(2),
+            name: 'La tua VAR (% abs)',
+            value: ((mySalary.exVar / mySalary.abs) * 100).toFixed(2),
             color: 'rgba(56, 109, 166, .7)',
           },
         ];
@@ -108,20 +108,20 @@ export default class ExVar extends PureComponent<ExVarProps> {
       valueAxis.renderer.grid.template.strokeOpacity = 0.05;
 
       // Add and configure Series
-      const ral = chart.series.push(new am4charts.ColumnSeries());
-      ral.dataFields.valueX = 'value';
-      ral.dataFields.categoryY = 'name';
-      ral.columns.template.width = am4core.percent(100);
-      ral.fillOpacity = 0.6;
-      ral.fill = am4core.color('rgb(243, 141, 13)');
-      ral.stroke = am4core.color('rgb(243, 141, 13)');
-      // ral.tooltipText = 'RAL: [bold]{valueX}[/]';
-      ral.columns.template.propertyFields.fill = 'color';
-      ral.columns.template.propertyFields.stroke = 'color';
-      ral.columns.template.column.cornerRadius(0, 3, 0, 3);
-      ral.columns.template.strokeOpacity = 0.5;
+      const abs = chart.series.push(new am4charts.ColumnSeries());
+      abs.dataFields.valueX = 'value';
+      abs.dataFields.categoryY = 'name';
+      abs.columns.template.width = am4core.percent(100);
+      abs.fillOpacity = 0.6;
+      abs.fill = am4core.color('rgb(243, 141, 13)');
+      abs.stroke = am4core.color('rgb(243, 141, 13)');
+      // abs.tooltipText = 'abs: [bold]{valueX}[/]';
+      abs.columns.template.propertyFields.fill = 'color';
+      abs.columns.template.propertyFields.stroke = 'color';
+      abs.columns.template.column.cornerRadius(0, 3, 0, 3);
+      abs.columns.template.strokeOpacity = 0.5;
 
-      var bullet = ral.bullets.push(new am4charts.LabelBullet());
+      var bullet = abs.bullets.push(new am4charts.LabelBullet());
       if (mode === 'value') {
         bullet.label.text = "€ {valueX.formatNumber('#,###')}";
       } else {
