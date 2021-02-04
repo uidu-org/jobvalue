@@ -12,9 +12,13 @@ export type Salary = {
   atsPerc50: number;
   atsPerc75: number;
   atsPerc90: number;
-  ex_perc?: number;
-  ex_count?: number;
-  ex_var?: number;
+  varValuePerc10: number;
+  varValuePerc25: number;
+  varValuePerc50: number;
+  varValuePerc75: number;
+  varValuePerc90: number;
+  incumbentsWithVarPerc?: number;
+  incumbentsCount?: number;
   sense_id?: number;
   sense_name?: string;
   codesense_id?: number;
@@ -34,9 +38,10 @@ export type SalaryData = {
   name: SalaryDataNameKeys;
   ats?: number;
   abs?: number;
+  var?: number;
 };
 
-export type SalaryKinds = 'abs' | 'ats';
+export type SalaryKinds = 'abs' | 'ats' | 'varValue';
 
 export type SalariesProps = {
   salaryDataForChart: Array<SalaryData>;
@@ -47,5 +52,6 @@ export type SalariesProps = {
   colors: {
     abs?: string;
     ats?: string;
+    varValue?: string;
   };
 };

@@ -15,7 +15,9 @@ export default class ExCount extends PureComponent<any> {
         >
           {loaded && salaryDataForChart ? (
             <div>
-              <h3 className="text-nowrap">{salaryDataForChart[1].ex_count}</h3>
+              <h3 className="text-nowrap">
+                {salaryDataForChart[1].incumbentsCount}
+              </h3>
             </div>
           ) : (
             <Spinner />

@@ -24,6 +24,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
     colors: {
       abs: '#386da7',
       ats: '#f28d0e',
+      varValue: '#f28d0e',
     },
   };
 
@@ -186,6 +187,22 @@ export default class Salaries extends PureComponent<SalariesProps> {
           bullet.label.fontSize = 14;
           bullet.dy = -16;
         }
+      }
+
+      if (series.includes('varValue')) {
+        const varValue = chart.series.push(new am4charts.ColumnSeries());
+        varValue.dataFields.valueY = 'varValue';
+        varValue.dataFields.categoryX = 'name';
+        varValue.tooltipText = '{valueY.key}';
+        varValue.columns.template.width = am4core.percent(100);
+        varValue.fill = am4core.color(colors.varValue);
+        varValue.fillOpacity = 0.4;
+        varValue.stroke = am4core.color(colors.varValue);
+        varValue.tooltipText = 'varValue: [bold]{valueY}[/]';
+        varValue.columns.template.propertyFields.fill = 'color';
+        // ats.columns.template.propertyFields.stroke = 'color';
+        varValue.columns.template.column.cornerRadius(3, 3, 0, 0);
+        varValue.columns.template.strokeOpacity = 0.5;
       }
 
       chart.cursor = new am4charts.XYCursor();

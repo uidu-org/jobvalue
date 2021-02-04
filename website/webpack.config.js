@@ -9,7 +9,9 @@ runDevServer({
       mainFields: ['jobvalue:src', 'browser', 'module', 'main'],
     },
   },
-}).catch((err) => {
-  console.log(err);
-  process.exit(err);
-});
+})
+  .catch((err) => {})
+  .catch((err) => {
+    console.log(err);
+    process.exit(err);
+  });

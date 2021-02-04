@@ -12,8 +12,8 @@ export const salaryBySenses = (state) => {
 
 export const salaryForChartCompactMode = (
   salaries: Array<Salary>,
-  mySalary?: { abs: number; ats: number },
-  jobOffer?: { abs: number; ats: number },
+  mySalary?: { abs: number; ats: number; var?: number },
+  jobOffer?: { abs: number; ats: number; var?: number },
   curves = [
     { name: 'Minimo', key: 'Perc10' },
     { name: 'Medio', key: 'Average' },
@@ -25,8 +25,8 @@ export const salaryForChart = (
   salaries: Array<Salary>,
   /** In case of PRO payment data, at 0 we have the national curve, at 1 we have the detailed one */
   salariesIndex: number,
-  mySalary?: { abs: number; ats: number },
-  jobOffer?: { abs: number; ats: number },
+  mySalary?: { abs: number; ats: number; var?: number },
+  jobOffer?: { abs: number; ats: number; var?: number },
   curves = [
     // { name: 'Media', key: 'average' },
     { name: '1° Decile', key: 'Perc10' },
@@ -41,6 +41,7 @@ export const salaryForChart = (
       name: SalaryDataNameKeys;
       ats?: number;
       abs?: number;
+      varValue?: number;
       color?: string;
     } = {
       name: legend.name as SalaryDataNameKeys,
@@ -48,11 +49,9 @@ export const salaryForChart = (
     const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[
       salariesIndex
     ];
-    console.log(foo);
-    console.log(legend);
     res.ats = foo[`ats${legend.key}`];
     res.abs = foo[`abs${legend.key}`];
-    console.log(res);
+    res.varValue = foo[`varValue${legend.key}`];
     return res;
   });
   if (mySalary) {
@@ -60,6 +59,7 @@ export const salaryForChart = (
       name: 'Tu' as SalaryDataNameKeys,
       ats: mySalary.ats,
       abs: mySalary.abs,
+      var: mySalary.var,
     });
   }
   if (jobOffer) {
@@ -67,6 +67,7 @@ export const salaryForChart = (
       name: 'Offerta' as SalaryDataNameKeys,
       ats: jobOffer.ats,
       abs: jobOffer.abs,
+      var: mySalary.var,
     });
   }
   return out.slice().sort((a, b) => a.ats - b.ats);

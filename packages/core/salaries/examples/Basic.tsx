@@ -46,6 +46,15 @@ export default function Basic() {
         <SalariesTable salaryDataForChart={salaries} />
       </div>
       <div className="card mb-5">
+        <div className="card-header">Dati retributivi (var value)</div>
+        <Salaries
+          salaryDataForChart={salaries}
+          series={['varValue']}
+          colors={{ varValue: '#f28d0e', abs: '#f28d0e' }}
+        />
+        <SalariesTable salaryDataForChart={salaries} />
+      </div>
+      <div className="card mb-5">
         <div className="card-header">Dati retributivi (ats) compact mode</div>
         <Salaries
           compactMode
