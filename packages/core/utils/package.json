@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/salaries": "^1.0.0",
+    "@jobvalue/salaries": "^1.0.1",
     "axios": "^0.21.1",
     "lodash": "^4.17.15",
     "numeral": "^2.0.6",

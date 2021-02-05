@@ -1,5 +1,11 @@
 # @jobvalue/website
 
+## 1.0.1
+
+### Patch Changes
+
+- 44a97b6: Adding VarValue curve to salaries, fix ExPerc
+
 ## 1.0.0
 
 ### Major Changes

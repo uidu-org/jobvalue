@@ -1,5 +1,13 @@
 # @jobvalue/company-benchmarks
 
+## 1.0.1
+
+### Patch Changes
+
+- 44a97b6: Adding VarValue curve to salaries, fix ExPerc
+- Updated dependencies [44a97b6]
+  - @jobvalue/utils@1.0.1
+
 ## 1.0.0
 
 ### Major Changes
