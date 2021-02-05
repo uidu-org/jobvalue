@@ -48,11 +48,12 @@ export default class ExPerc extends PureComponent<{
       chart.data = [
         {
           country: 'Percettori',
-          count: (salaryDataForChart[1] as any).incumbentsWithVarPerc,
+          count: (salaryDataForChart[1] as any).incumbentsWithVarPercentage,
         },
         {
           country: 'Non percettori',
-          count: 100 - (salaryDataForChart[1] as any).incumbentsWithVarPerc,
+          count:
+            100 - (salaryDataForChart[1] as any).incumbentsWithVarPercentage,
         },
       ];
 
@@ -73,7 +74,9 @@ export default class ExPerc extends PureComponent<{
       pieSeries.ticks.template.disabled = true;
 
       const label = pieSeries.createChild(am4core.Label);
-      label.text = `${(salaryDataForChart[1] as any).incumbentsWithVarPerc}%`;
+      label.text = `${
+        (salaryDataForChart[1] as any).incumbentsWithVarPercentage
+      }%`;
       label.horizontalCenter = 'middle';
       label.verticalCenter = 'middle';
       label.fontSize = 18;

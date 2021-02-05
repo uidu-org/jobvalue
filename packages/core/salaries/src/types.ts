@@ -17,7 +17,7 @@ export type Salary = {
   varValuePerc50: number;
   varValuePerc75: number;
   varValuePerc90: number;
-  incumbentsWithVarPerc?: number;
+  incumbentsWithVarPercentage?: number;
   incumbentsCount?: number;
   sense_id?: number;
   sense_name?: string;
