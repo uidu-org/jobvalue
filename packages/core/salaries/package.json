@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/salaries",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/salaries.cjs.js",
   "module": "dist/salaries.esm.js",

@@ -1,5 +1,11 @@
 # @jobvalue/company-benchmarks
 
+## 1.0.2
+
+### Patch Changes
+
+- 767a7f4: Fix incumbentsWithVarPercentage
+
 ## 1.0.1
 
 ### Patch Changes
