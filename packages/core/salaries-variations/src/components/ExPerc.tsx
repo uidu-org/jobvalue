@@ -87,7 +87,6 @@ export default class ExPerc extends PureComponent<{
 
   render() {
     const { loaded } = this.props;
-    console.log(this.props);
     return (
       <div className="d-flex flex-row align-items-center">
         <div className="card-body">
