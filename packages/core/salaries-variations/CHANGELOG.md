@@ -1,5 +1,11 @@
 # @jobvalue/salaries-variations
 
+## 1.0.3
+
+### Patch Changes
+
+- 36d308b: Remove console log
+
 ## 1.0.2
 
 ### Patch Changes
