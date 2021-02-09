@@ -41,7 +41,7 @@ export type SalaryData = {
   var?: number;
 };
 
-export type SalaryKinds = 'abs' | 'ats' | 'varValue';
+export type SalaryKinds = 'abs' | 'ats' | 'varValue' | 'varPerc';
 
 export type SalariesProps = {
   salaryDataForChart: Array<SalaryData>;
@@ -53,5 +53,6 @@ export type SalariesProps = {
     abs?: string;
     ats?: string;
     varValue?: string;
+    varPerc?: string;
   };
 };

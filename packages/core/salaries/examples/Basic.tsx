@@ -4,10 +4,16 @@ import Salaries, { SalariesTable } from '..';
 import { salaryDataForChart } from '../examples-utils';
 
 export default function Basic() {
-  const salaries = salaryForChart(salaryDataForChart, 0);
-  const compactSalaries = salaryForChartCompactMode(salaryDataForChart, {
-    abs: 22000,
-    ats: 22000,
+  const salaries = salaryForChart({
+    salaries: salaryDataForChart,
+    salariesIndex: 0,
+  });
+  const compactSalaries = salaryForChartCompactMode({
+    salaries: salaryDataForChart,
+    mySalary: {
+      abs: 22000,
+      ats: 22000,
+    },
   });
 
   return (
@@ -20,18 +26,19 @@ export default function Basic() {
       <div className="card mb-5">
         <div className="card-header">Dati retributivi (ats)</div>
         <Salaries
-          salaryDataForChart={salaryForChart(
-            salaryDataForChart,
-            0,
-            {
+          salaryDataForChart={salaryForChart({
+            salaries: salaryDataForChart,
+            salariesIndex: 0,
+            mySalary: {
               abs: 24000,
               ats: 25000,
             },
-            {
+            jobOffer: {
               abs: 32000,
               ats: 37000,
             },
-          )}
+            mySalaryName: 'Martina',
+          })}
           series={['ats', 'abs']}
         />
         <SalariesTable salaryDataForChart={salaries} />
@@ -52,6 +59,11 @@ export default function Basic() {
           series={['varValue']}
           colors={{ varValue: '#f28d0e', abs: '#f28d0e' }}
         />
+        <Salaries
+          salaryDataForChart={salaries}
+          series={['varPerc']}
+          colors={{ varPerc: '#f28d0e', abs: '#f28d0e' }}
+        />
         <SalariesTable salaryDataForChart={salaries} />
       </div>
       <div className="card mb-5">
@@ -62,9 +74,12 @@ export default function Basic() {
           series={['ats']}
         />
         <SalariesTable
-          salaryDataForChart={salaryForChartCompactMode(salaryDataForChart, {
-            abs: 24000,
-            ats: 25000,
+          salaryDataForChart={salaryForChartCompactMode({
+            salaries: salaryDataForChart,
+            mySalary: {
+              abs: 24000,
+              ats: 25000,
+            },
           })}
         />
       </div>

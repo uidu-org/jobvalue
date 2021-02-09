@@ -25,6 +25,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
       abs: '#386da7',
       ats: '#f28d0e',
       varValue: '#f28d0e',
+      varPerc: '#f28d0e',
     },
   };
 
@@ -90,6 +91,18 @@ export default class Salaries extends PureComponent<SalariesProps> {
       const label = categoryAxis.renderer.labels.template;
       label.wrap = true;
       label.maxWidth = 120;
+      label.text = '{label}';
+
+      categoryAxis.renderer.labels.template.adapter.add(
+        'text',
+        (label, target, key) => {
+          if (target.dataItem?.dataContext?.labelName) {
+            return target.dataItem?.dataContext?.labelName;
+          } else {
+            return label;
+          }
+        },
+      );
 
       const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.min = 0;
@@ -99,7 +112,9 @@ export default class Salaries extends PureComponent<SalariesProps> {
       }
       valueAxis.renderer.opposite = true;
       valueAxis.numberFormatter = new am4core.NumberFormatter();
-      valueAxis.numberFormatter.numberFormat = '#a';
+      valueAxis.numberFormatter.numberFormat = series.includes('varPerc')
+        ? '%a'
+        : '#a';
       valueAxis.extraMax = series.length === 2 || compactMode ? 0.05 : 0.15;
       valueAxis.renderer.baseGrid.strokeOpacity = 0;
       valueAxis.renderer.labels.template.fillOpacity = 0.3;
@@ -114,7 +129,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
         abs.fillOpacity = 0.4;
         abs.fill = am4core.color(colors.abs);
         abs.stroke = am4core.color(colors.abs);
-        abs.tooltipText = 'abs: [bold]{valueY}[/]';
+        abs.tooltipText = 'RAL: [bold]{valueY}[/]';
         abs.columns.template.propertyFields.fill = 'color';
         // abs.columns.template.propertyFields.stroke = 'color';
         abs.columns.template.column.cornerRadius(3, 3, 0, 0);
@@ -156,7 +171,7 @@ export default class Salaries extends PureComponent<SalariesProps> {
         ats.fill = am4core.color(colors.ats);
         ats.fillOpacity = 0.4;
         ats.stroke = am4core.color(colors.ats);
-        ats.tooltipText = 'ats: [bold]{valueY}[/]';
+        ats.tooltipText = 'RGA: [bold]{valueY}[/]';
         ats.columns.template.propertyFields.fill = 'color';
         // ats.columns.template.propertyFields.stroke = 'color';
         ats.columns.template.column.cornerRadius(3, 3, 0, 0);
@@ -198,11 +213,34 @@ export default class Salaries extends PureComponent<SalariesProps> {
         varValue.fill = am4core.color(colors.varValue);
         varValue.fillOpacity = 0.4;
         varValue.stroke = am4core.color(colors.varValue);
-        varValue.tooltipText = 'varValue: [bold]{valueY}[/]';
+        varValue.tooltipText = 'Var: [bold]{valueY}[/]';
         varValue.columns.template.propertyFields.fill = 'color';
         // ats.columns.template.propertyFields.stroke = 'color';
         varValue.columns.template.column.cornerRadius(3, 3, 0, 0);
         varValue.columns.template.strokeOpacity = 0.5;
+      }
+
+      if (series.includes('varPerc')) {
+        const varPerc = chart.series.push(new am4charts.ColumnSeries());
+        varPerc.dataFields.valueY = 'varPerc';
+        varPerc.dataFields.categoryX = 'name';
+        varPerc.tooltipText = '{valueY.key}';
+        varPerc.columns.template.width = am4core.percent(100);
+        varPerc.fill = am4core.color(colors.varPerc);
+        varPerc.fillOpacity = 0.4;
+        varPerc.stroke = am4core.color(colors.varPerc);
+        varPerc.tooltipText = 'Var: [bold]{valueY}%[/]';
+        varPerc.columns.template.propertyFields.fill = 'color';
+        // ats.columns.template.propertyFields.stroke = 'color';
+        varPerc.columns.template.column.cornerRadius(3, 3, 0, 0);
+        varPerc.columns.template.strokeOpacity = 0.5;
+        if (!series.includes('varValue')) {
+          varPerc.tooltip.disabled = true;
+          var bullet = varPerc.bullets.push(new am4charts.LabelBullet());
+          bullet.label.text = '{varPerc}%';
+          bullet.label.fontSize = 14;
+          bullet.dy = -16;
+        }
       }
 
       chart.cursor = new am4charts.XYCursor();

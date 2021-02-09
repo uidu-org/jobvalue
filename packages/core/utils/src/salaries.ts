@@ -10,23 +10,38 @@ export const salaryBySenses = (state) => {
   return groupBy(salary.items, 'sense_id');
 };
 
-export const salaryForChartCompactMode = (
-  salaries: Array<Salary>,
-  mySalary?: { abs: number; ats: number; var?: number },
-  jobOffer?: { abs: number; ats: number; var?: number },
+export const salaryForChartCompactMode = ({
+  salaries,
+  mySalary,
+  jobOffer,
   curves = [
     { name: 'Minimo', key: 'Perc10' },
     { name: 'Medio', key: 'Average' },
     { name: 'Massimo', key: 'Perc90' },
   ],
-) => salaryForChart(salaries, 0, mySalary, jobOffer, curves);
+  mySalaryName,
+}: {
+  salaries: Array<Salary>;
+  mySalary?: { abs: number; ats: number; varPerc?: number; varValue?: number };
+  jobOffer?: { abs: number; ats: number; varPerc?: number; varValue?: number };
+  curves: Array<any>;
+  mySalaryName?: string;
+}) =>
+  salaryForChart({
+    salaries,
+    salariesIndex: 0,
+    mySalary,
+    jobOffer,
+    curves,
+    mySalaryName,
+  });
 
-export const salaryForChart = (
-  salaries: Array<Salary>,
+export const salaryForChart = ({
+  salaries,
   /** In case of PRO payment data, at 0 we have the national curve, at 1 we have the detailed one */
-  salariesIndex: number,
-  mySalary?: { abs: number; ats: number; var?: number },
-  jobOffer?: { abs: number; ats: number; var?: number },
+  salariesIndex,
+  mySalary,
+  jobOffer,
   curves = [
     // { name: 'Media', key: 'average' },
     { name: '1° Decile', key: 'Perc10' },
@@ -35,23 +50,35 @@ export const salaryForChart = (
     { name: '3° Quartile', key: 'Perc75' },
     { name: '9° Decile', key: 'Perc90' },
   ],
-): SalaryData[] => {
+  mySalaryName = 'Tu',
+}: {
+  salaries: Array<Salary>;
+  salariesIndex: number;
+  mySalary?: { abs: number; ats: number; varPerc?: number; varValue?: number };
+  jobOffer?: { abs: number; ats: number; varPerc?: number; varValue?: number };
+  curves: Array<any>;
+  mySalaryName?: string;
+}): SalaryData[] => {
   const out = curves.map((legend) => {
     const res: {
       name: SalaryDataNameKeys;
       ats?: number;
       abs?: number;
+      varPerc?: number;
       varValue?: number;
       color?: string;
     } = {
       name: legend.name as SalaryDataNameKeys,
+      label: legend.name as SalaryDataNameKeys,
     };
     const foo = salaries.filter((s) => !s.codesense_id && !s.sense_id)[
       salariesIndex
     ];
     res.ats = foo[`ats${legend.key}`];
     res.abs = foo[`abs${legend.key}`];
+    res.varPerc = foo[`varPerc${legend.key}`];
     res.varValue = foo[`varValue${legend.key}`];
+    console.log(res);
     return res;
   });
   if (mySalary) {
@@ -59,7 +86,9 @@ export const salaryForChart = (
       name: 'Tu' as SalaryDataNameKeys,
       ats: mySalary.ats,
       abs: mySalary.abs,
-      var: mySalary.var,
+      varPerc: mySalary.varPerc,
+      varValue: mySalary.varValue,
+      labelName: mySalaryName,
     });
   }
   if (jobOffer) {
@@ -67,7 +96,8 @@ export const salaryForChart = (
       name: 'Offerta' as SalaryDataNameKeys,
       ats: jobOffer.ats,
       abs: jobOffer.abs,
-      var: mySalary.var,
+      varPerc: mySalary.varPerc,
+      varValue: mySalary.varValue,
     });
   }
   return out.slice().sort((a, b) => a.ats - b.ats);
