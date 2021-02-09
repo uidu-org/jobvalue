@@ -1,5 +1,12 @@
 # @jobvalue/job
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [08c2adc]
+  - @jobvalue/utils@2.0.0
+
 ## 1.0.0
 
 ### Major Changes

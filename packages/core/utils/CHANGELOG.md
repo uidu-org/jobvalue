@@ -1,5 +1,16 @@
 # @jobvalue/utils
 
+## 2.0.0
+
+### Major Changes
+
+- 08c2adc: Changed how salaries data for chart are calculated
+
+### Patch Changes
+
+- Updated dependencies [08c2adc]
+  - @jobvalue/salaries@2.0.0
+
 ## 1.0.1
 
 ### Patch Changes

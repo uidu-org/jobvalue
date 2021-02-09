@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [08c2adc]
+  - @jobvalue/salaries@2.0.0
+  - @jobvalue/utils@2.0.0
+
 ## 1.0.3
 
 ### Patch Changes
