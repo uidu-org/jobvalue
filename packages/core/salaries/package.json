@@ -1,13 +1,13 @@
 {
   "name": "@jobvalue/salaries",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "dist/salaries.cjs.js",
   "module": "dist/salaries.esm.js",
   "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^1.0.1",
+    "@jobvalue/utils": "^2.0.0",
     "@uidu/spinner": "^0.4.6",
     "axios": "^0.21.1",
     "numeral": "^2.0.6",

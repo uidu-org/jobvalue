@@ -1,6 +1,6 @@
 {
   "name": "@jobvalue/labour-cost",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Serve a mostrare quanto guadagno rispetto agli altri",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "types": "index.d.ts",
   "dependencies": {
     "@amcharts/amcharts4": "^4.8.0",
-    "@jobvalue/utils": "^1.0.0",
+    "@jobvalue/utils": "^2.0.0",
     "@uidu/spinner": "^0.4.6",
     "react": "^17.0.1",
     "recharts": "^2.0.0-beta.1",
