@@ -78,7 +78,6 @@ export const salaryForChart = ({
     res.abs = foo[`abs${legend.key}`];
     res.varPerc = foo[`varPerc${legend.key}`];
     res.varValue = foo[`varValue${legend.key}`];
-    console.log(res);
     return res;
   });
   if (mySalary) {

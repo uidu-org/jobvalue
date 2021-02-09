@@ -218,6 +218,14 @@ export default class Salaries extends PureComponent<SalariesProps> {
         // ats.columns.template.propertyFields.stroke = 'color';
         varValue.columns.template.column.cornerRadius(3, 3, 0, 0);
         varValue.columns.template.strokeOpacity = 0.5;
+        varValue.columns.template.adapter.add('fillOpacity', (fill, target) => {
+          // @ts-ignore
+          if (target.dataItem && target.dataItem.categoryX === 'Tu') {
+            return 1;
+          } else {
+            return fill;
+          }
+        });
       }
 
       if (series.includes('varPerc')) {
@@ -234,6 +242,15 @@ export default class Salaries extends PureComponent<SalariesProps> {
         // ats.columns.template.propertyFields.stroke = 'color';
         varPerc.columns.template.column.cornerRadius(3, 3, 0, 0);
         varPerc.columns.template.strokeOpacity = 0.5;
+        varPerc.columns.template.adapter.add('fillOpacity', (fill, target) => {
+          // @ts-ignore
+          if (target.dataItem && target.dataItem.categoryX === 'Tu') {
+            return 1;
+          } else {
+            return fill;
+          }
+        });
+
         if (!series.includes('varValue')) {
           varPerc.tooltip.disabled = true;
           var bullet = varPerc.bullets.push(new am4charts.LabelBullet());
