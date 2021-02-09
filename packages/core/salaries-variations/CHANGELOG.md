@@ -1,5 +1,13 @@
 # @jobvalue/salaries-variations
 
+## 1.0.2
+
+### Patch Changes
+
+- 767a7f4: Fix incumbentsWithVarPercentage
+- Updated dependencies [767a7f4]
+  - @jobvalue/salaries@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
