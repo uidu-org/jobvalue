@@ -1,5 +1,11 @@
 # @jobvalue/website
 
+## 1.0.2
+
+### Patch Changes
+
+- 9a1a7ef: Added benefits grid
+
 ## 1.0.1
 
 ### Patch Changes
