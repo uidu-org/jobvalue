@@ -37,6 +37,19 @@ export default class Benefits extends PureComponent<any> {
     }
   }
 
+  createGrid(valueAxis, value) {
+    let range = valueAxis.axisRanges.create();
+    range.value = value;
+    range.endValue = value;
+    range.label.text = '{value}%';
+    range.label.valign = 'top';
+    range.label.fontSize = 12;
+    range.label.dy = -24;
+    range.grid.stroke = am4core.color('#eaeff1');
+    range.grid.strokeWidth = 1;
+    range.grid.strokeOpacity = 1;
+  }
+
   drawChart = () => {
     const { data, currentBenefits } = this.props;
     if (data && !this.chart) {
@@ -83,6 +96,11 @@ export default class Benefits extends PureComponent<any> {
       valueAxis.renderer.labels.template.dy = 20;
       valueAxis.renderer.grid.template.disabled = true;
       valueAxis.renderer.labels.template.disabled = true;
+      this.createGrid(valueAxis, 0);
+      this.createGrid(valueAxis, 25);
+      this.createGrid(valueAxis, 50);
+      this.createGrid(valueAxis, 75);
+      this.createGrid(valueAxis, 100);
       // valueAxis.tooltip.disabled = true;
       // Create series
       let series = chart.series.push(new am4charts.ColumnSeries());
