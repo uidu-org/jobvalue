@@ -1,5 +1,13 @@
 # @jobvalue/salaries
 
+## 2.0.1
+
+### Patch Changes
+
+- 49d7f3c: Highlight mySalary for varPerc
+- Updated dependencies [49d7f3c]
+  - @jobvalue/utils@2.0.1
+
 ## 2.0.0
 
 ### Major Changes
