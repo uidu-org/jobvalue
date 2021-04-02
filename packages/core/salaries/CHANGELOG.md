@@ -1,5 +1,11 @@
 # @jobvalue/salaries
 
+## 2.0.2
+
+### Patch Changes
+
+- fd12789: Fix benefits star
+
 ## 2.0.1
 
 ### Patch Changes
