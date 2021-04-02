@@ -150,7 +150,7 @@ export default class Benefits extends PureComponent<any> {
       bullet.fillOpacity = 1;
 
       const star = bullet.createChild(am4core.Image);
-      star.href = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-160/star.svg';
+      star.href = 'https://jpcondivisi.s3-eu-west-1.amazonaws.com/star.svg';
       star.width = 14;
       star.height = 14;
       star.horizontalCenter = 'left';
